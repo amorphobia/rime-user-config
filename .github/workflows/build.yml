@@ -84,6 +84,7 @@ jobs:
 
       - name: Prepare User Settings 🗂️
         run: |
+          mkdir -p hamster/lua
           cp schemas/japanese.* hamster/
           cp schemas/shupin* hamster/
           cp lua/split.lua hamster/lua/
