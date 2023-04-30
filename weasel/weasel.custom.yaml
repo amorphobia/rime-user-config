@@ -1,0 +1,12 @@
+patch:
+  style/coor_scheme: cool_breeze
+  style/font_point: 16
+  style/inline_preedit: true
+  app_options/terminus.exe/ascii_mode: true
+  app_options/mintty.exe/ascii_mode: true
+  app_options/conemu64.exe/ascii_mode: true
+  app_options/windowsterminal.exe/ascii_mode: true
+  app_options/fluentterminal.app.exe/ascii_mode: true
+  app_options/remotedesktopmanagerfree.exe/ascii_mode: true
+  app_options/code.exe/ascii_mode: true
+  app_options/vscodium.exe/ascii_mode: true

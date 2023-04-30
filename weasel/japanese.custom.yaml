@@ -1,0 +1,28 @@
+patch:
+  schema/name: 🇯🇵日本語
+  key_binder:
+    import_preset: default
+    bindings/+:
+      - { when: has_menu, accept: minus, send: minus } # 长音
+      - { when: paging, accept: minus, send: Page_Up }
+  engine/segmentors:
+    - ascii_segmentor
+    - matcher
+    - abc_segmentor
+    - punct_segmentor
+    - fallback_segmentor
+  engine/translators:
+    - punct_translator
+    - script_translator
+    - reverse_lookup_translator
+    - table_translator@custom_phrase_user
+  engine/filters:
+    - simplifier
+    - uniquifier
+  custom_phrase_user:
+    dictionary: ""
+    user_dict: japanese_user
+    db_class: stabledb
+    enable_sentence: false
+    enable_completion: true
+    initial_quality: 0
