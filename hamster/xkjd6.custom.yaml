@@ -1,0 +1,6 @@
+patch:
+  schema/name: ⭐星空键道
+  engine/filters/+:
+    - lua_filter@split_filter
+    - lua_filter@preedit_filter
+  speller/auto_select: false
