@@ -94,7 +94,8 @@ jobs:
 
       - name: Make Zip Archive 🗄️
         run: |
-          zip -r -q hamster.zip hamster
+          cd hamster
+          zip -r -q ../hamster.zip *
 
       - name: Upload Artifact 📤
         uses: actions/upload-artifact@v3
