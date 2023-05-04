@@ -1,5 +1,8 @@
 patch:
   schema/name: 🍲蜀拼-重庆
+  engine/translators:
+    - punct_translator
+    - script_translator
   # 对于输入编码的处理
   speller/algebra:
     - xform/◎.+$//

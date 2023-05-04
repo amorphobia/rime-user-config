@@ -1,5 +1,9 @@
 patch:
   schema/name: 🍲蜀拼-重庆
+  engine/translators:
+    - punct_translator
+    - script_translator
+    - reverse_lookup_translator
   key_binder/bindings/+:
     - { when: has_menu, accept: semicolon, send: semicolon } # 恢复分号输入阴平
   # 对于输入编码的处理
