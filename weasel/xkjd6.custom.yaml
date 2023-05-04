@@ -13,3 +13,5 @@ patch:
     - lua_filter@split_filter
     - lua_filter@preedit_filter
   speller/auto_select: false
+  translator/enable_completion: false
+  switches/@4/reset: 1
