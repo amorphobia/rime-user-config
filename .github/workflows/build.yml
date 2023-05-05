@@ -120,9 +120,14 @@ jobs:
       - name: Download All Artifacts 📥
         uses: actions/download-artifact@v3
 
+      - name: Rename Release Zip Archives
+        run: |
+          mv weasel.zip/weasel.zip weasel-${{ github.ref_name }}.zip
+          mv hamster.zip/hamster.zip hamster-${{ github.ref_name }}.zip
+
       - name: Create Release and Upload Assets 🚀
         uses: softprops/action-gh-release@v1
         with:
           files: |
-            weasel.zip/weasel.zip
-            hamster.zip/hamster.zip
+            weasel-${{ github.ref_name }}.zip
+            hamster-${{ github.ref_name }}.zip

@@ -4,6 +4,8 @@ set -e
 
 SCHEMAS=schemas
 
+rm -rf ${SCHEMAS}
+
 mkdir -p ${SCHEMAS}/lua
 mkdir -p ${SCHEMAS}/opencc
 
