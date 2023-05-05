@@ -14,6 +14,11 @@ jobs:
       - name: Checkout 🛎️
         uses: actions/checkout@v3
 
+      - name: Clear Cache ❌
+        run: |
+          gh extension install actions/gh-actions-cache
+          gh actions-cache delete ${{ runner.os }}-schemas --confirm
+
       - name: Install Dependencies ⚙️
         run: sudo apt-get install -y opencc
 
@@ -23,6 +28,7 @@ jobs:
 
       - name: Cache Schemas 💾
         uses: actions/cache/save@v3
+        if: always()
         with:
           path: schemas
           key: ${{ runner.os }}-schemas
