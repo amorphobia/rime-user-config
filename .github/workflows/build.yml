@@ -20,6 +20,7 @@ jobs:
         run: |
           gh extension install actions/gh-actions-cache
           gh actions-cache delete ${{ runner.os }}-schemas --confirm
+        continue-on-error: true
 
       - name: Install Dependencies ⚙️
         run: sudo apt-get install -y opencc
