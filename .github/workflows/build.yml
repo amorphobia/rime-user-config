@@ -22,7 +22,7 @@ jobs:
           bash fetch.sh
 
       - name: Cache Schemas 💾
-        uses: actions/cache@v3
+        uses: actions/cache/save@v3
         with:
           path: schemas
           key: ${{ runner.os }}-schemas
@@ -37,7 +37,7 @@ jobs:
 
       - name: Cache Schemas 💾
         id: cache-schemas
-        uses: actions/cache@v3
+        uses: actions/cache/restore@v3
         with:
           path: schemas
           key: ${{ runner.os }}-schemas
@@ -74,7 +74,7 @@ jobs:
 
       - name: Cache Schemas 💾
         id: cache-schemas
-        uses: actions/cache@v3
+        uses: actions/cache/restore@v3
         with:
           path: schemas
           key: ${{ runner.os }}-schemas

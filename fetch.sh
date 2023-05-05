@@ -53,4 +53,5 @@ then
     git clone --depth 1 https://github.com/rime/rime-emoji emoji
     cat emoji/opencc/emoji_category.txt | opencc -c t2s.json > ${SCHEMAS}/opencc/emoji_category.txt
     cat emoji/opencc/emoji_word.txt | opencc -c t2s.json > ${SCHEMAS}/opencc/emoji_word.txt
+    cp emoji/opencc/emoji* ${SCHEMAS}/opencc/
 fi
