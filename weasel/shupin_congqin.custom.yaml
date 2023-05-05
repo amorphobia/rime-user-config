@@ -18,3 +18,4 @@ patch:
   'reverse_lookup/comment_format/@after 1': xform/Xkai3/kai3/
   'reverse_lookup/comment_format/@after 12': xform/(^|\ )lv2/$1lu2/
   'reverse_lookup/comment_format/@after 13': xform/(^|\ )lv4/$1lui4/
+  'reverse_lookup/comment_format/@after last': xform/(\S+)\ \1/$1/
