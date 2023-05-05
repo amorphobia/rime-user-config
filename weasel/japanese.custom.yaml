@@ -1,5 +1,7 @@
 patch:
   schema/name: 🇯🇵日本語
+  schema/dependencies:
+    - stroke
   key_binder:
     import_preset: default
     bindings/+:

@@ -1,5 +1,6 @@
 patch:
   schema/name: 🇯🇵日本語
+  schema/dependencies: null
   engine/segmentors:
     - ascii_segmentor
     - matcher
@@ -9,7 +10,6 @@ patch:
   engine/translators:
     - punct_translator
     - script_translator
-    - reverse_lookup_translator
     - table_translator@custom_phrase_user
   engine/filters:
     - simplifier
