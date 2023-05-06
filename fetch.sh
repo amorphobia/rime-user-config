@@ -51,7 +51,7 @@ if command -v opencc &> /dev/null
 then
     rm -rf emoji
     git clone --depth 1 https://github.com/rime/rime-emoji emoji
-    opencc -c t2s.json -i emoji/opencc/emoji_category.txt -o emoji/opencc/emoji_category.txt
-    opencc -c t2s.json -i emoji/opencc/emoji_word.txt -o emoji/opencc/emoji_word.txt
+    opencc -c t2s.json -i emoji/opencc/emoji_category.txt | awk '!seen[$1]++' > emoji/opencc/emoji_category.txt
+    opencc -c t2s.json -i emoji/opencc/emoji_word.txt | awk '!seen[$1]++' > emoji/opencc/emoji_word.txt
     cp emoji/opencc/* ${SCHEMAS}/opencc/
 fi
