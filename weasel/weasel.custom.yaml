@@ -1,6 +1,5 @@
 patch:
-  style/color_scheme: cool_breeze
-  style/font_point: 16
+  style/color_scheme: azure
   style/inline_preedit: true
   app_options/terminus.exe/ascii_mode: true
   app_options/mintty.exe/ascii_mode: true
