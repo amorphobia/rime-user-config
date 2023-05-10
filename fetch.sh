@@ -13,7 +13,12 @@ mkdir -p ${SCHEMAS}/opencc
 # https://github.com/xkinput/Rime_JD
 rm -rf jiandao && \
 git clone --depth 1 https://github.com/xkinput/Rime_JD jiandao --branch plum && \
-rm jiandao/xkjd6.dict.yaml jiandao/xkjd6.yingwen.dict.yaml && \
+for dict in danzi cizu fuhao buchong lianjie chaojizici wxw
+do
+    sed '/^---/,/^\.\.\./d' jiandao/xkjd6.${dict}.dict.yaml >> jiandao/xkjd6.dict.yaml && \
+    rm jiandao/xkjd6.${dict}.dict.yaml
+done && \
+rm jiandao/xkjd6.yingwen.dict.yaml jiandao/xkjd6.extended.dict.yaml && \
 cp jiandao/xkjd6.*.yaml ${SCHEMAS}/ && \
 cp jiandao/lua/* ${SCHEMAS}/lua/ && \
 cp jiandao/rime.lua ${SCHEMAS}/ && \
