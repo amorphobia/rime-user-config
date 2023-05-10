@@ -36,7 +36,7 @@ rm -rf clover && mkdir -p clover && (
     rm -rf ${clover_zip}
 ) && \
 sed -i -n '/import_tables/q;p' clover/clover.dict.yaml && \
-cat '...' >> clover/clover.dict.yaml && \
+echo '...' >> clover/clover.dict.yaml && \
 for dict in clover.base clover.phrase THUOCL_animal THUOCL_caijing THUOCL_car THUOCL_chengyu THUOCL_diming THUOCL_food THUOCL_IT THUOCL_law THUOCL_lishimingren THUOCL_medical THUOCL_poem sogou_new_words
 do
     sed '0,/^\.\.\.$/d' clover/${dict}.dict.yaml >> clover/clover.dict.yaml && \
