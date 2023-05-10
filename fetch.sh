@@ -52,6 +52,7 @@ echo "fetch clover done."
 # https://github.com/gkovacs/rime-japanese
 rm -rf japanese && \
 git clone --depth 1 https://github.com/gkovacs/rime-japanese japanese && (
+    cd japanese && \
     sed -i '/import_tables/,/^\.\.\.$/{/^\./!d}' japanese.dict.yaml && \
     for dict in mozc jmdict kana
     do
