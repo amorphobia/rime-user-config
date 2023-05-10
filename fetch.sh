@@ -15,7 +15,7 @@ rm -rf jiandao && \
 git clone --depth 1 https://github.com/xkinput/Rime_JD jiandao --branch plum && \
 for dict in danzi cizu fuhao buchong lianjie chaojizici wxw
 do
-    sed '/^---/,/^\.\.\./d' jiandao/xkjd6.${dict}.dict.yaml >> jiandao/xkjd6.dict.yaml && \
+    sed '0,/^\.\.\.$/d' jiandao/xkjd6.${dict}.dict.yaml >> jiandao/xkjd6.dict.yaml && \
     rm jiandao/xkjd6.${dict}.dict.yaml
 done && \
 rm jiandao/xkjd6.yingwen.dict.yaml jiandao/xkjd6.extended.dict.yaml && \
@@ -35,6 +35,13 @@ rm -rf clover && mkdir -p clover && (
     unzip "${clover_zip}" -d .
     rm -rf ${clover_zip}
 ) && \
+sed -i -n '/import_tables/q;p' clover/clover.dict.yaml && \
+cat '...' >> clover/clover.dict.yaml && \
+for dict in clover.base clover.phrase THUOCL_animal THUOCL_caijing THUOCL_car THUOCL_chengyu THUOCL_diming THUOCL_food THUOCL_IT THUOCL_law THUOCL_lishimingren THUOCL_medical THUOCL_poem sogou_new_words
+do
+    sed '0,/^\.\.\.$/d' clover/${dict}.dict.yaml >> clover/clover.dict.yaml && \
+    rm clover/${dict}.dict.yaml
+done && \
 cp clover/*.yaml ${SCHEMAS}/ && \
 cp clover/opencc/symbol* ${SCHEMAS}/opencc/ && \
 echo "fetch clover done."

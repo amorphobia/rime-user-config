@@ -2,7 +2,7 @@
 # encoding: utf-8
 ---
 name: xkjd6.extended
-version: "Q1"
+version: master
 sort: original 
 use_preset_vocabulary: false
 import_tables:
