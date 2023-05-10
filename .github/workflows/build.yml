@@ -60,7 +60,7 @@ jobs:
         with:
           script: core.setFailed('Cached schemas not found!')
 
-      - name: Prepare User Settings for Weasel
+      - name: Prepare User Settings for Weasel 🦡
         if: ${{ matrix.target == 'weasel' }}
         run: |
           cp -r schemas/* ${{ matrix.target }}/ && \

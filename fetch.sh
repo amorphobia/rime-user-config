@@ -15,8 +15,8 @@ rm -rf jiandao && \
 git clone --depth 1 https://github.com/xkinput/Rime_JD jiandao --branch plum && \
 cp jiandao/xkjd6.*.yaml ${SCHEMAS}/ && \
 cp jiandao/lua/* ${SCHEMAS}/lua/ && \
-cp jiandao/opencc/EN2en* ${SCHEMAS}/opencc/ && \
-cp jiandao/rime.lua ${SCHEMAS}/
+cp jiandao/rime.lua ${SCHEMAS}/ && \
+echo "fetch jiandao done."
 
 # 🍀四叶草
 # https://github.com/fkxxyz/rime-cloverpinyin
@@ -30,20 +30,23 @@ rm -rf clover && mkdir -p clover && (
     rm -rf ${clover_zip}
 ) && \
 cp clover/*.yaml ${SCHEMAS}/ && \
-cp clover/opencc/symbol* ${SCHEMAS}/opencc/
+cp clover/opencc/symbol* ${SCHEMAS}/opencc/ && \
+echo "fetch clover done."
 
 # 🇯🇵日本語
 # https://github.com/gkovacs/rime-japanese
 rm -rf japanese && \
 git clone --depth 1 https://github.com/gkovacs/rime-japanese japanese && \
-cp japanese/*.yaml ${SCHEMAS}/
+cp japanese/*.yaml ${SCHEMAS}/ && \
+echo "fetch japanese done."
 
 # 🍲蜀拼-重庆
 # https://github.com/Papnas/shupin
 rm -rf shupin && \
 git clone --depth 1 https://github.com/Papnas/shupin && \
 cp shupin/*.dict.yaml ${SCHEMAS}/ && \
-cp shupin/shupin_congqin.schema.yaml ${SCHEMAS}/
+cp shupin/shupin_congqin.schema.yaml ${SCHEMAS}/ && \
+echo "fetch shupin-congqin done."
 
 # 😂绘文字
 # https://github.com/rime/rime-emoji
@@ -54,4 +57,5 @@ then
     opencc -c t2s.json -i emoji/opencc/emoji_category.txt | awk '!seen[$1]++' > ${SCHEMAS}/opencc/emoji_category.txt
     opencc -c t2s.json -i emoji/opencc/emoji_word.txt | awk '!seen[$1]++' > ${SCHEMAS}/opencc/emoji_word.txt
     cp emoji/opencc/emoji.json ${SCHEMAS}/opencc/
+    echo "fetch emoji done."
 fi
