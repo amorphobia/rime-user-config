@@ -1,0 +1,19 @@
+# Rime dictionary
+# encoding: utf-8
+#
+# 键道6 扩展词库控制
+---
+name: xkjd6.extended
+version: "Q1"
+sort: original 
+use_preset_vocabulary: false
+import_tables:
+  - xkjd6.danzi
+  - xkjd6.cizu
+  - xkjd6.fuhao
+  - xkjd6.buchong
+  - xkjd6.lianjie
+  - xkjd6.chaojizici
+  - xkjd6.wxw
+  - xkjd6.user
+...
