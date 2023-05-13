@@ -11,8 +11,8 @@ patch:
     - { when: paging, accept: minus, send: Page_Up }
     - { when: has_menu, accept: equal, send: Page_Down }
     - { when: always, accept: Shift+space, select: .next }
-    - { when: always, accept: Control+comma, toggle: full_shape }
-    - { when: always, accept: Control+period, toggle: ascii_punct }
+    - { when: always, accept: Control+Alt+comma, toggle: full_shape }
+    - { when: always, accept: Control+Alt+period, toggle: ascii_punct }
   schema_list:
     - { schema: xkjd6 }
     - { schema: clover }
