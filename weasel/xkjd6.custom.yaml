@@ -12,5 +12,9 @@ patch:
   engine/filters/+:
     - lua_filter@split_filter
     - lua_filter@preedit_filter
+  engine/translators/+:
+    - lua_translator@number_translator
   speller/auto_select: false
+  recognizer/patterns/+:
+    jsq: "^=[^;']+$"
   switches/@4/reset: 1
