@@ -2,7 +2,6 @@ patch:
   schema/name: ⭐星空键道
   engine/filters/+:
     - lua_filter@split_filter
-    - lua_filter@preedit_filter
   engine/translators/+:
     - lua_translator@number_translator
   speller/auto_select: false
