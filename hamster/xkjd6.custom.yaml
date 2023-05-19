@@ -2,6 +2,9 @@ patch:
   schema/name: ⭐星空键道
   schema/dependencies:
     - clover
+  key_binder/bindings:
+    - { when: has_menu, accept: "&", toggle: emoji_cn }
+    - { when: has_menu, accept: "^", toggle: jffh }
   'engine/processors/@after 3': lua_processor@smart_selector
   engine/filters/+:
     - lua_filter@split_filter
