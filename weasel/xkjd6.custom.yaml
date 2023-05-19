@@ -9,8 +9,8 @@ patch:
     - { when: always, accept: Control+Alt+comma, toggle: full_shape }
     - { when: always, accept: Control+Alt+period, toggle: ascii_punct }
     - { when: has_menu, accept: Control+slash, toggle: jffh }
-    - { when: has_menu, accept: "'", send: 2 }
     - { when: has_menu, accept: Control+backslash, toggle: emoji_cn }
+  'engine/processors/@after 3': lua_processor@smart_selector
   engine/filters/+:
     - lua_filter@split_filter
   engine/translators/+:
