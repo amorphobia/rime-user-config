@@ -1,0 +1,6 @@
+patch:
+  schema_list:
+    - { schema: xkjd6 }
+    - { schema: clover }
+    - { schema: japanese }
+    - { schema: shupin_congqin }

@@ -1,0 +1,187 @@
+# Trime default style settings
+# encoding: utf-8
+
+config_version: "1.0"
+name: "36键横屏"
+author: "amorphobia"
+
+preset_values:
+  key_height: &keyHeight 24
+  vertical_gap: &vertGap 4.8
+  horizontal_gap: &horzGap 6.2
+  number_key_height: &numKeyHeight 36.4
+
+style:
+  key_height: *keyHeight
+  keyboards: [default, .symbols, english, .number]
+  text_size: 12 # default 12
+  text_height: 14 # default 20
+  candidate_text_size: 24 # default 24
+  candidate_view_height: 34 # default 44
+  candidate_padding: 14 # default 14
+  comment_text_size: 14 # default 14
+  comment_height: 16 # default 16
+  show_preview: true
+  round_corner: 0 # 0 for default (iPhone: 4, iPad: 8)
+  color_scheme: default
+  sound: "key_press_click.caf"
+
+preset_keyboards:
+  default:
+    ascii_mode: 0
+    author: "amorphobia"
+    height: *keyHeight
+    horizontal_gap: *horzGap
+    vertical_gap: *vertGap
+    keys:
+      - {click: 1, height: *numKeyHeight, swipe_up: "!", swipe_down: exclamationHalf}
+      - {click: 2, height: *numKeyHeight, swipe_up: "@", swipe_down: atHalf}
+      - {click: 3, height: *numKeyHeight, swipe_up: "#", swipe_down: sharpHalf}
+      - {click: 4, height: *numKeyHeight, swipe_up: "$", swipe_down: dolarHalf}
+      - {click: 5, height: *numKeyHeight, swipe_up: "%", swipe_down: percentHalf}
+      - {click: 6, height: *numKeyHeight, swipe_up: "^", swipe_down: hatHalf}
+      - {click: 7, height: *numKeyHeight, swipe_up: "&", swipe_down: andHalf}
+      - {click: 8, height: *numKeyHeight, swipe_up: "*", swipe_down: asteriskHalf}
+      - {click: 9, height: *numKeyHeight, swipe_up: "(", swipe_down: openParenthesisHalf}
+      - {click: 0, height: *numKeyHeight, swipe_up: ")", swipe_down: closeParenthesisHalf}
+      - {width: 100, height: 0.1}
+      - {click: q, swipe_up: "一", swipe_down: "壹"}
+      - {click: w, swipe_up: "二", swipe_down: "贰"}
+      - {click: e, swipe_up: "三", swipe_down: "叁"}
+      - {click: r, swipe_up: "四", swipe_down: "肆"}
+      - {click: t, swipe_up: "五", swipe_down: "伍"}
+      - {click: y, swipe_up: "六", swipe_down: "陆"}
+      - {click: u, swipe_up: "七", swipe_down: "柒"}
+      - {click: i, swipe_up: "八", swipe_down: "捌"}
+      - {click: o, swipe_up: "九", swipe_down: "玖"}
+      - {click: p, swipe_up: "〇", swipe_down: "零"}
+      - {width: 5}
+      - {click: a, swipe_up: "`", swipe_down: "~"}
+      - {click: s, swipe_up: "/", swipe_down: slashHalf}
+      - {click: d, swipe_up: '\', swipe_down: backslashHalf}
+      - {click: f, swipe_up: "[", swipe_down: openBracketHalf}
+      - {click: g, swipe_up: "]", swipe_down: closeBracketHalf}
+      - {click: h, swipe_up: "{", swipe_down: openBraceHalf}
+      - {click: j, swipe_up: "}", swipe_down: closeBraceHalf}
+      - {click: k, swipe_up: ":", swipe_down: ";"}
+      - {click: l, swipe_up: '"', swipe_down: "'"}
+      - {width: 5}
+      - {click: Shift, width: 12}
+      - {width: 3}
+      - {click: z, swipe_up: plusWithPlusAndMinusLable, swipe_down: "-"}
+      - {click: x, swipe_up: "_", swipe_down: underscoreHalf}
+      - {click: c, swipe_up: "=", swipe_down: "≠"}
+      - {click: v, swipe_up: "?", swipe_down: questionHalf}
+      - {click: b, swipe_up: "<", swipe_down: ">"}
+      - {click: n, swipe_up: ",", swipe_down: commaHalf}
+      - {click: m, swipe_up: ".", swipe_down: periodHalf}
+      - {width: 3}
+      - {click: BackSpace, width: 12}
+      - {click: moreSymbols, width: 14}
+      - {click: .number, width: 12}
+      - {click: space, width: 42}
+      - {click: english, width: 12}
+      - {click: Return, width: 20}
+    name: "默认键盘"
+    width: 10
+
+  english:
+    ascii_mode: 1
+    author: "amorphobia"
+    height: *keyHeight
+    horizontal_gap: *horzGap
+    vertical_gap: *vertGap
+    keys:
+      - {click: 1, height: *numKeyHeight, swipe_up: "!", swipe_down: "¹"}
+      - {click: 2, height: *numKeyHeight, swipe_up: "@", swipe_down: "²"}
+      - {click: 3, height: *numKeyHeight, swipe_up: "#", swipe_down: "³"}
+      - {click: 4, height: *numKeyHeight, swipe_up: "$", swipe_down: "⁴"}
+      - {click: 5, height: *numKeyHeight, swipe_up: "%", swipe_down: "⁵"}
+      - {click: 6, height: *numKeyHeight, swipe_up: "^", swipe_down: "⁶"}
+      - {click: 7, height: *numKeyHeight, swipe_up: "&", swipe_down: "⁷"}
+      - {click: 8, height: *numKeyHeight, swipe_up: "*", swipe_down: "⁸"}
+      - {click: 9, height: *numKeyHeight, swipe_up: "(", swipe_down: "⁹"}
+      - {click: 0, height: *numKeyHeight, swipe_up: ")", swipe_down: "⁰"}
+      - {height: 0.04, width: 100}
+      - {click: q, swipe_up: "~", swipe_down: "₁"}
+      - {click: w, swipe_up: "?", swipe_down: "₂"}
+      - {click: e, swipe_up: "+", swipe_down: "₃"}
+      - {click: r, swipe_up: "-", swipe_down: "₄"}
+      - {click: t, swipe_up: "<", swipe_down: "₅"}
+      - {click: y, swipe_up: ">", swipe_down: "₆"}
+      - {click: u, swipe_up: "ü", swipe_down: "₇"}
+      - {click: i, swipe_up: "|", swipe_down: "₈"}
+      - {click: o, swipe_up: ";", swipe_down: "₉"}
+      - {click: p, swipe_up: "'", swipe_down: "₀"}
+      - {width: 5}
+      - {click: a, swipe_up: "`", swipe_down: "⁺"}
+      - {click: s, swipe_up: "/", swipe_down: "⁻"}
+      - {click: d, swipe_up: '\', swipe_down: "⁼"}
+      - {click: f, swipe_up: "[", swipe_down: "⁽"}
+      - {click: g, swipe_up: "]", swipe_down: "⁾"}
+      - {click: h, swipe_up: "{", swipe_down: "ⁿ"}
+      - {click: j, swipe_up: "}", swipe_down: "ˣ"}
+      - {click: k, swipe_up: ":", swipe_down: "±"}
+      - {click: l, swipe_up: '"', swipe_down: "∓"}
+      - {width: 5}
+      - {click: Shift, width: 12}
+      - {width: 3}
+      - {click: z, swipe_up: "≈", swipe_down: "₊"}
+      - {click: x, swipe_up: "_", swipe_down: "₋"}
+      - {click: c, swipe_up: "=", swipe_down: "₌"}
+      - {click: v, swipe_up: "≤", swipe_down: "₍"}
+      - {click: b, swipe_up: "≥", swipe_down: "₎"}
+      - {click: n, swipe_up: "‰", swipe_down: "ₙ"}
+      - {click: m, swipe_up: dotCOM, swipe_down: "ₓ"}
+      - {width: 3}
+      - {click: BackSpace, width: 12}
+      - {click: moreSymbols, width: 14}
+      - {click: .number, width: 12}
+      - {click: ., swipe_up: ",", width: 10}
+      - {click: space, width: 34}
+      - {click: DefaultKeyboard, width: 10}
+      - {click: Return, width: 20}
+    name: "ASCII 键盘"
+    width: 10
+
+preset_color_schemes:
+  default:
+    back_color: 0xd6d7dc
+
+
+preset_keys:
+  # special keys / switches
+  Shift: {label: Shift, send: Shift_L, sound: "key_press_modifier.caf"}
+  Return: {label: Enter, send: Return, sound: "key_press_modifier.caf"}
+  BackSpace: {send: BackSpace, sound: "key_press_delete.caf"}
+  space: {label: "空格", send: space, sound: "key_press_modifier.caf"}
+  english: {label: "abc", send: Eisu_toggle, select: english, sound: "key_press_modifier.caf"}
+  .symbols: {label: "更多", send: Eisu_toggle, select: .symbols, sound: "key_press_modifier.caf"}
+  moreSymbols: {label: "ϟ12", text: "{.symbols}{DefaultKeyboard}", sound: "key_press_modifier.caf"}
+  .number: {label: 123, send: Eisu_toggle, select: .number, sound: "key_press_modifier.caf"}
+  DefaultKeyboard: {label: 中, send: Eisu_toggle, select: default, sound: "key_press_modifier.caf"}
+  # half width symbols
+  exclamationHalf: {label: "!", commit: "!"}
+  atHalf: {label: "@", commit: "@"}
+  sharpHalf: {label: "#", commit: "#"}
+  dolarHalf: {label: "$", commit: "$"}
+  percentHalf: {label: "%", commit: "%"}
+  hatHalf: {label: "^", commit: "^"}
+  andHalf: {label: "&", commit: "&"}
+  asteriskHalf: {label: "*", commit: "*"}
+  openParenthesisHalf: {label: "(", commit: "("}
+  closeParenthesisHalf: {label: ")", commit: ")"}
+  slashHalf: {label: "/", commit: "/"}
+  backslashHalf: {label: "\\", commit: "\\"}
+  openBracketHalf: {label: "[", commit: "["}
+  closeBracketHalf: {label: "]", commit: "]"}
+  openBraceHalf: {label: "{", commit: "{"}
+  closeBraceHalf: {label: "}", commit: "}"}
+  underscoreHalf: {label: "_", commit: "_"}
+  equalHalf: {label: "=", commit: "="}
+  questionHalf: {label: "?", commit: "?"}
+  commaHalf: {label: ",", commit: ","}
+  periodHalf: {label: ".", commit: "."}
+  # user defined keys
+  plusWithPlusAndMinusLable: {label: "+-", text: "+"}
+  dotCOM: {label: ".com", commit: ".com"}

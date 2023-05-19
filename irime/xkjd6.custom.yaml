@@ -1,0 +1,31 @@
+patch:
+  schema/name: ⭐星空键道
+  schema/dependencies:
+    - clover
+  key_binder/bindings:
+    - { when: has_menu, accept: "&", toggle: emoji_cn }
+    - { when: has_menu, accept: "^", toggle: jffh }
+  'engine/processors/@after 3': lua_processor@smart_selector
+  engine/filters/+:
+    - lua_filter@split_filter
+  engine/translators/+:
+    - lua_translator@number_translator
+    - reverse_lookup_translator
+  speller/auto_select: false
+  recognizer/patterns/+:
+    jsq: "^=[^;']+$"
+    reverse_lookup: "^u[a-z]*'?$"
+  reverse_lookup:
+    dictionary: clover
+    prefix: "u"
+    suffix: "'"
+    tips: "〔全拼〕"
+    preedit_format:
+      - xform/^u(.+)/$1/
+      - xform/([nl])v/$1ü/
+      - xform/([nl])ue/$1üe/
+      - xform/([jqxy])v/$1u/
+    comment_format:
+      - xform/^/〔/
+      - xform/$/〕/
+      - xform/ /, /
