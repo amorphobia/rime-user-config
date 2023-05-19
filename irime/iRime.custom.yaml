@@ -1,0 +1,20 @@
+patch:
+  app_setting:
+    monitor_paste: true
+    candidate_tool_bar_is_show_schema_switcher: true
+    play_key_voice_volume: 0.25
+    candidate_tool_bar_is_show_pasteboard: true
+    backspace_swipe_left_to_clear: true
+    theme_name: 36key
+    mark_text: true
+    is_show_candidate_comment: true
+    is_open_word_association: true
+    play_key_voice: true
+    impact_feedback_style: UIImpactFeedbackStyleLight
+    candidate_tool_bar_is_show_emoji: false
+    impact_feedback: true
+    is_show_pop: true
+    space_swipe_to_move: true
+    space_swip_up_to_select_2nd: true
+    display_upper_text: true
+    enter_swip_up_to_new_line: true

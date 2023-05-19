@@ -19,8 +19,12 @@ Opencc 方案
 
 在[最新发布页面](https://github.com/amorphobia/rime-user-config/releases/latest)下载对应平台的 `zip` 文件
 
-- [小狼毫](https://github.com/rime/weasel)：解压后，将 `weasel` 文件夹内所有文件复制到 `%APPDATA%\Rime\` 中，重新部署
+- [小狼毫](https://github.com/rime/weasel)：解压后，将文件夹内所有文件复制到 `%APPDATA%\Rime\` 中，重新部署
 - [仓输入法](https://github.com/imfuxiao/Hamster)：直接用仓 App 打开 `zip` 文件即可
+- [iRime](https://apps.apple.com/app/id1142623977)：用 iRime 主程序打开 `zip` 文件后重新部署
+
+注：据美区用户反馈，iRime 主程序接入了[友盟+](https://www.umeng.com)进行用户追踪[^1]。
+![App Store Snapshot](pics/irime-appstore-snapshot.png)
 
 ### 自动构建版本
 
@@ -30,3 +34,5 @@ Opencc 方案
 
 * [ ] 生成[鼠须管](https://github.com/rime/squirrel)配置包
 * [ ] 电脑端一键安装脚本
+
+[^1]: [商店评价页面](https://apps.apple.com/us/app/id1142623977?see-all=reviews)
