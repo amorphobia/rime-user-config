@@ -13,6 +13,7 @@ patch:
   'engine/processors/@after 3': lua_processor@smart_selector
   engine/filters/+:
     - lua_filter@split_filter
+    - simplifier@emoji_plus
   engine/translators/+:
     - lua_translator@number_translator
     - reverse_lookup_translator
@@ -34,3 +35,7 @@ patch:
       - xform/^/〔/
       - xform/$/〕/
       - xform/ /, /
+  emoji_plus:
+    opencc_config: emoji_plus.json
+    option_name: emoji_cn
+    tips: all

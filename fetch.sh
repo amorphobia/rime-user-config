@@ -82,3 +82,10 @@ then
     cp emoji/opencc/emoji.json ${SCHEMAS}/opencc/
     echo "fetch emoji done."
 fi
+
+# ➕️绘文字加
+# https://github.com/amorphobia/rime-emoji-plus
+rm -rf emoji_plus && \
+git clone --depth 1 https://github.com/amorphobia/rime-emoji-plus emoji_plus && \
+cp emoji_plus/opencc/* ${SCHEMAS}/opencc/ && \
+echo "fetch emoji-plus done."

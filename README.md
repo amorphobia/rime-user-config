@@ -12,6 +12,7 @@
 
 Opencc 方案
 - [😂绘文字](https://github.com/rime/rime-emoji)
+- [➕️绘文字加](https://github.com/amorphobia/rime-emoji-plus)
 
 ## 使用
 
