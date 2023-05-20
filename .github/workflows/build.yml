@@ -8,7 +8,7 @@ on:
 
 jobs:
   prepare-schemas:
-    name: Prepare Schemas
+    name: Prepare Schemas 🖨️
     runs-on: ubuntu-latest
     steps:
       - name: Checkout 🛎️
@@ -44,7 +44,7 @@ jobs:
           - { target: weasel, name: Weasel, emoji: 🦡 }
           - { target: hamster, name: Hamster, emoji: 🐹 }
           - { target: irime, name: iRime, emoji: ℹ️ }
-    name: Build Package for ${{ matrix.target }}
+    name: Build Package for ${{ matrix.name }} ${{ matrix.emoji }}
     runs-on: ubuntu-latest
     needs: prepare-schemas
     steps:
@@ -94,7 +94,14 @@ jobs:
           path: ${{ matrix.target }}.zip
 
   create-release:
-    name: Create Release
+    strategy:
+      matrix:
+        target: [ weasel, hamster, irime ]
+        include:
+          - { target: weasel, name: Weasel, emoji: 🦡 }
+          - { target: hamster, name: Hamster, emoji: 🐹 }
+          - { target: irime, name: iRime, emoji: ℹ️ }
+    name: Create Release for ${{ matrix.name }} ${{ matrix.emoji }}
     if: startsWith(github.ref, 'refs/tags/v')
     runs-on: ubuntu-latest
     needs: build-package
@@ -104,17 +111,13 @@ jobs:
 
       - name: Download All Artifacts 📥
         uses: actions/download-artifact@v3
+        with:
+          name: ${{ matrix.target }}.zip
 
-      - name: Rename Release Zip Archives
-        run: |
-          mv weasel.zip/weasel.zip weasel-${{ github.ref_name }}.zip
-          mv hamster.zip/hamster.zip hamster-${{ github.ref_name }}.zip
-          mv irime.zip/irime.zip irime-${{ github.ref_name }}.zip
+      - name: Rename Release Zip Archives 🗃️
+        run: mv ${{ matrix.target }}.zip ${{ matrix.target }}-${{ github.ref_name }}.zip
 
       - name: Create Release and Upload Assets 🚀
         uses: softprops/action-gh-release@v1
         with:
-          files: |
-            weasel-${{ github.ref_name }}.zip
-            hamster-${{ github.ref_name }}.zip
-            irime-${{ github.ref_name }}.zip
+          files: ${{ matrix.target }}-${{ github.ref_name }}.zip
