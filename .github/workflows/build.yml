@@ -109,6 +109,7 @@ jobs:
         run: |
           mv weasel.zip/weasel.zip weasel-${{ github.ref_name }}.zip
           mv hamster.zip/hamster.zip hamster-${{ github.ref_name }}.zip
+          mv irime.zip/irime.zip irime-${{ github.ref_name }}.zip
 
       - name: Create Release and Upload Assets 🚀
         uses: softprops/action-gh-release@v1
@@ -116,3 +117,4 @@ jobs:
           files: |
             weasel-${{ github.ref_name }}.zip
             hamster-${{ github.ref_name }}.zip
+            irime-${{ github.ref_name }}.zip
