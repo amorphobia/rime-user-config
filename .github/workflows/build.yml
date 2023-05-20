@@ -109,7 +109,7 @@ jobs:
       - name: Checkout 🛎️
         uses: actions/checkout@v3
 
-      - name: Download All Artifacts 📥
+      - name: Download Artifacts for ${{ matrix.name }} ${{ matrix.emoji }}
         uses: actions/download-artifact@v3
         with:
           name: ${{ matrix.target }}.zip
