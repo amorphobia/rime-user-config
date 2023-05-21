@@ -34,3 +34,4 @@ patch:
     opencc_config: emoji_plus.json
     option_name: emoji_cn
     tips: all
+  hint_text: '×'
