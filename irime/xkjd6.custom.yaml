@@ -5,7 +5,7 @@ patch:
   key_binder/bindings:
     - { when: has_menu, accept: "&", toggle: emoji_cn }
     - { when: has_menu, accept: "^", toggle: jffh }
-  'engine/processors/@after 3': lua_processor@smart_selector
+  'engine/processors/@after 2': lua_processor@smart_selector
   engine/filters/+:
     - lua_filter@split_filter
     - simplifier@emoji_plus
