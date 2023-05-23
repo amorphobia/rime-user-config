@@ -79,6 +79,8 @@ then
     git clone --depth 1 https://github.com/rime/rime-emoji emoji
     opencc -c t2s.json -i emoji/opencc/emoji_category.txt | awk '!seen[$1]++' > ${SCHEMAS}/opencc/emoji_category.txt
     opencc -c t2s.json -i emoji/opencc/emoji_word.txt | awk '!seen[$1]++' > ${SCHEMAS}/opencc/emoji_word.txt
+    # https://github.com/rime/rime-emoji/issues/48
+    sed -i 's/鼔/鼓/g' ${SCHEMAS}/opencc/emoji_word.txt
     cp emoji/opencc/emoji.json ${SCHEMAS}/opencc/
     echo "fetch emoji done."
 fi
