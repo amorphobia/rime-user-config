@@ -77,7 +77,7 @@ jobs:
         run: |
           mkdir -p ${{ matrix.target }}/lua ${{ matrix.target }}/opencc && \
           cp schemas/japanese.* schemas/shupin* schemas/rime.lua ${{ matrix.target }}/ && \
-          cp ${{ matrix.target }}/lua/* lua/* ${{ matrix.target }}/lua/ && \
+          cp schemas/lua/* lua/* ${{ matrix.target }}/lua/ && \
           cp schemas/opencc/emoji* ${{ matrix.target }}/opencc/ && \
           cat rime.lua >> ${{ matrix.target }}/rime.lua && \
           echo "prepare for ${{ matrix.target }} done."
