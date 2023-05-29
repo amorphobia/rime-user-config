@@ -75,6 +75,7 @@ echo "fetch shupin-congqin done."
 # https://github.com/rime/rime-emoji
 if command -v opencc &> /dev/null
 then
+    echo "$(opencc --version)"
     rm -rf emoji
     git clone --depth 1 https://github.com/rime/rime-emoji emoji
     opencc -c t2s.json -i emoji/opencc/emoji_category.txt | awk '!seen[$1]++' > ${SCHEMAS}/opencc/emoji_category.txt

@@ -64,19 +64,29 @@ jobs:
         with:
           script: core.setFailed('Cached schemas not found!')
 
-      - name: Prepare User Settings for ${{ matrix.name }} ${{ matrix.emoji }}
-        if: ${{ matrix.target == 'weasel' || matrix.target == 'irime' }}
+      - name: Prepare User Settings for Weasel 🦡
+        if: ${{ matrix.target == 'weasel'}}
         run: |
           cp -r schemas/* ${{ matrix.target }}/ && \
           cp lua/* ${{ matrix.target }}/lua/ && \
           cat rime.lua >> ${{ matrix.target }}/rime.lua && \
           echo "prepare for ${{ matrix.target }} done."
 
-      - name: Prepare User Settings for ${{ matrix.name }} ${{ matrix.emoji }}
+      - name: Prepare User Settings for Hamster 🐹
         if: ${{ matrix.target == 'hamster' }}
         run: |
           mkdir -p ${{ matrix.target }}/lua ${{ matrix.target }}/opencc && \
           cp schemas/japanese.* schemas/shupin* schemas/rime.lua ${{ matrix.target }}/ && \
+          cp lua/* ${{ matrix.target }}/lua/ && \
+          cp schemas/opencc/emoji* ${{ matrix.target }}/opencc/ && \
+          cat rime.lua >> ${{ matrix.target }}/rime.lua && \
+          echo "prepare for ${{ matrix.target }} done."
+
+      - name: Prepare User Settings for iRime ℹ️
+        if: ${{ matrix.target == 'irime' }}
+        run: |
+          mkdir -p ${{ matrix.target }}/lua ${{ matrix.target }}/opencc && \
+          cp schemas/japanese.* schemas/shupin* schemas/xkjd6.* schemas/rime.lua ${{ matrix.target }}/ && \
           cp lua/* ${{ matrix.target }}/lua/ && \
           cp schemas/opencc/emoji* ${{ matrix.target }}/opencc/ && \
           cat rime.lua >> ${{ matrix.target }}/rime.lua && \
