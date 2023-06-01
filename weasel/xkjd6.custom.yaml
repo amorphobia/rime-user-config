@@ -21,7 +21,7 @@ patch:
   recognizer/patterns/+:
     jsq: "^=[^;']+$"
     reverse_lookup: "^u[a-z]*'?$"
-    unicode: "^u`[0-9a-zA-Z]*$"
+    unicode: "^u`[0-9a-fA-F]*$"
   reverse_lookup:
     dictionary: clover
     prefix: "u"
