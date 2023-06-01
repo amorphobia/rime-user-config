@@ -10,12 +10,13 @@ patch:
     - lua_filter@split_filter
     - simplifier@emoji_plus
   engine/translators/+:
-    - lua_translator@number_translator
+    - lua_translator@unicode_translator
     - reverse_lookup_translator
   speller/auto_select: false
   recognizer/patterns/+:
     jsq: "^=[^;']+$"
     reverse_lookup: "^u[a-z]*'?$"
+    unicode: "^u`[0-9a-zA-Z]*$"
   reverse_lookup:
     dictionary: clover
     prefix: "u"
