@@ -1,6 +1,12 @@
 patch:
-  style/color_scheme: azure
+  style/color_scheme: google
   style/inline_preedit: true
+  style/label_font_point: 10
+  style/comment_font_point: 10
+  style/font_face: Segoe UI Emoji:30:39, Segoe UI Emoji:1f51f:1f51f, Noto Color Emoji, Source Han Sans SC, Microsoft YaHei
+  style/layout/enhanced_position: true
+  style/layout/max_width: 512
+  style/layout/max_height: 512
   app_options/terminus.exe/ascii_mode: true
   app_options/mintty.exe/ascii_mode: true
   app_options/conemu64.exe/ascii_mode: true
