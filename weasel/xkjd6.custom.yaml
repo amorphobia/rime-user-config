@@ -52,6 +52,7 @@ patch:
       - xform/^/〔/
       - xform/$/〕/
       - xform/ /, /
+  EN2en: null
   emoji_plus:
     opencc_config: emoji_plus.json
     option_name: emoji_cn
