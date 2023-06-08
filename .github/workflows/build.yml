@@ -84,9 +84,10 @@ jobs:
         if: ${{ matrix.target == 'irime' }}
         run: |
           mkdir -p ${{ matrix.target }}/lua ${{ matrix.target }}/opencc && \
-          cp schemas/japanese.* schemas/shupin* schemas/xkjd6.* schemas/rime.lua ${{ matrix.target }}/ && \
+          cp schemas/japanese.* schemas/shupin* schemas/xkjd6.* ${{ matrix.target }}/ && \
           cp schemas/lua/* lua/* ${{ matrix.target }}/lua/ && \
           cp schemas/opencc/emoji* ${{ matrix.target }}/opencc/ && \
+          cat schemas/rime.lua >> ${{ matrix.target }}/rime.lua && \
           echo "prepare for ${{ matrix.target }} done."
 
       - name: Make Zip Archive 🗄️
