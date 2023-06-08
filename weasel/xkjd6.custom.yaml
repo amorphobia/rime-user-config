@@ -26,12 +26,12 @@ patch:
     - { when: composing, accept: KP_Multiply, send: asterisk }
     - { when: composing, accept: KP_Divide, send: slash }
     - { when: composing, accept: KP_Decimal, send: period }
-  'engine/processors/@after 2': lua_processor@smart_selector
+  'engine/processors/@after 2': lua_processor@*smart_selector
   engine/filters/+:
-    - lua_filter@split_filter
+    - lua_filter@*split_filter
     - simplifier@emoji_plus
   engine/translators/+:
-    - lua_translator@unicode_translator
+    - lua_translator@*unicode_translator
     - reverse_lookup_translator
   speller/auto_select: false
   recognizer/patterns/+:

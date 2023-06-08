@@ -69,7 +69,6 @@ jobs:
         run: |
           cp -r schemas/* ${{ matrix.target }}/ && \
           cp lua/* ${{ matrix.target }}/lua/ && \
-          cat rime.lua >> ${{ matrix.target }}/rime.lua && \
           echo "prepare for ${{ matrix.target }} done."
 
       - name: Prepare User Settings for Hamster 🐹
@@ -79,7 +78,6 @@ jobs:
           cp schemas/japanese.* schemas/shupin* schemas/rime.lua ${{ matrix.target }}/ && \
           cp lua/* ${{ matrix.target }}/lua/ && \
           cp schemas/opencc/emoji* ${{ matrix.target }}/opencc/ && \
-          cat rime.lua >> ${{ matrix.target }}/rime.lua && \
           echo "prepare for ${{ matrix.target }} done."
 
       - name: Prepare User Settings for iRime ℹ️
@@ -89,7 +87,6 @@ jobs:
           cp schemas/japanese.* schemas/shupin* schemas/xkjd6.* schemas/rime.lua ${{ matrix.target }}/ && \
           cp schemas/lua/* lua/* ${{ matrix.target }}/lua/ && \
           cp schemas/opencc/emoji* ${{ matrix.target }}/opencc/ && \
-          cat rime.lua >> ${{ matrix.target }}/rime.lua && \
           echo "prepare for ${{ matrix.target }} done."
 
       - name: Make Zip Archive 🗄️
