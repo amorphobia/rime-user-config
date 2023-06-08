@@ -3,5 +3,5 @@ patch:
   switches/@1/states: [ 🈚, 🈶 ]
   key_binder/import_preset: null
   key_binder/bindings:
-    - { when: has_menu, accept: "&", toggle: emoji_suggestion }
     - { when: has_menu, accept: "^", toggle: zh_simp_s2t }
+    - { when: has_menu, accept: "&", toggle: emoji_suggestion }

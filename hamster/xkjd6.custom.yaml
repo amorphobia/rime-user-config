@@ -8,8 +8,8 @@ patch:
     - { name: jffh, reset: 0, states: [ 汉, 漢 ] }
     - { name: emoji_cn, states: [ 🈚, 🈶 ] }
   key_binder/bindings:
-    - { when: has_menu, accept: "&", toggle: emoji_cn }
     - { when: has_menu, accept: "^", toggle: jffh }
+    - { when: has_menu, accept: "&", toggle: emoji_cn }
   'engine/processors/@after 2': lua_processor@*smart_selector
   engine/filters/+:
     - lua_filter@*split_filter

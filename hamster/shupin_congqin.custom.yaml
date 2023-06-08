@@ -5,6 +5,9 @@ patch:
     - punct_translator
     - script_translator
   key_binder/import_preset: null
+  key_binder/bindings:
+    - { when: has_menu, accept: minus, send: minus }  # tone 1
+    - { when: has_menu, accept: "^", toggle: simplification }
   # 对于输入编码的处理
   'speller/algebra/@after 2': xform/Xkai3/kai3/ # 「蟹」读 kǎi
   'speller/algebra/@after 13': xform/^lv2/lu2/ # lü̂ 派入 lû

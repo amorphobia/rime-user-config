@@ -4,13 +4,13 @@ patch:
     - punct_translator
     - script_translator
     - reverse_lookup_translator
-  key_binder/import_preset: null
+  key_binder/import_preset: default
   key_binder/bindings/+:
-    - { when: has_menu, accept: semicolon, send: semicolon } # 恢复分号输入阴平
-    - { when: always, accept: Shift+space, select: .next }
-    - { when: always, accept: Control+Alt+comma, toggle: full_shape }
-    - { when: always, accept: Control+Alt+period, toggle: ascii_punct }
+    - { when: has_menu, accept: equal, send: Page_Down }
     - { when: has_menu, accept: Control+slash, toggle: simplification }
+  key_binder/bindings/+:
+    __patch:
+      - key_bindings:/paging_with_brackets
   # 对于输入编码的处理
   'speller/algebra/@after 2': xform/Xkai3/kai3/ # 「蟹」读 kǎi
   'speller/algebra/@after 13': xform/^lv2/lu2/ # lü̂ 派入 lû

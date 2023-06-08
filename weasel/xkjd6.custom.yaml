@@ -8,12 +8,8 @@ patch:
     - { name: full_shape, states: [ 半, 全 ] }
     - { name: jffh, reset: 0, states: [ 汉, 漢 ] }
     - { name: emoji_cn, states: [ 🈚, 🈶 ] }
+  key_binder/import_preset: default
   key_binder/bindings:
-    - { when: paging, accept: minus, send: Page_Up }
-    - { when: has_menu, accept: equal, send: Page_Down }
-    - { when: always, accept: Shift+space, select: .next }
-    - { when: always, accept: Control+Alt+comma, toggle: full_shape }
-    - { when: always, accept: Control+Alt+period, toggle: ascii_punct }
     - { when: has_menu, accept: Control+slash, toggle: jffh }
     - { when: has_menu, accept: Control+backslash, toggle: emoji_cn }
     - { when: composing, accept: KP_0, send: 0 }
@@ -31,6 +27,9 @@ patch:
     - { when: composing, accept: KP_Multiply, send: asterisk }
     - { when: composing, accept: KP_Divide, send: slash }
     - { when: composing, accept: KP_Decimal, send: period }
+  key_binder/bindings/+:
+    __patch:
+      - key_bindings:/paging_with_minus_equal
   'engine/processors/@after 2': lua_processor@*smart_selector
   engine/filters/+:
     - lua_filter@*split_filter
