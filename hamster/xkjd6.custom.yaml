@@ -2,6 +2,11 @@ patch:
   schema/name: ⭐星空键道
   schema/dependencies:
     - clover
+  switches:
+    - { name: ascii_mode, reset: 0, states: [ 中, En ] }
+    - { name: full_shape, states: [ 半, 全 ] }
+    - { name: jffh, reset: 0, states: [ 汉, 漢 ] }
+    - { name: emoji_cn, states: [ 🈚, 🈶 ] }
   key_binder/bindings:
     - { when: has_menu, accept: "&", toggle: emoji_cn }
     - { when: has_menu, accept: "^", toggle: jffh }
