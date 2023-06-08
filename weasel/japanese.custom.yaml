@@ -2,11 +2,13 @@ patch:
   schema/name: 🇯🇵日本語
   schema/dependencies:
     - stroke
-  key_binder:
-    import_preset: default
-    bindings/+:
-      - { when: has_menu, accept: minus, send: minus } # 长音
-      - { when: paging, accept: minus, send: Page_Up }
+  key_binder/bindings:
+    - { when: has_menu, accept: minus, send: minus } # 长音
+    - { when: paging, accept: minus, send: Page_Up }
+    - { when: always, accept: Shift+space, select: .next }
+    - { when: always, accept: Control+Alt+comma, toggle: full_shape }
+    - { when: always, accept: Control+Alt+period, toggle: ascii_punct }
+    - { when: has_menu, accept: Control+slash, toggle: simplification }
   engine/segmentors:
     - ascii_segmentor
     - matcher

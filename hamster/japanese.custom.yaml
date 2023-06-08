@@ -1,6 +1,8 @@
 patch:
   schema/name: 🇯🇵日本語
   schema/dependencies: null
+  key_binder/bindings:
+    - { when: has_menu, accept: Control+slash, toggle: simplification }
   engine/segmentors:
     - ascii_segmentor
     - matcher
