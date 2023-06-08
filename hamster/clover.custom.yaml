@@ -1,3 +1,6 @@
 patch:
   schema/dependencies: null
   switches/@1/states: [ 🈚, 🈶 ]
+  key_binder/bindings:
+    - { when: has_menu, accept: "&", toggle: emoji_suggestion }
+    - { when: has_menu, accept: "^", toggle: zh_simp_s2t }
