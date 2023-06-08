@@ -4,6 +4,7 @@ patch:
   engine/translators:
     - punct_translator
     - script_translator
+  key_binder/import_preset: null
   # 对于输入编码的处理
   'speller/algebra/@after 2': xform/Xkai3/kai3/ # 「蟹」读 kǎi
   'speller/algebra/@after 13': xform/^lv2/lu2/ # lü̂ 派入 lû

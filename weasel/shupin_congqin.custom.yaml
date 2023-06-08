@@ -4,6 +4,7 @@ patch:
     - punct_translator
     - script_translator
     - reverse_lookup_translator
+  key_binder/import_preset: null
   key_binder/bindings/+:
     - { when: has_menu, accept: semicolon, send: semicolon } # 恢复分号输入阴平
     - { when: always, accept: Shift+space, select: .next }

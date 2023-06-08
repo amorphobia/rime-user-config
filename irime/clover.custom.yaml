@@ -1,5 +1,6 @@
 patch:
   schema/dependencies: null
+  key_binder/import_preset: null
   key_binder/bindings:
     - { when: has_menu, accept: "&", toggle: emoji_suggestion }
     - { when: has_menu, accept: "^", toggle: zh_simp_s2t }
