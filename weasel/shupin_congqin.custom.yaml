@@ -5,21 +5,26 @@ patch:
     - script_translator
     - reverse_lookup_translator
   key_binder/import_preset: default
-  key_binder/bindings/+:
-    - { when: has_menu, accept: equal, send: Page_Down }
+  key_binder/bindings:
     - { when: has_menu, accept: Control+slash, toggle: simplification }
+    - { when: has_menu, accept: minus, send: minus } # 阴平
+    - { when: paging, accept: minus, send: Page_Up }
+    - { when: has_menu, accept: equal, send: Page_Down }
   key_binder/bindings/+:
     __patch:
       - key_bindings:/paging_with_brackets
   # 对于输入编码的处理
+  speller/algebra/@1: xform/Ddi/li/ # 「的」读 li
   'speller/algebra/@after 2': xform/Xkai3/kai3/ # 「蟹」读 kǎi
   'speller/algebra/@after 13': xform/^lv2/lu2/ # lü̂ 派入 lû
   'speller/algebra/@after 14': xform/^lv4/lui4/ # lǘ 派入 luí
   # 输入时候选框里的提示拼音
+  translator/comment_format/@0: xform/Ddi/li
   'translator/comment_format/@after 1': xform/Xkai3/kai3/
   'translator/comment_format/@after 12': xform/^lv2/lu2/
   'translator/comment_format/@after 13': xform/^lv4/lui4/
   # 反查时的提示拼音
+  reverse_lookup/comment_format/@0: xform/Ddi/li
   'reverse_lookup/comment_format/@after 1': xform/Xkai3/kai3/
   'reverse_lookup/comment_format/@after 12': xform/(^|\ )lv2/$1lu2/
   'reverse_lookup/comment_format/@after 13': xform/(^|\ )lv4/$1lui4/

@@ -6,13 +6,14 @@ patch:
     - script_translator
   key_binder/import_preset: null
   key_binder/bindings:
-    - { when: has_menu, accept: minus, send: minus }  # tone 1
     - { when: has_menu, accept: "^", toggle: simplification }
   # 对于输入编码的处理
+  speller/algebra/@1: xform/Ddi/li/ # 「的」读 li
   'speller/algebra/@after 2': xform/Xkai3/kai3/ # 「蟹」读 kǎi
   'speller/algebra/@after 13': xform/^lv2/lu2/ # lü̂ 派入 lû
   'speller/algebra/@after 14': xform/^lv4/lui4/ # lǘ 派入 luí
   # 输入时候选框里的提示拼音
+  translator/comment_format/@0: xform/Ddi/li
   'translator/comment_format/@after 1': xform/Xkai3/kai3/
   'translator/comment_format/@after 12': xform/^lv2/lu2/
   'translator/comment_format/@after 13': xform/^lv4/lui4/
