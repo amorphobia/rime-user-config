@@ -1,13 +1,9 @@
 patch:
-  style/color_scheme: google
+  style/color_scheme: pornhub
   style/inline_preedit: true
-  style/label_font_point: 10
-  style/comment_font_point: 10
-  style/font_face: Segoe UI Emoji:30:39, Segoe UI Emoji:1f51f:1f51f, Noto Color Emoji, Source Han Sans SC, Microsoft YaHei
-  style/comment_font_face: Segoe UI Emoji:30:39, Segoe UI Emoji:1f51f:1f51f, Noto Color Emoji, Source Han Sans SC, Microsoft YaHei
-  style/layout/enhanced_position: true
-  style/layout/max_width: 512
-  style/layout/max_height: 512
+  # turn on following two options on Weasel 0.15.0+
+  # style/preedit_type: preview_all
+  # style/layout/margin_x: -1
   app_options/terminus.exe/ascii_mode: true
   app_options/mintty.exe/ascii_mode: true
   app_options/conemu64.exe/ascii_mode: true
@@ -16,3 +12,22 @@ patch:
   app_options/remotedesktopmanagerfree.exe/ascii_mode: true
   app_options/code.exe/ascii_mode: true
   app_options/vscodium.exe/ascii_mode: true
+  preset_color_schemes/pornhub:
+    name: 涩情枢纽／PornHub
+    author: amorphobia
+    text_color: 0xf2f2f2
+    back_color: 0x262626
+    border_color: 0x262626
+    label_color: 0xf2f2f2
+    shadow_color: 0x012440
+    candidate_text_color: 0xf2f2f2
+    comment_text_color: 0x0587f2
+    hilited_text_color: 0x262626
+    hilited_back_color: 0x0587f2
+    hilited_label_color: 0x262626
+    hilited_candidate_text_color: 0x262626
+    hilited_candidate_back_color: 0x0587f2
+    hilited_comment_text_color: 0x034e8c
+    hilited_mark_color: 0x034e8c
+    prevpage_color: 0xf2f2f2
+    nextpage_color: 0xf2f2f2
