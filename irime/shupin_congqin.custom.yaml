@@ -1,9 +1,9 @@
 patch:
   schema/name: 🍲蜀拼-重庆
-  schema/dependencies: null
   engine/translators:
     - punct_translator
     - script_translator
+    - reverse_lookup_translator
   key_binder/import_preset: null
   key_binder/bindings:
     - { when: has_menu, accept: "^", toggle: simplification }
