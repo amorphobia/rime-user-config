@@ -1,4 +1,5 @@
 patch:
+  schema/name: 🍀四叶草
   schema/dependencies: null
   switches/@1/states: [ 🈚, 🈶 ]
   key_binder/import_preset: default
