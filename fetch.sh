@@ -9,7 +9,7 @@ rm -rf ${SCHEMAS}
 mkdir -p ${SCHEMAS}/lua
 mkdir -p ${SCHEMAS}/opencc
 
-# ⭐星空键道
+# 🌟️星空键道
 # https://github.com/xkinput/Rime_JD
 rm -rf jiandao && \
 git clone --depth 1 https://github.com/xkinput/Rime_JD jiandao --branch plum && (
@@ -71,7 +71,7 @@ cp shupin/*.dict.yaml ${SCHEMAS}/ && \
 cp shupin/shupin_congqin.schema.yaml ${SCHEMAS}/ && \
 echo "fetch shupin-congqin done."
 
-# 😂绘文字
+# 😄️绘文字
 # https://github.com/rime/rime-emoji
 if command -v opencc &> /dev/null
 then
