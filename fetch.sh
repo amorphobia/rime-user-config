@@ -10,21 +10,15 @@ mkdir -p ${SCHEMAS}/lua
 mkdir -p ${SCHEMAS}/opencc
 
 # 🌟️星空键道
-# https://github.com/xkinput/Rime_JD
+# https://github.com/amorphobia/rime-jiandao
 rm -rf jiandao && \
-git clone --depth 1 https://github.com/xkinput/Rime_JD jiandao --branch plum && (
+git clone --depth 1 https://github.com/amorphobia/rime-jiandao jiandao && (
     cd jiandao && \
-    for dict in danzi cizu fuhao buchong lianjie chaojizici wxw
-    do
-        sed '0,/^\.\.\.$/d' xkjd6.${dict}.dict.yaml >> xkjd6.dict.yaml && \
-        rm xkjd6.${dict}.dict.yaml
-    done && \
-    rm xkjd6.yingwen.dict.yaml xkjd6.extended.dict.yaml
+    bash scripts/make_dicts.sh --append dicts/cizu_append.txt.in --delete dicts/cizu_delete.txt.in --modify dicts/cizu_modify.txt.in --deweight
+    rm schema/recipe.yaml
 ) && \
-cp jiandao/xkjd6.*.yaml ${SCHEMAS}/ && \
-cp jiandao/lua/* ${SCHEMAS}/lua/ && \
-cp jiandao/rime.lua ${SCHEMAS}/ && \
-echo "fetch jiandao done."
+cp -r jiandao/schema/* ${SCHEMAS}/ && \
+echo "fetch Jiandao done."
 
 # 🍀四叶草
 # https://github.com/fkxxyz/rime-cloverpinyin

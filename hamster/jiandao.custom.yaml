@@ -4,19 +4,15 @@ patch:
     - clover
   key_binder/bindings:
     - { when: has_menu, accept: "^", toggle: jffh }
-    - { when: has_menu, accept: "&", toggle: emoji_cn }
-  'engine/processors/@after 2': lua_processor@smart_selector
+    - { when: has_menu, accept: "&", toggle: emoji_suggestion }
   engine/filters/+:
-    - lua_filter@split_filter
+    - lua_filter@*split_filter
     - simplifier@emoji_plus
   engine/translators/+:
-    - lua_translator@unicode_translator
     - reverse_lookup_translator
   speller/auto_select: false
   recognizer/patterns/+:
-    jsq: "^=[^;']+$"
     reverse_lookup: "^u[a-z]*'?$"
-    unicode: "^u`[0-9a-fA-F]*$"
   reverse_lookup:
     dictionary: clover
     prefix: "u"
@@ -34,6 +30,6 @@ patch:
   EN2en: null
   emoji_plus:
     opencc_config: emoji_plus.json
-    option_name: emoji_cn
+    option_name: emoji_suggestion
     tips: all
-  hint_text: '✖︎'
+  hint_text: '✖️'

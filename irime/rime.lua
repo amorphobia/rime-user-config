@@ -1,3 +1,7 @@
-split_filter = require("split_filter")
 smart_selector = require("smart_selector")
+topup_selector = require("topup_selector")
+date_time_translator = require("date_time_translator")
+calculator = require("calculator")
 unicode_translator = require("unicode_translator")
+hint_filter = require("hint_filter")
+split_filter = require("split_filter")

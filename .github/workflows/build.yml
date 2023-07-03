@@ -65,7 +65,7 @@ jobs:
           script: core.setFailed('Cached schemas not found!')
 
       - name: Prepare User Settings for Weasel 🦡
-        if: ${{ matrix.target == 'weasel'}}
+        if: ${{ matrix.target == 'weasel' }}
         run: |
           cp -r schemas/* ${{ matrix.target }}/ && \
           cp lua/* ${{ matrix.target }}/lua/ && \
@@ -75,8 +75,8 @@ jobs:
         if: ${{ matrix.target == 'hamster' }}
         run: |
           mkdir -p ${{ matrix.target }}/lua ${{ matrix.target }}/opencc && \
-          cp schemas/japanese.* schemas/shupin* schemas/rime.lua ${{ matrix.target }}/ && \
-          cp lua/* ${{ matrix.target }}/lua/ && \
+          cp schemas/japanese.* schemas/shupin* schemas/jiandao.* ${{ matrix.target }}/ && \
+          cp schemas/lua/* lua/* ${{ matrix.target }}/lua/ && \
           cp schemas/opencc/emoji* ${{ matrix.target }}/opencc/ && \
           echo "prepare for ${{ matrix.target }} done."
 
@@ -84,7 +84,7 @@ jobs:
         if: ${{ matrix.target == 'irime' }}
         run: |
           mkdir -p ${{ matrix.target }}/lua ${{ matrix.target }}/opencc && \
-          cp schemas/japanese.* schemas/shupin* schemas/xkjd6.* ${{ matrix.target }}/ && \
+          cp schemas/japanese.* schemas/shupin* schemas/jiandao.* ${{ matrix.target }}/ && \
           cp schemas/lua/* lua/* ${{ matrix.target }}/lua/ && \
           cp schemas/opencc/emoji* ${{ matrix.target }}/opencc/ && \
           cat schemas/rime.lua >> ${{ matrix.target }}/rime.lua && \

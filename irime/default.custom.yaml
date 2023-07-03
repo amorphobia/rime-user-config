@@ -1,7 +1,7 @@
 patch:
   menu/page_size: 10
   schema_list:
-    - { schema: xkjd6 }
+    - { schema: jiandao }
     - { schema: clover }
     - { schema: japanese }
     - { schema: shupin_congqin }

@@ -10,7 +10,7 @@ patch:
     - { when: always, accept: Control+Alt+comma, toggle: full_shape }
     - { when: always, accept: Control+Alt+period, toggle: ascii_punct }
   schema_list:
-    - { schema: xkjd6 }
+    - { schema: jiandao }
     - { schema: clover }
     - { schema: japanese }
     - { schema: shupin_congqin }

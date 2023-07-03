@@ -2,28 +2,23 @@ patch:
   schema/name: 🌟️星空键道
   schema/dependencies:
     - clover
-  switches:
-    - { name: ascii_mode, reset: 0, states: [ 中, En ] }
-    - { name: full_shape, states: [ 半, 全 ] }
-    - { name: jffh, reset: 0, states: [ 汉, 漢 ] }
-    - { name: emoji_cn, states: [ 🈚, 🈶 ] }
-    - { name: sbb_hint, reset: 1 }
-    - { name: topup_hint, reset: 1 }
   key_binder/bindings:
     - { when: has_menu, accept: "^", toggle: jffh }
-    - { when: has_menu, accept: "&", toggle: emoji_cn }
-  'engine/processors/@after 2': lua_processor@*smart_selector
-  engine/filters/+:
-    - lua_filter@*split_filter
-    - simplifier@emoji_plus
+    - { when: has_menu, accept: "&", toggle: emoji_suggestion }
+  engine/processors/@3: lua_processor@smart_selector
+  engine/processors/@4: lua_processor@topup_selector
+  engine/translators/@4: lua_translator@date_time_translator
+  engine/translators/@5: lua_translator@calculator
+  engine/translators/@6: lua_translator@unicode_translator
+  engine/filters/@5: lua_filter@hint_filter
   engine/translators/+:
-    - lua_translator@*unicode_translator
     - reverse_lookup_translator
+  engine/filters/+:
+    - lua_filter@split_filter
+    - simplifier@emoji_plus
   speller/auto_select: false
   recognizer/patterns/+:
-    jsq: "^=[^;']+$"
     reverse_lookup: "^u[a-z]*'?$"
-    unicode: "^u`[0-9a-fA-F]*$"
   reverse_lookup:
     dictionary: clover
     prefix: "u"
@@ -38,9 +33,8 @@ patch:
       - xform/^/〔/
       - xform/$/〕/
       - xform/ /, /
-  EN2en: null
   emoji_plus:
     opencc_config: emoji_plus.json
-    option_name: emoji_cn
+    option_name: emoji_suggestion
     tips: all
-  hint_text: '✖️'
+  hint_text: '✖︎'
