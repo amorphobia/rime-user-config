@@ -87,7 +87,6 @@ jobs:
           cp schemas/japanese.* schemas/shupin* schemas/jiandao.* ${{ matrix.target }}/ && \
           cp schemas/lua/* lua/* ${{ matrix.target }}/lua/ && \
           cp schemas/opencc/emoji* ${{ matrix.target }}/opencc/ && \
-          cat schemas/rime.lua >> ${{ matrix.target }}/rime.lua && \
           echo "prepare for ${{ matrix.target }} done."
 
       - name: Make Zip Archive 🗄️
