@@ -2,7 +2,35 @@
 # encoding: utf-8
 set -e
 
-SCHEMAS=schemas
+VERSION="master"
+
+ARGS=$(getopt -o v: --long setver: -n "$(basename $0)" -- "$@")
+if [[ $? -ne 0 ]]
+then
+    exit 1
+fi
+
+eval set -- "${ARGS}"
+
+while true
+do
+    case "$1" in
+        -v | --setver )
+            VERSION=$2
+            shift 2
+            ;;
+        -- )
+            shift
+            break
+        * )
+            exit 1
+            ;;
+    esac
+done
+
+WORK=$(pwd)
+DICTS=${WORK}/dicts
+SCHEMAS=${WORK}/schemas
 
 rm -rf ${SCHEMAS}
 
@@ -14,7 +42,8 @@ mkdir -p ${SCHEMAS}/opencc
 rm -rf jiandao && \
 git clone --depth 1 https://github.com/amorphobia/rime-jiandao jiandao && (
     cd jiandao && \
-    bash scripts/make_dicts.sh --append dicts/cizu_append.txt.in --delete dicts/cizu_delete.txt.in --modify dicts/cizu_modify.txt.in --deweight
+    cat ${DICTS}/buchong_append.txt >> dicts/04.buchong.txt && \
+    bash scripts/make_dicts.sh --append ${DICTS}/cizu_append.txt --delete ${DICTS}/cizu_delete.txt --modify ${DICTS}/cizu_modify.txt --version ${VERSION} --deweight && \
     rm schema/recipe.yaml
 ) && \
 cp -r jiandao/schema/* ${SCHEMAS}/ && \

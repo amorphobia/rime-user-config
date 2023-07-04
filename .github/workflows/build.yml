@@ -27,7 +27,7 @@ jobs:
 
       - name: Fetch Schemas 📥
         run: |
-          bash fetch.sh
+          bash fetch.sh --setver ${{ github.ref_name }}
 
       - name: Cache Schemas 💾
         uses: actions/cache/save@v3
