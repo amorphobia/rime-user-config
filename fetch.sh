@@ -22,6 +22,7 @@ do
         -- )
             shift
             break
+            ;;
         * )
             exit 1
             ;;
