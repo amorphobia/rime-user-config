@@ -6,7 +6,7 @@ patch:
     - { when: has_menu, accept: "^", toggle: jffh }
     - { when: has_menu, accept: "&", toggle: emoji_suggestion }
   engine/filters/+:
-    - lua_filter@*split_filter
+    - lua_filter@*comment_spliter
     - simplifier@emoji_plus
   engine/translators/+:
     - reverse_lookup_translator

@@ -14,7 +14,7 @@ patch:
   engine/translators/+:
     - reverse_lookup_translator
   engine/filters/+:
-    - lua_filter@split_filter
+    - lua_filter@comment_spliter
     - simplifier@emoji_plus
   speller/auto_select: false
   recognizer/patterns/+:
