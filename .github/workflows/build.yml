@@ -76,7 +76,7 @@ jobs:
         run: |
           mkdir -p ${{ matrix.target }}/lua ${{ matrix.target }}/opencc && \
           cp schemas/japanese.* schemas/shupin* schemas/jiandao.* ${{ matrix.target }}/ && \
-          cp schemas/lua/* lua/* ${{ matrix.target }}/lua/ && \
+          cp -r schemas/lua/* lua/* ${{ matrix.target }}/lua/ && \
           cp schemas/opencc/emoji* ${{ matrix.target }}/opencc/ && \
           echo "prepare for ${{ matrix.target }} done."
 
@@ -85,7 +85,7 @@ jobs:
         run: |
           mkdir -p ${{ matrix.target }}/lua ${{ matrix.target }}/opencc && \
           cp schemas/japanese.* schemas/shupin* schemas/jiandao.* ${{ matrix.target }}/ && \
-          cp schemas/lua/* lua/* ${{ matrix.target }}/lua/ && \
+          cp -r schemas/lua/* lua/* ${{ matrix.target }}/lua/ && \
           cp schemas/opencc/emoji* ${{ matrix.target }}/opencc/ && \
           echo "prepare for ${{ matrix.target }} done."
 
