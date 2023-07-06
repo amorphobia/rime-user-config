@@ -1,3 +1,5 @@
 编译	bmyk	+250
 便以	bmyk	-150
+挡风	dpfr	+150
+难喝	nfhe	+150
 注释	qjek	+150
