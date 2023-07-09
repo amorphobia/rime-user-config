@@ -1,5 +1,4 @@
 patch:
-  schema/name: 🌟️星空键道
   schema/icon: jiandao.ico
   schema/dependencies:
     - clover

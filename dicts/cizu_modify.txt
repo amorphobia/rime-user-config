@@ -1,5 +1,12 @@
 编译	bmyk	+250
 便以	bmyk	-150
+地铁	dktd	+150
 挡风	dpfr	+150
+上海	ephh	+150
+高斯	gzsk	+150
+盒马	hems	+250
+键道	jmdz	+150
 难喝	nfhe	+150
 注释	qjek	+150
+违停	wwtg	+250
+未听	wwtg	-150
