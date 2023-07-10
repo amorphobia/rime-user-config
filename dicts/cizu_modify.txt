@@ -8,5 +8,8 @@
 键道	jmdz	+150
 难喝	nfhe	+150
 注释	qjek	+150
+乳糖	rjtp	+150
 违停	wwtg	+250
 未听	wwtg	-150
+二手房	xef	+150
+相互作用	xhzy	+150
