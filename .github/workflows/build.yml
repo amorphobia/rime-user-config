@@ -8,9 +8,22 @@ on:
       - 'v*'
 
 jobs:
+  sanity-check:
+    name: Dictionary Sanity Check 🧐
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout 🛎️
+        uses: actions/checkout@v3
+
+      - name: Process Dict File 📄️
+        run: |
+          sort -k2,2 -k4,4nr -k5,5nr -k3,3 dicts/cizu_append.txt | awk '!seen[$1,$2]++' > dicts/cizu_append_processed.txt
+          diff dicts/cizu_append.txt dicts/cizu_append_processed.txt
+
   prepare-schemas:
     name: Prepare Schemas 🖨️
     runs-on: ubuntu-latest
+    needs: sanity-check
     steps:
       - name: Checkout 🛎️
         uses: actions/checkout@v3
