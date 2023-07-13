@@ -5,7 +5,7 @@
 ## 包含方案
 
 主要方案
-- [⭐星空键道](https://github.com/xkinput/Rime_JD)
+- [🌟️星空键道](https://github.com/amorphobia/rime-jiandao)
 - [🍀️四叶草简体拼音](https://github.com/fkxxyz/rime-cloverpinyin)
 - [🇯🇵日本語](https://github.com/gkovacs/rime-japanese)
 - [🍲蜀拼-重庆](https://github.com/Papnas/shupin)
