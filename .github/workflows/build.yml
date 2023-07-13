@@ -15,10 +15,9 @@ jobs:
       - name: Checkout 🛎️
         uses: actions/checkout@v3
 
-      - name: Process Dict File 📄️
+      - name: Sanity Check 📄️
         run: |
-          sort -k2,2 -k4,4nr -k5,5nr -k3,3 dicts/cizu_append.txt | awk '!seen[$1,$2]++' > dicts/cizu_append_processed.txt
-          diff dicts/cizu_append.txt dicts/cizu_append_processed.txt
+          bash scripts/sanity_check.sh
 
   prepare-schemas:
     name: Prepare Schemas 🖨️
@@ -41,7 +40,7 @@ jobs:
 
       - name: Fetch Schemas 📥
         run: |
-          bash fetch.sh --setver ${{ github.ref_name }}
+          bash scripts/fetch.sh --setver ${{ github.ref_name }}
 
       - name: Cache Schemas 💾
         uses: actions/cache/save@v3
