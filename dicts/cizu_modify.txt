@@ -10,9 +10,11 @@
 来点	lhdm	+150
 难喝	nfhe	+150
 注释	qjek	+150
+签收	qmed	+250
 乳糖	rjtp	+150
 违停	wwtg	+250
 未听	wwtg	-150
+额度	xedj	+150
 二手房	xef	+150
 醒了	xgle	+150
 相互作用	xhzy	+150
