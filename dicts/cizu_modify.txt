@@ -9,6 +9,7 @@
 键道	jmdz	+150
 来点	lhdm	+150
 难喝	nfhe	+150
+内卷	nwjt	+150
 注释	qjek	+150
 签收	qmed	+250
 乳糖	rjtp	+150
