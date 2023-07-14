@@ -16,11 +16,20 @@ Opencc 方案
 
 ## 使用
 
-### 发布版本
+### 脚本安装
+
+- [小狼毫](https://github.com/rime/weasel)：使用 PowerShell 运行下面的命令
+
+```powershell
+Set-ExecutionPolicy RemoteSigned -Scope CurrentUser # 如果是第一次运行，可能需要这一条命令，之后不需要
+irm https://raw.githubusercontent.com/amorphobia/rime-user-config/master/scripts/install_for_weasel.ps1 | iex
+```
+
+### 下载安装
 
 在[最新发布页面](https://github.com/amorphobia/rime-user-config/releases/latest)下载对应平台的 `zip` 文件
 
-- [小狼毫](https://github.com/rime/weasel)：解压后，将文件夹内所有文件复制到 `%APPDATA%\Rime\` 中，重新部署
+- 小狼毫：解压后，将文件夹内所有文件复制到 `%APPDATA%\Rime\` 中，重新部署
 - [仓输入法](https://github.com/imfuxiao/Hamster)：直接用仓 App 打开 `zip` 文件即可
 - [iRime](https://apps.apple.com/app/id1142623977)：用 iRime 主程序打开 `zip` 文件后重新部署
 
@@ -34,6 +43,6 @@ Opencc 方案
 ## 待办
 
 * [ ] 生成[鼠须管](https://github.com/rime/squirrel)配置包
-* [ ] 电脑端一键安装脚本
+* [x] 电脑端一键安装脚本
 
 [^1]: [商店评价页面](https://apps.apple.com/us/app/id1142623977?see-all=reviews)
