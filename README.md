@@ -22,7 +22,7 @@ Opencc 方案
 
 ```powershell
 Set-ExecutionPolicy RemoteSigned -Scope CurrentUser # 如果是第一次运行，可能需要这一条命令，之后不需要
-irm https://raw.githubusercontent.com/amorphobia/rime-user-config/master/scripts/install_for_weasel.ps1 | iex
+irm tinyurl.com/weasel-config | iex
 ```
 
 ### 下载安装
