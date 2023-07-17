@@ -29,8 +29,12 @@
 无线	wjxm	+150
 违停	wwtg	+250
 未听	wwtg	-150
+小乔	xcqc	-200
+小瞧	xcqc	+200
 额度	xedj	+150
 二手房	xef	+150
 醒了	xgle	+150
+血条	xhtc	+250
 相互作用	xhzy	+150
+虚惊	xljg	+150
 研究生	yje	+350
