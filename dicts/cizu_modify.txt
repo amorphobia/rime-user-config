@@ -27,6 +27,7 @@
 三连	sflm	+150
 外翻	whff	+150
 无线	wjxm	+150
+吃的	wkde	+150
 违停	wwtg	+250
 未听	wwtg	-150
 小乔	xcqc	-200
