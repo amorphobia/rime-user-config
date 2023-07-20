@@ -15,13 +15,20 @@
 # along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
 <#
-.SYNOPSYS
+.SYNOPSIS
     Rime schema installer
 .DESCRIPTION
     Install schemas of user schemas
+.PARAMETER Proxy
+    The Uri of proxy server
 .LINK
     https://github.com/amorphobia/rime-user-config
 #>
+
+param(
+    [Parameter(Mandatory=$false)]
+    [string]$Proxy
+)
 
 function Get-RimeUserDir {
     $dir = ""
@@ -37,8 +44,14 @@ function Get-RimeUserDir {
 }
 
 function Get-DownloadUrl {
+    param(
+        [Parameter(Mandatory=$false)]
+        [string]$Proxy
+    )
+    $p = if ($Proxy) { @{ Proxy = $Proxy } } else { @{} }
+
     $query_url = "https://api.github.com/repos/amorphobia/rime-user-config/releases/latest"
-    $tag = (Invoke-WebRequest $query_url | ConvertFrom-Json).tag_name
+    $tag = (Invoke-RestMethod @p $query_url).tag_name
     $zip = "weasel-$tag.zip"
 
     return "https://github.com/amorphobia/rime-user-config/releases/download/$tag/$zip"
@@ -55,13 +68,15 @@ function Start-Deployment {
     }
 }
 
-$download_url = Get-DownloadUrl
+$p = if ($Proxy) { @{ Proxy = $Proxy } } else { @{} }
+
+$download_url = Get-DownloadUrl @p
 $tmp = New-TemporaryFile
 $zip = Move-Item -Path (Convert-Path $tmp.PSPath) -Destination ((Convert-Path $tmp.PSParentPath) + "\" + ([uri]$download_url).Segments[-1]) -PassThru -Force
 $dest_path = "$env:TEMP\" + [io.path]::GetFileNameWithoutExtension($zip)
 
 Write-Host "Downloading latest schemas & config ..."
-Invoke-WebRequest $download_url -Out $zip
+Invoke-WebRequest @p $download_url -Out $zip
 
 Write-Host "Expanding zip archive ..."
 Expand-Archive -Path $zip -DestinationPath $dest_path -Force

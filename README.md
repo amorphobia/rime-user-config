@@ -21,8 +21,14 @@ Opencc 方案
 - [小狼毫](https://github.com/rime/weasel)：使用 PowerShell 运行下面的命令
 
 ```powershell
-Set-ExecutionPolicy RemoteSigned -Scope CurrentUser # 如果是第一次运行，可能需要这一条命令，之后不需要
-irm tinyurl.com/weasel-config | iex
+# 如果是第一次运行，可能需要这一条命令，之后不需要
+Set-ExecutionPolicy RemoteSigned -Scope CurrentUser
+
+# 直接安装
+irm tinyurl.com/rime-config | iex
+
+# 或者使用代理
+& ([scriptblock]::Create((irm -Proxy <Uri> tinyurl.com/rime-config))) -Proxy <Uri>
 ```
 
 ### 下载安装
