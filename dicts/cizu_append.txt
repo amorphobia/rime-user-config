@@ -1419,6 +1419,7 @@
 停满了	tml	iaa	950
 太慢了	tml	voa	950
 太满了	tml	vaa	850
+黇鹿	tmlj	vo	950
 天卫	tmww	va	950
 托尼奖	tnj	iao	950
 潼南区	tnq	auv	950
