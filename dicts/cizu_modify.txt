@@ -30,6 +30,7 @@
 吃的	wkde	+150
 违停	wwtg	+250
 未听	wwtg	-150
+威信	wwxb	+150
 小乔	xcqc	-200
 小瞧	xcqc	+200
 额度	xedj	+150
