@@ -28,7 +28,8 @@ Set-ExecutionPolicy RemoteSigned -Scope CurrentUser
 irm tinyurl.com/rime-config | iex
 
 # 或者使用代理
-& ([scriptblock]::Create((irm -Proxy <Uri> tinyurl.com/rime-config))) -Proxy <Uri>
+$Proxy = "http://addr:port"
+& ([scriptblock]::Create((irm -Proxy $Proxy tinyurl.com/rime-config))) -Proxy $Proxy
 ```
 
 ### 下载安装
@@ -38,6 +39,7 @@ irm tinyurl.com/rime-config | iex
 - 小狼毫：解压后，将文件夹内所有文件复制到 `%APPDATA%\Rime\` 中，重新部署
 - [仓输入法](https://github.com/imfuxiao/Hamster)：直接用仓 App 打开 `zip` 文件即可
 - [iRime](https://apps.apple.com/app/id1142623977)：用 iRime 主程序打开 `zip` 文件后重新部署
+- [鼠须管](https://github.com/rime/squirrel)：解压后，将文件夹内所有内容复制到 `~/Library/Rime/` 中，重新部署
 
 注：据美区用户反馈，iRime 主程序接入了[友盟+](https://www.umeng.com)进行用户追踪[^1]。
 ![App Store Snapshot](pics/irime-appstore-snapshot.png)
@@ -48,7 +50,8 @@ irm tinyurl.com/rime-config | iex
 
 ## 待办
 
-* [ ] 生成[鼠须管](https://github.com/rime/squirrel)配置包
-* [x] 电脑端一键安装脚本
+* [x] 生成[鼠须管](https://github.com/rime/squirrel)配置包
+* [x] 电脑端一键安装脚本（小狼毫）
+* [ ] 电脑端一键安装脚本（鼠须管）
 
 [^1]: [商店评价页面](https://apps.apple.com/us/app/id1142623977?see-all=reviews)

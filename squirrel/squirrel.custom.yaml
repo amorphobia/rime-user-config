@@ -1,0 +1,49 @@
+patch:
+  app_options/com.apple.Terminal/no_inline: false
+  style/color_scheme: elf
+  style/color_scheme_dark: elf_dark
+  preset_color_schemes/+:
+    elf:
+      name: 精灵／Elf
+      author: amorphobia <xu350n9@gmail.com>
+      horizontal: true
+      text_orientation: horizontal
+      font_point: 14
+      label_font_point: 10
+      inline_preedit: true
+      candidate_format: "%c\u2005%@"
+      corner_radius: 3
+      hilited_corner_radius: 5
+      border_height: 3
+      border_width: 8
+      line_spacing: 0
+      text_color: 0x4c4c4c
+      back_color: 0xffffff
+      candidate_text_color: 0x4c4c4c
+      hilited_text_color: 0x000000
+      hilited_candidate_text_color: 0xffffff
+      hilited_candidate_back_color: 0xcf5e00
+      comment_text_color: 0x5a5a5a
+      hilited_comment_text_color: 0xfcac9d
+    elf_dark:
+      name: 精灵（暗）／Elf (dark)
+      author: amorphobia <xu350n9@gmail.com>
+      horizontal: true
+      text_orientation: horizontal
+      font_point: 14
+      label_font_point: 10
+      inline_preedit: true
+      candidate_format: "%c\u2005%@"
+      corner_radius: 3
+      hilited_corner_radius: 5
+      border_height: 3
+      border_width: 8
+      line_spacing: 0
+      text_color: 0x4c4c4c
+      back_color: 0x2f2c27
+      candidate_text_color: 0xc7c7c7
+      hilited_text_color: 0x000000
+      hilited_candidate_text_color: 0xffffff
+      hilited_candidate_back_color: 0xcf5e00
+      comment_text_color: 0x939393
+      hilited_comment_text_color: 0xfcac9d

@@ -1,0 +1,31 @@
+patch:
+  schema/icon: jiandao.ico
+  schema/dependencies:
+    - clover
+  engine/filters/+:
+    - lua_filter@*comment_spliter
+    - simplifier@emoji_plus
+  engine/translators/+:
+    - reverse_lookup_translator
+  key_binder/bindings/@4/accept: Control+Alt+slash
+  recognizer/patterns/+:
+    reverse_lookup: "^u[a-z]*'?$"
+  reverse_lookup:
+    dictionary: clover
+    prefix: "u"
+    suffix: "'"
+    tips: "〔全拼〕"
+    preedit_format:
+      - xform/^u(.+)/$1/
+      - xform/([nl])v/$1ü/
+      - xform/([nl])ue/$1üe/
+      - xform/([jqxy])v/$1u/
+    comment_format:
+      - xform/^/〔/
+      - xform/$/〕/
+      - xform/ /, /
+  emoji_plus:
+    opencc_config: emoji_plus.json
+    option_name: emoji_suggestion
+    tips: all
+  hint_text: '✖️'
