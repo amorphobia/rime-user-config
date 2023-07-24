@@ -81,6 +81,8 @@ Invoke-WebRequest @p $download_url -Out $zip
 Write-Host "Expanding zip archive ..."
 Expand-Archive -Path $zip -DestinationPath $dest_path -Force
 
+Remove-Item "$dest_path\jiandao.user.dict.yaml"
+
 $rime_user_dir = Get-RimeUserDir
 
 Write-Host "Copying files to rime user data directory ..."
