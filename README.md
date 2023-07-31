@@ -25,11 +25,11 @@ Opencc 方案
 Set-ExecutionPolicy RemoteSigned -Scope CurrentUser
 
 # 直接安装
-irm tinyurl.com/rime-config | iex
+irm 0xa.nl/rime-conf | iex
 
 # 或者使用代理
 $Proxy = "http://addr:port"
-& ([scriptblock]::Create((irm -Proxy $Proxy tinyurl.com/rime-config))) -Proxy $Proxy
+& ([scriptblock]::Create((irm -Proxy $Proxy 0xa.nl/rime-conf))) -Proxy $Proxy
 ```
 
 ### 下载安装
