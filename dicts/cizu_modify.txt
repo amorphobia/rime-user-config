@@ -7,6 +7,8 @@
 大招	dsfz	+150
 大招	dsqz	+150
 睡吧	ebbs	+150
+双核	emhe	+150
+双流	emlq	+150
 上海	ephh	+150
 生菜	erch	+150
 专精	ftjg	+150
