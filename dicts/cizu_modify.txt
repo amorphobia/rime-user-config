@@ -17,6 +17,7 @@
 盒马	hems	+250
 解耦	jdxd	+150
 基操	jkcz	+150
+积分	jkfn	+150
 键道	jmdz	+150
 列第	lddk	-250
 来点	lhdm	+150
