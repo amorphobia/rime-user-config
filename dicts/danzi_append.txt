@@ -1,6 +1,8 @@
 𧿨	bfoiu
 𧿨	bfoiuu
 毴	bkuviv
+熛	bqo
+熛	bqouvi
 峇	bsiai
 峇	bsiaiv
 𢭃	ddiuvo
@@ -24,7 +26,8 @@
 𬂁	jwuav
 𬂁	jwuavv
 𤆺	kyou
-𤆺	kyouaai
+𤆺	kyouai
+苶	ndiiii
 朒	nlui
 朒	nluiai
 黁	nwov
@@ -35,6 +38,7 @@
 𤆵	psouai
 珮	pwvv
 珮	pwvvua
+壴	qjvooo
 㞗	qqav
 㞗	qqavvi
 玊	sjvvo
