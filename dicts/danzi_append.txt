@@ -5,6 +5,8 @@
 熛	bqouvi
 峇	bsiai
 峇	bsiaiv
+歺	cfivu
+歺	cfivua
 𢭃	ddiuvo
 丼	dfvv
 丼	dfvvoo
@@ -19,6 +21,8 @@
 眗	gdiaua
 鿍	gpvou
 鿍	gpvoua
+粳	grouv
+粳	grouvi
 齽	jbiv
 齽	jbivvv
 乆	jqai
