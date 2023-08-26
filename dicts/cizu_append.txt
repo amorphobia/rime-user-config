@@ -3508,6 +3508,7 @@
 杨高	ypgz	vo	950
 永平路	ypl	ovo	950
 阳了	yple	aa	950
+杨玏	yple	vv	950
 杨思	ypsk	vi	950
 杨修	ypxq	vi	1050
 语气词	yqc	ouo	950

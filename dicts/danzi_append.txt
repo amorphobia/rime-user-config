@@ -31,6 +31,8 @@
 𬂁	jwuavv
 𤆺	kyou
 𤆺	kyouai
+玏	levv
+玏	levvau
 苶	ndiiii
 朒	nlui
 朒	nluiai
@@ -53,5 +55,6 @@
 鿎	tsvuvu
 忒	twvoo
 忒	twvooa
+𮧵	wwvviu
 鞥	xrv
 鞥	xrviiv
