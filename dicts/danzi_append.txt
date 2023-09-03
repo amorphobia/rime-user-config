@@ -5,6 +5,8 @@
 熛	bqouvi
 峇	bsiai
 峇	bsiaiv
+獕	cbua
+獕	cbuaia
 歺	cfivu
 歺	cfivua
 𢭃	ddiuvo
@@ -26,6 +28,8 @@
 粳	grouvi
 齽	jbiv
 齽	jbivvv
+粔	jlouv
+粔	jlouva
 乆	jqai
 乆	jqaii
 𬂁	jwuav
@@ -35,6 +39,8 @@
 玏	levv
 玏	levvau
 苶	ndiiii
+籹	nloua
+籹	nlouau
 朒	nlui
 朒	nluiai
 黁	nwov
