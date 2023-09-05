@@ -13,6 +13,7 @@
 双押	emys	+150
 上海	ephh	+150
 生菜	erch	+150
+歃血	esxh	+150
 专精	ftjg	+150
 公网	gywp	+150
 高斯	gzsk	+150
