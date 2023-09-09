@@ -17,3 +17,7 @@ patch:
   switcher/hotkeys:
     - Control+quoteright
     - Alt+space
+  switcher/save_options/+:
+    - simplification
+    - traditionalization
+    - martianization

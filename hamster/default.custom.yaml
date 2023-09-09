@@ -5,3 +5,7 @@ patch:
     - { schema: clover }
     - { schema: japanese }
     - { schema: shupin_congqin }
+  switcher/save_options/+:
+    - simplification
+    - traditionalization
+    - martianization

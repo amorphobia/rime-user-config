@@ -138,3 +138,21 @@ rm -rf emoji_plus && \
 git clone --depth 1 https://github.com/amorphobia/rime-emoji-plus emoji_plus && \
 cp emoji_plus/opencc/* ${SCHEMAS}/opencc/ && \
 echo "fetch emoji-plus done."
+
+# 📖️通规
+# https://github.com/amorphobia/opencc-tonggui
+rm -rf tonggui.zip && \
+TONGGUI_TAG=$(curl -s https://api.github.com/repos/amorphobia/opencc-tonggui/releases/latest | jq -r '.tag_name') && \
+TONGGUI_URL="https://github.com/amorphobia/opencc-tonggui/releases/download/${TONGGUI_TAG}/opencc-tonggui-${TONGGUI_TAG}.zip" && \
+wget -O tonggui.zip ${TONGGUI_URL} && \
+unzip tonggui.zip -d ${SCHEMAS} && \
+echo "fetch tonggui done."
+
+# 👽️焱暒妏
+# https://github.com/amorphobia/opencc-martian
+rm -rf martian.zip && \
+MARTIAN_TAG=$(curl -s https://api.github.com/repos/amorphobia/opencc-martian/releases/latest | jq -r '.tag_name') && \
+MARTIAN_URL="https://github.com/amorphobia/opencc-martian/releases/download/${MARTIAN_TAG}/opencc-martian-${MARTIAN_TAG}.zip" && \
+wget -O martian.zip ${MARTIAN_URL} && \
+unzip martian.zip -d ${SCHEMAS} && \
+echo "fetch martian done."

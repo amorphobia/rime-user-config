@@ -13,6 +13,8 @@
 Opencc 方案
 - [😂绘文字](https://github.com/rime/rime-emoji)
 - [➕️绘文字加](https://github.com/amorphobia/rime-emoji-plus)
+- [📖️通规](https://github.com/amorphobia/opencc-tonggui)
+- [👽️焱暒妏](https://github.com/amorphobia/opencc-martian)
 
 ## 使用
 

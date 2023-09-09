@@ -1,8 +1,9 @@
 patch:
   schema/dependencies:
     - clover
+  switches/@2: { options: [ simplification, traditionalization, martianization ], states: [ 汉, 漢, 焱 ] }
   key_binder/bindings:
-    - { when: has_menu, accept: "^", toggle: jffh }
+    - { when: has_menu, accept: "^", toggle: traditionalization }
     - { when: has_menu, accept: "&", toggle: emoji_suggestion }
   engine/processors/@3: lua_processor@smart_selector
   engine/processors/@4: lua_processor@topup_selector
@@ -13,6 +14,7 @@ patch:
   engine/translators/+:
     - reverse_lookup_translator
   engine/filters/+:
+    - simplifier@martianization
     - lua_filter@comment_spliter
     - simplifier@emoji_plus
   speller/auto_select: false
@@ -32,6 +34,9 @@ patch:
       - xform/^/〔/
       - xform/$/〕/
       - xform/ /, /
+  martianization:
+    opencc_config: s2m.json
+    option_name: martianization
   emoji_plus:
     opencc_config: emoji_plus.json
     option_name: emoji_suggestion
