@@ -1,4 +1,4 @@
-不感兴趣	bgxq	+150
+不吃	bjwk	+150
 编译	bmyk	+250
 便以	bmyk	-150
 才对	chdb	+150
@@ -8,6 +8,7 @@
 大招	dsfz	+150
 大招	dsqz	+150
 睡吧	ebbs	+150
+时节	ekjd	+150
 双核	emhe	+150
 双流	emlq	+150
 双押	emys	+150
@@ -25,6 +26,7 @@
 基操	jkcz	+150
 积分	jkfn	+150
 键道	jmdz	+150
+键政	jmqr	+150
 酱香	jxxx	+150
 列第	lddk	-250
 来点	lhdm	+150
