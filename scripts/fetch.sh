@@ -67,7 +67,7 @@ git clone --depth 1 https://github.com/amorphobia/rime-jiandao jiandao && (
     cat ${DICTS}/danzi_append.txt >> dicts/01.danzi.txt && \
     cat ${DICTS}/buchong_append.txt >> dicts/04.buchong.txt && \
     bash scripts/make_dicts.sh --append ${DICTS}/cizu_append.txt --delete ${DICTS}/cizu_delete.txt --modify ${DICTS}/cizu_modify.txt --version ${VERSION} --deweight && \
-    rm schema/recipe.yaml
+    rm schema/recipe.yaml schema/rime.lua
 ) && \
 cp -r jiandao/schema/* ${SCHEMAS}/ && \
 echo "fetch Jiandao done."
