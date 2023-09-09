@@ -91,7 +91,8 @@ jobs:
           mkdir -p ${{ matrix.target }}/lua ${{ matrix.target }}/opencc && \
           cp schemas/japanese.* schemas/shupin* schemas/jiandao.* ${{ matrix.target }}/ && \
           cp -r schemas/lua/* lua/* ${{ matrix.target }}/lua/ && \
-          cp schemas/opencc/emoji* ${{ matrix.target }}/opencc/ && \
+          cp schemas/opencc/* ${{ matrix.target }}/opencc/ && \
+          rm ${{ matrix.target }}/opencc/symbol* && \
           echo "prepare for ${{ matrix.target }} done."
 
       - name: Prepare User Settings for iRime ℹ️
@@ -100,7 +101,8 @@ jobs:
           mkdir -p ${{ matrix.target }}/lua ${{ matrix.target }}/opencc && \
           cp schemas/japanese.* schemas/shupin* schemas/jiandao.* ${{ matrix.target }}/ && \
           cp -r schemas/lua/* lua/* ${{ matrix.target }}/lua/ && \
-          cp schemas/opencc/emoji* ${{ matrix.target }}/opencc/ && \
+          cp schemas/opencc/* ${{ matrix.target }}/opencc/ && \
+          rm ${{ matrix.target }}/opencc/symbol* && \
           echo "prepare for ${{ matrix.target }} done."
 
       - name: Prepare User Settings for Squirrel 🐿️
