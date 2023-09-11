@@ -18,6 +18,5 @@ patch:
     - Control+quoteright
     - Control+Shift+space
   switcher/save_options/+:
-    - simplification
     - traditionalization
     - martianization

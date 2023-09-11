@@ -30,6 +30,7 @@
 酱香	jxxx	+150
 列第	lddk	-250
 来点	lhdm	+150
+馒头	mftd	+150
 难喝	nfhe	+150
 内卷	nwjt	+150
 内推	nwtb	+150
