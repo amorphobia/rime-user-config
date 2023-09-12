@@ -10,7 +10,7 @@ patch:
   engine/translators/@4: lua_translator@date_time_translator
   engine/translators/@5: lua_translator@calculator
   engine/translators/@6: lua_translator@unicode_translator
-  engine/filters/@5: lua_filter@hint_filter
+  engine/filters/@2: lua_filter@hint_filter
   engine/translators/+:
     - reverse_lookup_translator
   engine/filters/+:
