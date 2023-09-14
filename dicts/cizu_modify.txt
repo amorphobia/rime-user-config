@@ -1,6 +1,8 @@
 不吃	bjwk	+150
 编译	bmyk	+250
 便以	bmyk	-150
+比亚迪	byd	+150
+爆雷	bzlw	+150
 才对	chdb	+150
 搭便车	dbj	+150
 待会	dhhb	+150
@@ -9,6 +11,7 @@
 大招	dsfz	+150
 大招	dsqz	+150
 睡吧	ebbs	+150
+是个	ekge	+150
 时节	ekjd	+150
 双核	emhe	+150
 双流	emlq	+150
@@ -17,6 +20,9 @@
 生菜	erch	+150
 歃血	esxh	+150
 专精	ftjg	+150
+飞键	fwjm	+150
+光伏	gmfj	+150
+光伏	gxfj	+150
 公网	gywp	+150
 高斯	gzsk	+150
 盒马	hems	+250
@@ -40,6 +46,7 @@
 乳糖	rjtp	+150
 三连	sflm	+150
 提现	tkxm	+150
+同事	tyek	+150
 吃饱了撑	wblj	-250
 外翻	whff	+150
 务必	wjbk	+150

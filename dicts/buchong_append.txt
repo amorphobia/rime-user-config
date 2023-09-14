@@ -23,6 +23,7 @@
 艸	aiuaii
 𢀖	aoviv
 𠬤	aovvi
+丱	auivi
 𠃓	auu
 肀	avvi
 𰀡	iiao
@@ -30,8 +31,10 @@
 𰀢	iiuvo
 攴	ivao
 卝	iviv
+⺿	ivvi
 𧾷	oiviv
 𰃮	oouoa
+䒑	ouv
 㐬	ovaoui
 𰁜	oviiuo
 𧘇	uauo
