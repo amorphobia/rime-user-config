@@ -20,7 +20,9 @@
 一丢丢	ydd
 义项	ykxx
 # 部首偏旁
+芔	aiiaiu
 艸	aiuaii
+茻	aiuaii
 𢀖	aoviv
 𠬤	aovvi
 丱	auivi
