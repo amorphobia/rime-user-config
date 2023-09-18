@@ -30,6 +30,22 @@ param(
     [string]$Proxy
 )
 
+function Get-WeaselVersion {
+    $dir = ""
+    $registry_root = "HKLM:\SOFTWARE\WOW6432Node\Rime\Weasel"
+    if (!(Test-Path -Path $registry_root)) {
+        $registry_root = "HKLM:\SOFTWARE\Rime\Weasel"
+    }
+    if (Test-Path -Path $registry_root) {
+        $dir = (Get-ItemProperty -Path $registry_root).WeaselRoot
+    }
+    if ($dir) {
+        return ((Get-Item $dir).Basename | Select-String -Pattern "([\d\.]+)").Matches.Value
+    } else {
+        return 0
+    }
+}
+
 function Get-RimeUserDir {
     $dir = ""
     $registry_root = "HKCU:\SOFTWARE\Rime\Weasel"
@@ -81,9 +97,14 @@ Invoke-WebRequest @p $download_url -Out $zip
 Write-Host "Expanding zip archive ..."
 Expand-Archive -Path $zip -DestinationPath $dest_path -Force
 
-Remove-Item "$dest_path\jiandao.user.dict.yaml"
-
 $rime_user_dir = Get-RimeUserDir
+
+if (Test-Path "$rime_user_dir\jiandao.user.dict.yaml") {
+    Remove-Item "$dest_path\jiandao.user.dict.yaml"
+}
+if ([System.Version](Get-WeaselVersion) -lt [System.Version]"0.15.0") {
+    Remove-Item "$dest_path\jiandao.ico"
+}
 
 Write-Host "Copying files to rime user data directory ..."
 Copy-Item -Force -Recurse "$dest_path\*" "$rime_user_dir\"
