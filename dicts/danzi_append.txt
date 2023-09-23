@@ -16,6 +16,10 @@
 𢭃	ddiuvo
 丼	dfvv
 丼	dfvvoo
+𮙋	djoa
+𮙋	djoauo
+奀	dkvuv
+奀	dkvuvu
 氹	dpaaa
 鿎	dsvuv
 鿎	dsvuvu
@@ -34,6 +38,8 @@
 粳	grouvi
 齽	jbiv
 齽	jbivvv
+𲂍	jgoa
+𲂍	jgoaov
 粔	jlouv
 粔	jlouva
 乆	jqai
@@ -51,6 +57,8 @@
 朒	nluiai
 黁	nwov
 黁	nwovuv
+𫍢	nzoav
+𫍢	nzoava
 棑	phv
 棑	phvivv
 𤆵	psoua
@@ -71,5 +79,7 @@
 洞	tyai
 洞	tyaiav
 𮧵	wwvviu
+奀	xnv
+奀	xnvuvu
 鞥	xrv
 鞥	xrviiv
