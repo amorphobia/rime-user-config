@@ -38,6 +38,7 @@ patch:
     opencc_config: s2m.json
     option_name: martianization
     tips: all
+    random: true
   emoji_plus:
     opencc_config: emoji_plus.json
     option_name: emoji_suggestion
