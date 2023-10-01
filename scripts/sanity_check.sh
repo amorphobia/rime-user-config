@@ -19,21 +19,21 @@
 WORK=$(pwd)
 
 sort -k2,2 -k4,4nr -k5,5nr -k3,3 dicts/cizu_append.txt | awk '!seen[$1,$2]++' > dicts/cizu_append_processed.txt
-res=$(diff dicts/cizu_append.txt dicts/cizu_append_processed.txt)
+res=$(diff --strip-trailing-cr dicts/cizu_append.txt dicts/cizu_append_processed.txt)
 
 if [[ $res ]]; then
     exit 1
 fi
 
 sort -k2,2 -s dicts/cizu_delete.txt | awk '!seen[$1,$2]++' > dicts/cizu_delete_processed.txt
-res=$(diff dicts/cizu_delete.txt dicts/cizu_delete_processed.txt)
+res=$(diff --strip-trailing-cr dicts/cizu_delete.txt dicts/cizu_delete_processed.txt)
 
 if [[ $res ]]; then
     exit 1
 fi
 
 sort -k2,2 -s dicts/cizu_modify.txt | awk '!seen[$1,$2]++' > dicts/cizu_modify_processed.txt
-res=$(diff dicts/cizu_modify.txt dicts/cizu_modify_processed.txt)
+res=$(diff --strip-trailing-cr dicts/cizu_modify.txt dicts/cizu_modify_processed.txt)
 
 if [[ $res ]]; then
     exit 1
