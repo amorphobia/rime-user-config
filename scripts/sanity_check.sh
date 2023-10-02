@@ -16,6 +16,8 @@
 # You should have received a copy of the GNU Affero General Public License
 # along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
+export LC_ALL=C
+
 WORK=$(pwd)
 
 sort -k2,2 -k4,4nr -k5,5nr -k3,3 dicts/cizu_append.txt | awk '!seen[$1,$2]++' > dicts/cizu_append_processed.txt
