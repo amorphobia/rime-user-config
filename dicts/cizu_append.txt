@@ -1731,6 +1731,7 @@
 港标	gpbc	av	1050
 刚上	gpep	ii	950
 港汇	gphb	aa	1050
+挂牌价	gpj	iui	1050
 更漂亮	gpl	vao	1050
 桂平路	gpl	vvo	950
 钢炼	gplm	io	1050
