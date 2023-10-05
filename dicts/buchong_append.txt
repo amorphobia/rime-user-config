@@ -21,6 +21,8 @@
 一丢丢	ydd
 义项	ykxx
 # 部首偏旁
+𠃊	a
+㡭	aaoaao
 芔	aiiaiu
 艸	aiuaii
 茻	aiuaii
@@ -42,4 +44,5 @@
 𰁜	oviiuo
 𧘇	uauo
 尣	uoua
+𥫗	uvouvo
 匸	va

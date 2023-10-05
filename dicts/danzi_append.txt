@@ -65,6 +65,8 @@
 𤆵	psouai
 珮	pwvv
 珮	pwvvua
+㝉	qjoo
+㝉	qjoovv
 壴	qjvooo
 㞗	qqav
 㞗	qqavvi
@@ -83,3 +85,5 @@
 奀	xnvuvu
 鞥	xrv
 鞥	xrviiv
+𱊭	yluiu
+𱊭	yluiua
