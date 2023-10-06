@@ -13,6 +13,8 @@
 獕	cbuaia
 歺	cfivu
 歺	cfivua
+艸	czaia
+艸	czaiai
 𢭃	ddiuvo
 丼	dfvv
 丼	dfvvoo
@@ -36,8 +38,14 @@
 鿍	gpvoua
 粳	grouv
 粳	grouvi
+芔	hbaia
+芔	hbaiai
+芔	hjaia
+芔	hjaiai
 齽	jbiv
 齽	jbivvv
+屮	jeai
+屮	jeaiii
 𲂍	jgoa
 𲂍	jgoaov
 粔	jlouv
@@ -50,6 +58,10 @@
 𤆺	kyouai
 玏	levv
 玏	levvau
+茻	mjai
+茻	mjaiai
+茻	mpai
+茻	mpaiai
 苶	ndiiii
 籹	nloua
 籹	nlouau
@@ -80,6 +92,8 @@
 忒	twvooa
 洞	tyai
 洞	tyaiav
+屮	weai
+屮	weaiii
 𮧵	wwvviu
 奀	xnv
 奀	xnvuvu
