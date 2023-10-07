@@ -1,4 +1,5 @@
 不吃	bjwk	+150
+辨识	bmek	+150
 编译	bmyk	+250
 便以	bmyk	-150
 比亚迪	byd	+150
@@ -70,6 +71,7 @@
 虚惊	xljg	+150
 线上	xmep	+150
 线下	xmxs	+150
+又因	ydyb	+150
 延误	yfwj	+150
 研究生	yje	+350
 原装	ytfm	+150
