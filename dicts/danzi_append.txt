@@ -77,8 +77,14 @@
 黁	nwovuv
 𫍢	nzoav
 𫍢	nzoava
+䖰	phia
+䖰	phiauu
+𠂢	phuuu
+𠂢	phuuua
 棑	phv
 棑	phvivv
+房	ppoa
+房	ppoaov
 𤆵	psoua
 𤆵	psouai
 珮	pwvv
@@ -90,6 +96,7 @@
 㞗	qqavvi
 玊	sjvvo
 玊	sjvvoo
+蜙	syiavu
 黇	tmvi
 黇	tmviiv
 鿎	tsvu

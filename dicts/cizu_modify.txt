@@ -24,6 +24,7 @@
 专精	ftjg	+150
 飞键	fwjm	+150
 古装	gjfm	+150
+过审	glen	+150
 光伏	gmfj	+150
 光伏	gxfj	+150
 公网	gywp	+150
@@ -71,6 +72,7 @@
 虚惊	xljg	+150
 线上	xmep	+150
 线下	xmxs	+150
+相识	xxek	+150
 又因	ydyb	+150
 延误	yfwj	+150
 研究生	yje	+350
