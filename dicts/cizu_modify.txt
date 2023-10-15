@@ -13,6 +13,8 @@
 大招	dsfz	+150
 大招	dsqz	+150
 睡吧	ebbs	+150
+疏于	ejyl	+150
+熟语	ejyl	+150
 是个	ekge	+150
 时节	ekjd	+150
 双核	emhe	+150
