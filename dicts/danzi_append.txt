@@ -19,6 +19,8 @@
 獕	cbuaia
 歺	cfivu
 歺	cfivua
+𤭢	cwovv
+𤭢	cwovva
 艸	czaia
 艸	czaiai
 𢭃	ddiuvo
@@ -115,5 +117,7 @@
 奀	xnvuvu
 鞥	xrv
 鞥	xrviiv
+舺	xsuu
+舺	xsuuia
 𱊭	yluiu
 𱊭	yluiua
