@@ -2,6 +2,7 @@ patch:
   schema/dependencies:
     - clover
   switches/@2: { options: [ simplification, traditionalization, martianization ], abbrev: [ 汉, 漢, 焱 ], states: [ 通用规范汉字, 繁體字, 焱暒妏 ] }
+  switches/@next: { name: notolization, reset: 1 }
   key_binder/bindings:
     - { when: has_menu, accept: "^", toggle: traditionalization }
     - { when: has_menu, accept: "&", toggle: emoji_suggestion }
@@ -9,6 +10,7 @@ patch:
     - simplifier@martianization
     - lua_filter@*comment_spliter
     - simplifier@emoji_plus
+    - simplifier@notolization
   engine/translators/+:
     - reverse_lookup_translator
   speller/auto_select: false
@@ -37,4 +39,7 @@ patch:
     opencc_config: emoji_plus.json
     option_name: emoji_suggestion
     tips: all
+  notolization:
+    opencc_config: tofu.json
+    option_name: notolization
   hint_text: '✖️'
