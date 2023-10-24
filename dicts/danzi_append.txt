@@ -31,6 +31,8 @@
 奀	dkvuv
 奀	dkvuvu
 氹	dpaaa
+𪠽	dpoi
+𪠽	dpoiou
 鿎	dsvuv
 鿎	dsvuvu
 坏	fhv
@@ -71,6 +73,8 @@
 茻	mpai
 茻	mpaiai
 苶	ndiiii
+婗	nkauu
+婗	nkauui
 籹	nloua
 籹	nlouau
 朒	nlui
@@ -120,5 +124,6 @@
 鞥	xrviiv
 舺	xsuu
 舺	xsuuia
+嫛	ykvuau
 𱊭	yluiu
 𱊭	yluiua
