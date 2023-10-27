@@ -89,7 +89,7 @@ jobs:
         if: ${{ matrix.target == 'hamster' }}
         run: |
           mkdir -p ${{ matrix.target }}/lua ${{ matrix.target }}/opencc && \
-          cp schemas/japanese.* schemas/shupin* schemas/jiandao.* ${{ matrix.target }}/ && \
+          cp schemas/jiandao.* ${{ matrix.target }}/ && \
           cp -r schemas/lua/* lua/* ${{ matrix.target }}/lua/ && \
           cp schemas/opencc/* opencc/* ${{ matrix.target }}/opencc/ && \
           rm ${{ matrix.target }}/opencc/symbol* && \
@@ -99,7 +99,7 @@ jobs:
         if: ${{ matrix.target == 'irime' }}
         run: |
           mkdir -p ${{ matrix.target }}/lua ${{ matrix.target }}/opencc && \
-          cp schemas/japanese.* schemas/shupin* schemas/jiandao.* ${{ matrix.target }}/ && \
+          cp schemas/jiandao.* ${{ matrix.target }}/ && \
           cp -r schemas/lua/* lua/* ${{ matrix.target }}/lua/ && \
           cp schemas/opencc/* opencc/* ${{ matrix.target }}/opencc/ && \
           rm ${{ matrix.target }}/opencc/symbol* && \

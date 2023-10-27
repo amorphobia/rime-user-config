@@ -3,8 +3,6 @@ patch:
   schema_list:
     - { schema: jiandao }
     - { schema: clover }
-    - { schema: japanese }
-    - { schema: shupin_congqin }
   switcher/save_options/+:
     - traditionalization
     - martianization
