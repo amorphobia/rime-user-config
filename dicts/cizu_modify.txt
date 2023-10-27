@@ -49,6 +49,7 @@
 老九	lzjq	-250
 馒头	mftd	+150
 难喝	nfhe	+150
+你和	nkhe	+150
 内卷	nwjt	+150
 内推	nwtb	+150
 注释	qjek	+150

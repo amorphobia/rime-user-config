@@ -22,6 +22,7 @@
 义项	ykxx
 # 部首偏旁
 𠃊	a
+㇉	a
 㔾	aa
 㡭	aaoaao
 芔	aiiaiu
