@@ -16,7 +16,7 @@ patch:
     enableEmbeddedInputMode: true
     symbolsOfCursorBack: []
     symbolsOfReturnToMainKeyboard: []
-    pairsOfSymbols: []
+    pairsOfSymbols: []    enableLoadingTextForSpaceButton: true
     showCurrentInputSchemaNameOnLoadingTextForSpaceButton: true
   rime:
     keyValueOfSwitchSimplifiedAndTraditional: simplification
