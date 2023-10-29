@@ -102,7 +102,10 @@ patch:
             - { action: character(f), width: percentage(0.1) }
             - action: character(g)
               width: percentage(0.1)
-              swipe: [{ action: shortCommand(#三选上屏), label: 三选, display: true, processByRIME: true, direction: up }]
+              swipe:
+                - { action: shortCommand(#三选上屏), label: 三选, display: true, processByRIME: true, direction: up }
+                - { action: 'keyboardType(custom(36键-左))', display: true, processByRIME: true, direction: left }
+                - { action: 'keyboardType(custom(36键-右))', display: true, processByRIME: true, direction: right }
             - { action: character(h), width: percentage(0.1) }
             - { action: character(j), width: percentage(0.1) }
             - action: character(k)
@@ -167,6 +170,320 @@ patch:
               swipe: [{ action: shortCommand(#行尾), display: true, processByRIME: true, direction: up }]
             - action: enter
               width: percentage(0.2)
+              swipe: [{ action: shortCommand(#换行), display: true, processByRIME: true, direction: up }]
+      rowHeight: 45
+      buttonInsets: left(3),bottom(2),top(4),right(3)
+    - name: 36键-左
+      rows:
+        - keys:
+            - action: character(1)
+              width: percentage(0.085)
+              swipe: [{ action: character(!), display: true, processByRIME: true, direction: up }]
+            - action: character(2)
+              width: percentage(0.085)
+              swipe: [{ action: character(@), display: true, processByRIME: true, direction: up }]
+            - action: character(3)
+              width: percentage(0.085)
+              swipe: [{ action: character(#), display: true, processByRIME: true, direction: up }]
+            - action: character(4)
+              width: percentage(0.085)
+              swipe: [{ action: character($), display: true, processByRIME: true, direction: up }]
+            - action: character(5)
+              width: percentage(0.085)
+              swipe: [{ action: character(%), display: true, processByRIME: true, direction: up }]
+            - action: character(6)
+              width: percentage(0.085)
+              swipe: [{ action: character(^), display: true, processByRIME: true, direction: up }]
+            - action: character(7)
+              width: percentage(0.085)
+              swipe: [{ action: character(&), display: true, processByRIME: true, direction: up }]
+            - action: character(8)
+              width: percentage(0.085)
+              swipe: [{ action: character(*), display: true, processByRIME: true, direction: up }]
+            - action: character(9)
+              width: percentage(0.085)
+              swipe: [{ action: 'character(()', display: true, processByRIME: true, direction: up }]
+            - action: character(0)
+              width: percentage(0.085)
+              swipe: [{ action: 'character())', display: true, processByRIME: true, direction: up }]
+            - { action: none, width: percentage(0.15) }
+          rowHeight: 36
+        - keys:
+            - action: character(q)
+              width: percentage(0.085)
+              swipe:
+                - { action: character(`), display: true, processByRIME: true, direction: up }
+                - { action: character(~), display: true, processByRIME: true, direction: down }
+                - { action: tab, display: true, processByRIME: true, direction: right }
+            - { action: character(w), width: percentage(0.085) }
+            - { action: character(e), width: percentage(0.085) }
+            - { action: character(r), width: percentage(0.085) }
+            - { action: character(t), width: percentage(0.085) }
+            - action: character(y)
+              width: percentage(0.085)
+              swipe:
+                - { action: character(-), display: true, processByRIME: true, direction: up }
+                - { action: character(_), display: true, processByRIME: true, direction: down }
+            - action: character(u)
+              width: percentage(0.085)
+              swipe:
+                - { action: character(=), display: true, processByRIME: true, direction: up }
+                - { action: character(+), display: true, processByRIME: true, direction: down }
+            - action: character(i)
+              width: percentage(0.085)
+              swipe:
+                - { action: 'character([)', display: true, processByRIME: true, direction: up }
+                - { action: 'character({)', display: true, processByRIME: true, direction: down }
+            - action: character(o)
+              width: percentage(0.085)
+              swipe:
+                - { action: 'character(])', display: true, processByRIME: true, direction: up }
+                - { action: 'character(})', display: true, processByRIME: true, direction: down }
+            - action: character(p)
+              width: percentage(0.085)
+              swipe:
+                - { action: character(\), display: true, processByRIME: true, direction: up }
+                - { action: character(|), display: true, processByRIME: true, direction: down }
+            - { action: none, width: percentage(0.15) }
+        - keys:
+            - { action: characterMargin(a), width: percentage(0.0425) }
+            - { action: character(a), width: percentage(0.085) }
+            - action: character(s)
+              width: percentage(0.085)
+              swipe: [{ action: shortCommand(#RimeSwitcher), label: 切换, display: true, processByRIME: true, direction: up }]
+            - { action: character(d), width: percentage(0.085) }
+            - { action: character(f), width: percentage(0.085) }
+            - action: character(g)
+              width: percentage(0.085)
+              swipe:
+                - { action: shortCommand(#三选上屏), label: 三选, display: true, processByRIME: true, direction: up }
+                - { action: 'keyboardType(custom(36键-右))', display: true, processByRIME: true, direction: right }
+            - { action: character(h), width: percentage(0.085) }
+            - { action: character(j), width: percentage(0.085) }
+            - action: character(k)
+              width: percentage(0.085)
+              swipe:
+                - { action: character(;), display: true, processByRIME: true, direction: up }
+                - { action: character(:), display: true, processByRIME: true, direction: down }
+            - action: character(l)
+              width: percentage(0.085)
+              swipe:
+                - { action: character('), display: true, processByRIME: true, direction: up }
+                - { action: character("), display: true, processByRIME: true, direction: down }
+            - { action: characterMargin(l), width: percentage(0.0425) }
+            - { action: none, width: percentage(0.05) }
+            - { action: 'keyboardType(custom(36键-右))', width: percentage(0.1), label: → }
+        - keys:
+            - action: shift
+              width: percentage(0.1105)
+              swipe: [{ action: shortCommand(#中英切换), display: true, processByRIME: true, direction: up }]
+            - { action: characterMargin(z), width: percentage(0.017) }
+            - { action: character(z), width: percentage(0.085) }
+            - action: character(x)
+              width: percentage(0.085)
+              swipe: [{ action: shortCommand(#剪切), label: 剪切, display: true, processByRIME: true, direction: up }]
+            - action: character(c)
+              width: percentage(0.085)
+              swipe: [{ action: shortCommand(#复制), label: 复制, display: true, processByRIME: true, direction: up }]
+            - action: character(v)
+              width: percentage(0.085)
+              swipe: [{ action: shortCommand(#粘贴), label: 粘贴, display: true, processByRIME: true, direction: up }]
+            - action: character(b)
+              width: percentage(0.085)
+              swipe:
+                - { action: 'character(,)', display: true, processByRIME: true, direction: up }
+                - { action: character(<), display: true, processByRIME: true, direction: down }
+            - action: character(n)
+              width: percentage(0.085)
+              swipe:
+                - { action: character(.), display: true, processByRIME: true, direction: up }
+                - { action: character(>), display: true, processByRIME: true, direction: down }
+            - action: character(m)
+              width: percentage(0.085)
+              swipe:
+                - { action: character(/), display: true, processByRIME: true, direction: up }
+                - { action: character(?), display: true, processByRIME: true, direction: down }
+            - { action: characterMargin(m), width: percentage(0.017) }
+            - action: backspace
+              width: percentage(0.1105)
+              swipe: [{ action: shortCommand(#重输), display: true, processByRIME: true, direction: left }]
+            - { action: none, width: percentage(0.05) }
+            - { action: 'keyboardType(custom(36键))', width: percentage(0.1), label: ↘ }
+        - keys:
+            - action: keyboardType(numericNineGrid)
+              width: percentage(0.17)
+              swipe: [{ action: shortCommand(#上个输入方案), display: true, processByRIME: true, direction: up }]
+            - action: shortCommand(#左移)
+              width: percentage(0.085)
+              label: ←
+              swipe: [{ action: shortCommand(#行首), display: true, processByRIME: true, direction: up }]
+            - action: space
+              width: percentage(0.34)
+              swipe: [{ action: shortCommand(#次选上屏), display: false, processByRIME: true, direction: up }]
+            - action: shortCommand(#右移)
+              width: percentage(0.085)
+              label: →
+              swipe: [{ action: shortCommand(#行尾), display: true, processByRIME: true, direction: up }]
+            - action: enter
+              width: percentage(0.17)
+              swipe: [{ action: shortCommand(#换行), display: true, processByRIME: true, direction: up }]
+            - { action: none, width: percentage(0.15) }
+      rowHeight: 45
+      buttonInsets: left(3),bottom(2),top(4),right(3)
+    - name: 36键-右
+      rows:
+        - keys:
+            - { action: none, width: percentage(0.15) }
+            - action: character(1)
+              width: percentage(0.085)
+              swipe: [{ action: character(!), display: true, processByRIME: true, direction: up }]
+            - action: character(2)
+              width: percentage(0.085)
+              swipe: [{ action: character(@), display: true, processByRIME: true, direction: up }]
+            - action: character(3)
+              width: percentage(0.085)
+              swipe: [{ action: character(#), display: true, processByRIME: true, direction: up }]
+            - action: character(4)
+              width: percentage(0.085)
+              swipe: [{ action: character($), display: true, processByRIME: true, direction: up }]
+            - action: character(5)
+              width: percentage(0.085)
+              swipe: [{ action: character(%), display: true, processByRIME: true, direction: up }]
+            - action: character(6)
+              width: percentage(0.085)
+              swipe: [{ action: character(^), display: true, processByRIME: true, direction: up }]
+            - action: character(7)
+              width: percentage(0.085)
+              swipe: [{ action: character(&), display: true, processByRIME: true, direction: up }]
+            - action: character(8)
+              width: percentage(0.085)
+              swipe: [{ action: character(*), display: true, processByRIME: true, direction: up }]
+            - action: character(9)
+              width: percentage(0.085)
+              swipe: [{ action: 'character(()', display: true, processByRIME: true, direction: up }]
+            - action: character(0)
+              width: percentage(0.085)
+              swipe: [{ action: 'character())', display: true, processByRIME: true, direction: up }]
+          rowHeight: 36
+        - keys:
+            - { action: none, width: percentage(0.15) }
+            - action: character(q)
+              width: percentage(0.085)
+              swipe:
+                - { action: character(`), display: true, processByRIME: true, direction: up }
+                - { action: character(~), display: true, processByRIME: true, direction: down }
+                - { action: tab, display: true, processByRIME: true, direction: right }
+            - { action: character(w), width: percentage(0.085) }
+            - { action: character(e), width: percentage(0.085) }
+            - { action: character(r), width: percentage(0.085) }
+            - { action: character(t), width: percentage(0.085) }
+            - action: character(y)
+              width: percentage(0.085)
+              swipe:
+                - { action: character(-), display: true, processByRIME: true, direction: up }
+                - { action: character(_), display: true, processByRIME: true, direction: down }
+            - action: character(u)
+              width: percentage(0.085)
+              swipe:
+                - { action: character(=), display: true, processByRIME: true, direction: up }
+                - { action: character(+), display: true, processByRIME: true, direction: down }
+            - action: character(i)
+              width: percentage(0.085)
+              swipe:
+                - { action: 'character([)', display: true, processByRIME: true, direction: up }
+                - { action: 'character({)', display: true, processByRIME: true, direction: down }
+            - action: character(o)
+              width: percentage(0.085)
+              swipe:
+                - { action: 'character(])', display: true, processByRIME: true, direction: up }
+                - { action: 'character(})', display: true, processByRIME: true, direction: down }
+            - action: character(p)
+              width: percentage(0.085)
+              swipe:
+                - { action: character(\), display: true, processByRIME: true, direction: up }
+                - { action: character(|), display: true, processByRIME: true, direction: down }
+        - keys:
+            - { action: 'keyboardType(custom(36键-左))', width: percentage(0.1), label: ← }
+            - { action: none, width: percentage(0.05) }
+            - { action: characterMargin(a), width: percentage(0.0425) }
+            - { action: character(a), width: percentage(0.085) }
+            - action: character(s)
+              width: percentage(0.085)
+              swipe: [{ action: shortCommand(#RimeSwitcher), label: 切换, display: true, processByRIME: true, direction: up }]
+            - { action: character(d), width: percentage(0.085) }
+            - { action: character(f), width: percentage(0.085) }
+            - action: character(g)
+              width: percentage(0.085)
+              swipe:
+                - { action: shortCommand(#三选上屏), label: 三选, display: true, processByRIME: true, direction: up }
+                - { action: 'keyboardType(custom(36键-左))', display: true, processByRIME: true, direction: left }
+            - { action: character(h), width: percentage(0.085) }
+            - { action: character(j), width: percentage(0.085) }
+            - action: character(k)
+              width: percentage(0.085)
+              swipe:
+                - { action: character(;), display: true, processByRIME: true, direction: up }
+                - { action: character(:), display: true, processByRIME: true, direction: down }
+            - action: character(l)
+              width: percentage(0.085)
+              swipe:
+                - { action: character('), display: true, processByRIME: true, direction: up }
+                - { action: character("), display: true, processByRIME: true, direction: down }
+            - { action: characterMargin(l), width: percentage(0.0425) }
+        - keys:
+            - { action: 'keyboardType(custom(36键))', width: percentage(0.1), label: ↙ }
+            - { action: none, width: percentage(0.05) }
+            - action: shift
+              width: percentage(0.1105)
+              swipe: [{ action: shortCommand(#中英切换), display: true, processByRIME: true, direction: up }]
+            - { action: characterMargin(z), width: percentage(0.017) }
+            - { action: character(z), width: percentage(0.085) }
+            - action: character(x)
+              width: percentage(0.085)
+              swipe: [{ action: shortCommand(#剪切), label: 剪切, display: true, processByRIME: true, direction: up }]
+            - action: character(c)
+              width: percentage(0.085)
+              swipe: [{ action: shortCommand(#复制), label: 复制, display: true, processByRIME: true, direction: up }]
+            - action: character(v)
+              width: percentage(0.085)
+              swipe: [{ action: shortCommand(#粘贴), label: 粘贴, display: true, processByRIME: true, direction: up }]
+            - action: character(b)
+              width: percentage(0.085)
+              swipe:
+                - { action: 'character(,)', display: true, processByRIME: true, direction: up }
+                - { action: character(<), display: true, processByRIME: true, direction: down }
+            - action: character(n)
+              width: percentage(0.085)
+              swipe:
+                - { action: character(.), display: true, processByRIME: true, direction: up }
+                - { action: character(>), display: true, processByRIME: true, direction: down }
+            - action: character(m)
+              width: percentage(0.085)
+              swipe:
+                - { action: character(/), display: true, processByRIME: true, direction: up }
+                - { action: character(?), display: true, processByRIME: true, direction: down }
+            - { action: characterMargin(m), width: percentage(0.017) }
+            - action: backspace
+              width: percentage(0.1105)
+              swipe: [{ action: shortCommand(#重输), display: true, processByRIME: true, direction: left }]
+        - keys:
+            - { action: none, width: percentage(0.15) }
+            - action: keyboardType(numericNineGrid)
+              width: percentage(0.17)
+              swipe: [{ action: shortCommand(#上个输入方案), display: true, processByRIME: true, direction: up }]
+            - action: shortCommand(#左移)
+              width: percentage(0.085)
+              label: ←
+              swipe: [{ action: shortCommand(#行首), display: true, processByRIME: true, direction: up }]
+            - action: space
+              width: percentage(0.34)
+              swipe: [{ action: shortCommand(#次选上屏), display: false, processByRIME: true, direction: up }]
+            - action: shortCommand(#右移)
+              width: percentage(0.085)
+              label: →
+              swipe: [{ action: shortCommand(#行尾), display: true, processByRIME: true, direction: up }]
+            - action: enter
+              width: percentage(0.17)
               swipe: [{ action: shortCommand(#换行), display: true, processByRIME: true, direction: up }]
       rowHeight: 45
       buttonInsets: left(3),bottom(2),top(4),right(3)
