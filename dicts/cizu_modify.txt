@@ -36,6 +36,7 @@
 盒马	hems	+250
 好爽	hzem	+150
 好爽	hzex	+150
+金句	jbjl	+150
 叫啥	jces	+150
 接种	jdfy	+150
 解耦	jdxd	+150
@@ -53,6 +54,7 @@
 内卷	nwjt	+150
 内推	nwtb	+150
 注释	qjek	+150
+起效	qkxc	+150
 签收	qmed	+250
 乳糖	rjtp	+150
 三连	sflm	+150
