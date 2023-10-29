@@ -1,6 +1,6 @@
 patch:
   toolbar:
-    heightOfToolbar: 36
+    heightOfToolbar: 40
     displayKeyboardDismissButton: true
     candidateWordFontSize: 16
     candidateCommentFontSize: 14
@@ -14,9 +14,10 @@ patch:
     symbolsOfGridOfNumericKeyboard: [ '=', '+', '-', '*', '/']
     lockShiftState: false
     enableEmbeddedInputMode: true
-    symbolsOfCursorBack: []
+    symbolsOfCursorBack: [ '()', '[]', '{}' ]
     symbolsOfReturnToMainKeyboard: []
-    pairsOfSymbols: []    enableLoadingTextForSpaceButton: true
+    pairsOfSymbols: [ '()', '[]', '{}' ]
+    enableLoadingTextForSpaceButton: true
     showCurrentInputSchemaNameOnLoadingTextForSpaceButton: true
   rime:
     keyValueOfSwitchSimplifiedAndTraditional: simplification
@@ -168,4 +169,4 @@ patch:
               width: percentage(0.2)
               swipe: [{ action: shortCommand(#换行), display: true, processByRIME: true, direction: up }]
       rowHeight: 45
-      buttonInsets: left(3),bottom(3),top(3),right(3)
+      buttonInsets: left(3),bottom(2),top(4),right(3)
