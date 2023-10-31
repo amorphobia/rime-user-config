@@ -45,6 +45,8 @@
 键道	jmdz	+150
 键政	jmqr	+150
 酱香	jxxx	+150
+开屏	khpg	+250
+开平	khpg	-150
 列第	lddk	-250
 来点	lhdm	+150
 老九	lzjq	-250
