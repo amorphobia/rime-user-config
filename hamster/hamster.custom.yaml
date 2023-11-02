@@ -19,7 +19,8 @@ patch:
     pairsOfSymbols: [ '()', '[]', '{}' ]
     enableLoadingTextForSpaceButton: true
     showCurrentInputSchemaNameOnLoadingTextForSpaceButton: true
-    engraving: # set ' ' to get unengraved
+    custom:
+      # set ' ' to get unengraved
       # leave empty to display characters
       - &engraving
       # set ← → ↙ ↘ to display arrows
@@ -27,6 +28,10 @@ patch:
       - &rightArrow →
       - &leftDownArrow ↙
       - &rightDownArrow ↘
+      - &portraitNum 36
+      - &portraitChar 45
+      - &landscapeNum 27
+      - &landscapeChar 33.3
   rime:
     keyValueOfSwitchSimplifiedAndTraditional: simplification
   keyboards:
@@ -83,7 +88,9 @@ patch:
               width: percentage(0.1)
               swipe: [{ action: 'character())', processByRIME: true, direction: up }]
               label: *engraving
-          rowHeight: 36
+          rowHeight: &numHeight
+            portrait: *portraitNum
+            landscape: *landscapeNum
         - keys:
             - &q
               action: character(q)
@@ -243,7 +250,9 @@ patch:
               width: percentage(0.2)
               swipe: [{ action: shortCommand(#换行), direction: up }]
               label: *engraving
-      rowHeight: 45
+      rowHeight: &charHeight
+        portrait: *portraitChar
+        landscape: *landscapeChar
       buttonInsets: left(3),bottom(2),top(4),right(3)
     - name: 36键-左
       rows:
@@ -269,7 +278,7 @@ patch:
             - <<: *num0
               width: percentage(0.085)
             - &oneHandedPadding { action: none, width: percentage(0.15) }
-          rowHeight: 36
+          rowHeight: *numHeight
         - keys:
             - <<: *q
               width: percentage(0.085)
@@ -354,7 +363,7 @@ patch:
             - <<: *enter
               width: percentage(0.17)
             - <<: *oneHandedPadding
-      rowHeight: 45
+      rowHeight: *charHeight
       buttonInsets: left(3),bottom(2),top(4),right(3)
     - name: 36键-右
       rows:
@@ -380,7 +389,7 @@ patch:
               width: percentage(0.085)
             - <<: *num0
               width: percentage(0.085)
-          rowHeight: 36
+          rowHeight: *numHeight
         - keys:
             - <<: *oneHandedPadding
             - <<: *q
@@ -466,5 +475,5 @@ patch:
               width: percentage(0.085)
             - <<: *enter
               width: percentage(0.17)
-      rowHeight: 45
+      rowHeight: *charHeight
       buttonInsets: left(3),bottom(2),top(4),right(3)
