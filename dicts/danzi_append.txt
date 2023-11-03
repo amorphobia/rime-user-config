@@ -35,6 +35,8 @@
 𪠽	dpoiou
 鿎	dsvuv
 鿎	dsvuvu
+𰛒	dyav
+𰛒	dyavai
 坏	fhv
 坏	fhvovu
 蜡	fsiavi
@@ -106,6 +108,8 @@
 玊	sjvvo
 玊	sjvvoo
 蜙	syiavu
+怹	tfiao
+怹	tfiaoa
 黇	tmvi
 黇	tmviiv
 鿎	tsvu

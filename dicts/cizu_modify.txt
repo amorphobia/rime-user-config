@@ -86,5 +86,6 @@
 又因	ydyb	+150
 延误	yfwj	+150
 研究生	yje	+350
+一件	ykjm	+150
 原装	ytfm	+150
 组装	zjfm	+150
