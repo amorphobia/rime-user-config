@@ -19,6 +19,9 @@ patch:
     pairsOfSymbols: [ '()', '[]', '{}' ]
     enableLoadingTextForSpaceButton: true
     showCurrentInputSchemaNameOnLoadingTextForSpaceButton: true
+    # enableColorSchema: true
+    # swipeLabelUpAndDownIrregularLayout: true
+    # disableSwipeLabel: true
     custom:
       # set ' ' to get unengraved
       # leave empty to display characters
