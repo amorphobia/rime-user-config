@@ -4,6 +4,7 @@ patch:
   # turn on following two options on Weasel 0.15.0+
   # style/preedit_type: preview_all
   # style/layout/margin_x: -1
+  # style/font_face: "Plangothic P2:30000:3134A, Plangothic P2:31350:323AF"
   app_options/terminus.exe/ascii_mode: true
   app_options/mintty.exe/ascii_mode: true
   app_options/conemu64.exe/ascii_mode: true
