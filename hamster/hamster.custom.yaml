@@ -158,6 +158,7 @@ patch:
               swipe:
                 - { action: shortCommand(#行首), direction: up, label: ⇤ }
                 - { action: shortCommand(#左移), direction: left }
+                - { action: 'keyboardType(custom(36键-横屏))', direction: down, label: 分体 }
               label: *engraving
             - &g
               action: character(g)
@@ -490,5 +491,130 @@ patch:
               width: percentage(0.085)
             - <<: *enter
               width: percentage(0.17)
+      rowHeight: *charHeight
+      buttonInsets: left(3),bottom(2),top(4),right(3)
+    - name: 36键-横屏
+      rows:
+        - keys:
+            - <<: *num1
+              width: percentage(0.06)
+            - <<: *num2
+              width: percentage(0.06)
+            - <<: *num3
+              width: percentage(0.06)
+            - <<: *num4
+              width: percentage(0.06)
+            - <<: *num5
+              width: percentage(0.06)
+            - <<: *num6
+              width: percentage(0.06)
+            - &landscapePadding
+              action: none
+              width: percentage(0.28)
+            - <<: *num5
+              width: percentage(0.06)
+            - <<: *num6
+              width: percentage(0.06)
+            - <<: *num7
+              width: percentage(0.06)
+            - <<: *num8
+              width: percentage(0.06)
+            - <<: *num9
+              width: percentage(0.06)
+            - <<: *num0
+              width: percentage(0.06)
+          rowHeight: *numHeight
+        - keys:
+            - <<: *q
+              width: percentage(0.06)
+            - <<: *w
+              width: percentage(0.06)
+            - <<: *e
+              width: percentage(0.06)
+            - <<: *r
+              width: percentage(0.06)
+            - <<: *t
+              width: percentage(0.06)
+            - <<: *y
+              width: percentage(0.06)
+            - <<: *landscapePadding
+            - <<: *t
+              width: percentage(0.06)
+            - <<: *y
+              width: percentage(0.06)
+            - <<: *u
+              width: percentage(0.06)
+            - <<: *i
+              width: percentage(0.06)
+            - <<: *o
+              width: percentage(0.06)
+            - <<: *p
+              width: percentage(0.06)
+        - keys:
+            - <<: *marginA
+              width: percentage(0.0327272727272727)
+            - <<: *a
+              width: percentage(0.0654545454545455)
+            - <<: *s
+              width: percentage(0.0654545454545455)
+            - <<: *d
+              width: percentage(0.0654545454545455)
+            - <<: *f
+              width: percentage(0.0654545454545455)
+            - <<: *g
+              width: percentage(0.0654545454545455)
+            - <<: *landscapePadding
+            - <<: *g
+              width: percentage(0.0654545454545455)
+            - <<: *h
+              width: percentage(0.0654545454545455)
+            - <<: *j
+              width: percentage(0.0654545454545455)
+            - <<: *k
+              width: percentage(0.0654545454545455)
+            - <<: *l
+              width: percentage(0.0654545454545455)
+            - <<: *marginL
+              width: percentage(0.0327272727272727)
+        - keys:
+            - <<: *shift
+              width: percentage(0.0850909090909091)
+            - <<: *marginZ
+              width: percentage(0.0130909090909091)
+            - <<: *z
+              width: percentage(0.0654545454545455)
+            - <<: *x
+              width: percentage(0.0654545454545455)
+            - <<: *c
+              width: percentage(0.0654545454545455)
+            - <<: *v
+              width: percentage(0.0654545454545455)
+            - <<: *landscapePadding
+            - <<: *v
+              width: percentage(0.0654545454545455)
+            - <<: *b
+              width: percentage(0.0654545454545455)
+            - <<: *n
+              width: percentage(0.0654545454545455)
+            - <<: *m
+              width: percentage(0.0654545454545455)
+            - <<: *marginM
+              width: percentage(0.0130909090909091)
+            - <<: *backspace
+              width: percentage(0.0850909090909091)
+        - keys:
+            - <<: *numPad
+              width: percentage(0.12)
+            - <<: *spaceLeft
+              width: percentage(0.06)
+            - <<: *space
+              width: percentage(0.18)
+            - <<: *landscapePadding
+            - <<: *space
+              width: percentage(0.18)
+            - <<: *spaceRight
+              width: percentage(0.06)
+            - <<: *enter
+              width: percentage(0.12)
       rowHeight: *charHeight
       buttonInsets: left(3),bottom(2),top(4),right(3)
