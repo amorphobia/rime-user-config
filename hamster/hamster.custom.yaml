@@ -276,7 +276,10 @@ patch:
             - &space
               action: space
               width: percentage(0.4)
-              swipe: [{ action: shortCommand(#次选上屏), direction: up }]
+              swipe:
+                - { action: shortCommand(#次选上屏), direction: up }
+                - { action: shortCommand(#左移), direction: left }
+                - { action: shortCommand(#右移), direction: right }
             - &spaceRight
               action: shortCommand(#中英切换)
               width: percentage(0.1)
