@@ -45,52 +45,72 @@ patch:
             - &num1
               action: character(1)
               width: percentage(0.1)
-              swipe: [{ action: character(!), processByRIME: true, direction: up }]
+              swipe:
+                - { action: character(!), processByRIME: true, direction: up }
+                - { action: character(!), processByRIME: true, display: false, direction: down }
               label: *engraving
             - &num2
               action: character(2)
               width: percentage(0.1)
-              swipe: [{ action: character(@), processByRIME: true, direction: up }]
+              swipe:
+                - { action: character(@), processByRIME: true, direction: up }
+                - { action: character(@), processByRIME: true, display: false, direction: down }
               label: *engraving
             - &num3
               action: character(3)
               width: percentage(0.1)
-              swipe: [{ action: character(#), processByRIME: true, direction: up }]
+              swipe:
+                - { action: character(#), processByRIME: true, direction: up }
+                - { action: character(#), processByRIME: true, display: false, direction: down }
               label: *engraving
             - &num4
               action: character(4)
               width: percentage(0.1)
-              swipe: [{ action: character($), processByRIME: true, direction: up }]
+              swipe:
+                - { action: character($), processByRIME: true, direction: up }
+                - { action: character($), processByRIME: true, display: false, direction: down }
               label: *engraving
             - &num5
               action: character(5)
               width: percentage(0.1)
-              swipe: [{ action: character(%), processByRIME: true, direction: up }]
+              swipe:
+                - { action: character(%), processByRIME: true, direction: up }
+                - { action: character(%), processByRIME: true, display: false, direction: down }
               label: *engraving
             - &num6
               action: character(6)
               width: percentage(0.1)
-              swipe: [{ action: character(^), processByRIME: true, direction: up }]
+              swipe:
+                - { action: character(^), processByRIME: true, direction: up }
+                - { action: character(^), processByRIME: true, display: false, direction: down }
               label: *engraving
             - &num7
               action: character(7)
               width: percentage(0.1)
-              swipe: [{ action: character(&), processByRIME: true, direction: up }]
+              swipe:
+                - { action: character(&), processByRIME: true, direction: up }
+                - { action: character(&), processByRIME: true, display: false, direction: down }
               label: *engraving
             - &num8
               action: character(8)
               width: percentage(0.1)
-              swipe: [{ action: character(*), processByRIME: true, direction: up }]
+              swipe:
+                - { action: character(*), processByRIME: true, direction: up }
+                - { action: character(*), processByRIME: true, display: false, direction: down }
               label: *engraving
             - &num9
               action: character(9)
               width: percentage(0.1)
-              swipe: [{ action: 'character(()', processByRIME: true, direction: up }]
+              swipe:
+                - { action: 'character(()', processByRIME: true, direction: up }
+                - { action: 'character(()', processByRIME: true, display: false, direction: down }
               label: *engraving
             - &num0
               action: character(0)
               width: percentage(0.1)
-              swipe: [{ action: 'character())', processByRIME: true, direction: up }]
+              swipe:
+                - { action: 'character())', processByRIME: true, direction: up }
+                - { action: 'character())', processByRIME: true, display: false, direction: down }
               label: *engraving
           rowHeight: &numHeight
             portrait: *portraitNum
@@ -156,14 +176,15 @@ patch:
               action: character(f),
               width: percentage(0.1),
               swipe:
-                - { action: shortCommand(#行首), direction: up, label: ⇤ }
+                - { action: shortCommand(#行首), label: ⇤, direction: up }
                 - { action: shortCommand(#左移), direction: left }
-                - { action: 'keyboardType(custom(36键-横屏))', direction: down, label: 分体 }
+                - { action: 'keyboardType(custom(36键-横屏))', label: 分体, direction: down }
               label: *engraving
             - &g
               action: character(g)
               width: percentage(0.1)
               swipe:
+                - { action: none, direction: up }
                 - { action: 'keyboardType(custom(36键))', label: 单手, direction: down }
                 - { action: 'keyboardType(custom(36键-左))', direction: left }
                 - { action: 'keyboardType(custom(36键-右))', direction: right }
@@ -172,7 +193,7 @@ patch:
               action: character(h),
               width: percentage(0.1),
               swipe:
-                - { action: shortCommand(#行尾), direction: up, label: ⇥ }
+                - { action: shortCommand(#行尾), label: ⇥, direction: up }
                 - { action: shortCommand(#右移), direction: right }
               label: *engraving
             - &j { action: character(j), width: percentage(0.1), label: *engraving }
