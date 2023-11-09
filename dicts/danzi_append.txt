@@ -74,8 +74,12 @@
 𤆺	kyouai
 玏	levv
 玏	levvau
+㘄	lrov
+㘄	lrovia
 茻	mjai
 茻	mjaiai
+蓂	mkiio
+蓂	mkiioa
 茻	mpai
 茻	mpaiai
 苶	ndiiii
@@ -116,6 +120,8 @@
 怹	tfiaoa
 黇	tmvi
 黇	tmviiv
+牠	tsuv
+牠	tsuvai
 鿎	tsvu
 鿎	tsvuvu
 忒	twvoo
@@ -126,6 +132,10 @@
 屮	weaiii
 𮧵	wwvviu
 𫪘	xdovuo
+嚄	xloii
+嚄	xloiii
+姆	xmaua
+姆	xmauaa
 奀	xnv
 奀	xnvuvu
 鞥	xrv
