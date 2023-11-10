@@ -23,7 +23,7 @@ patch:
     # swipeLabelUpAndDownIrregularLayout: true
     # disableSwipeLabel: true
   rime:
-    keyValueOfSwitchSimplifiedAndTraditional: simplification
+    keyValueOfSwitchSimplifiedAndTraditional: traditionalization
     overrideDictFiles: false
     regexOnOverrideDictFiles: [ installation.yaml, user.yaml, "^.*[.]userdb.*$" ]
     regexOnCopyAppGroupDictFile: [ installation.yaml, user.yaml, "^.*[.]userdb.*$" ]
@@ -172,7 +172,9 @@ patch:
             - &s
               action: character(s)
               width: *normalWidth
-              swipe: [{ action: shortCommand(#RimeSwitcher), label: 切换, direction: up }]
+              swipe:
+               - { action: shortCommand(#RimeSwitcher), label: 开关, direction: up }
+               - { action: shortCommand(#简繁切换), label: 简繁, direction: up }
               label: *engraving
             - &d { action: character(d), width: *normalWidth, label: *engraving }
             - &f

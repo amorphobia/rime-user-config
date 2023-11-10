@@ -1,8 +1,9 @@
 patch:
   schema/name: 🍀四叶草
   schema/dependencies: null
-  switches/@1/states: [ 🈚, 🈶 ]
+  switches/@0/name: traditionalization
   key_binder/import_preset: null
   key_binder/bindings:
-    - { when: has_menu, accept: "^", toggle: zh_simp_s2t }
+    - { when: has_menu, accept: "^", toggle: traditionalization }
     - { when: has_menu, accept: "&", toggle: emoji_suggestion }
+  simplifier/option_name: traditionalization
