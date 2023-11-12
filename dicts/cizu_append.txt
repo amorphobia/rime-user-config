@@ -7363,6 +7363,7 @@
 陶管	tzgt	au	950
 讨骂	tzms	oo	950
 桃夭	tzyz	vu	950
+吹屄	wbbk	oa	950
 外白渡桥	wbdq	uu	950
 插班生	wbe	ivu	950
 我不杀伯仁，伯仁却因我而死	wbes	uv	850
