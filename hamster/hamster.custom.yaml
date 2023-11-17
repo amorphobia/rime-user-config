@@ -173,7 +173,7 @@ patch:
               action: character(s)
               width: *normalWidth
               swipe:
-               - { action: shortCommand(#RimeSwitcher), label: 开关, direction: up }
+               - { action: shortCommand(#RimeSwitcher), label: 选单, direction: up }
                - { action: shortCommand(#简繁切换), label: 简繁, direction: down }
               label: *engraving
             - &d { action: character(d), width: *normalWidth, label: *engraving }
@@ -270,12 +270,15 @@ patch:
         - keys:
             - &numPad
               action: keyboardType(numericNineGrid)
-              width: percentage(0.2)
+              width: percentage(0.14)
               swipe: [{ action: shortCommand(#上个输入方案), direction: up }]
               label: *engraving
+            - action: character(.)
+              width: percentage(0.08)
+              swipe: [{ action: 'symbol(.com)', direction: up }]  
             - &spaceLeft
               action: character(,)
-              width: *normalWidth
+              width: percentage(0.08)
               swipe: [{ action: character(.), processByRIME: true, direction: up }]
               label: *engraving
             - &space
