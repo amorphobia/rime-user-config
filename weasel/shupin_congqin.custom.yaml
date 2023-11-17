@@ -1,5 +1,4 @@
 patch:
-  schema/name: 🍲蜀拼-重庆
   engine/translators:
     - punct_translator
     - script_translator
