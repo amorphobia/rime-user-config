@@ -1,7 +1,7 @@
 patch:
   schema/icon: jiandao.ico
   schema/dependencies:
-    - clover
+    - pinyin_simp
   switches/@2: { options: [ simplification, traditionalization, martianization ], abbrev: [ 汉, 漢, 焱 ], states: [ 通用规范汉字, 繁體字, 焱暒妏 ] }
   engine/filters/+:
     - simplifier@martianization
@@ -13,7 +13,7 @@ patch:
   recognizer/patterns/+:
     reverse_lookup: "^u[a-z]*'?$"
   reverse_lookup:
-    dictionary: clover
+    dictionary: pinyin_simp
     prefix: "u"
     suffix: "'"
     tips: "〔全拼〕"

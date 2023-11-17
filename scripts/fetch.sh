@@ -72,29 +72,14 @@ git clone --depth 1 https://github.com/amorphobia/rime-jiandao jiandao && (
 cp -r jiandao/schema/* ${SCHEMAS}/ && \
 echo "fetch Jiandao done."
 
-# 🍀四叶草
-# https://github.com/fkxxyz/rime-cloverpinyin
-clover_ver="1.1.4"
-clover_zip="clover.schema-${clover_ver}.zip"
-clover_url="https://github.com/fkxxyz/rime-cloverpinyin/releases/download/${clover_ver}/${clover_zip}"
-rm -rf clover && mkdir -p clover && (
-    cd clover && \
-    curl -LO "${clover_url}" && \
-    unzip "${clover_zip}" -d . && \
-    rm -rf ${clover_zip} && \
-    sed -i -n '/import_tables/q;p' clover.dict.yaml && \
-    echo '...' >> clover.dict.yaml && \
-    for dict in clover.base clover.phrase THUOCL_animal THUOCL_caijing THUOCL_car THUOCL_chengyu THUOCL_diming THUOCL_food THUOCL_IT THUOCL_law THUOCL_lishimingren THUOCL_medical THUOCL_poem sogou_new_words
-    do
-        sed '0,/^\.\.\.$/d' ${dict}.dict.yaml >> clover.dict.yaml && \
-        rm ${dict}.dict.yaml
-    done
-) && \
-cp clover/*.yaml ${SCHEMAS}/ && \
-cp clover/opencc/symbol* ${SCHEMAS}/opencc/ && \
-echo "fetch clover done."
+# 袖珍简化字拼音
+# https://github.com/rime/rime-pinyin-simp
+rm -rf simp && \
+git clone --depth 1 https://github.com/rime/rime-pinyin-simp simp && \
+cp simp/pinyin_simp.* ${SCHEMAS}/ && \
+echo "fetch pinyin-simp done."
 
-# 🇯🇵日本語
+# 日本語
 # https://github.com/gkovacs/rime-japanese
 rm -rf japanese && \
 git clone --depth 1 https://github.com/gkovacs/rime-japanese japanese && (
@@ -109,7 +94,7 @@ git clone --depth 1 https://github.com/gkovacs/rime-japanese japanese && (
 cp japanese/*.yaml ${SCHEMAS}/ && \
 echo "fetch japanese done."
 
-# 🍲蜀拼-重庆
+# 蜀拼-重慶
 # https://github.com/Papnas/shupin
 rm -rf shupin && \
 git clone --depth 1 https://github.com/Papnas/shupin && \
@@ -117,7 +102,7 @@ cp shupin/*.dict.yaml ${SCHEMAS}/ && \
 cp shupin/shupin_congqin.schema.yaml ${SCHEMAS}/ && \
 echo "fetch shupin-congqin done."
 
-# 😄️绘文字
+# 繪文字
 # https://github.com/rime/rime-emoji
 if command -v opencc &> /dev/null
 then
@@ -139,7 +124,7 @@ git clone --depth 1 https://github.com/amorphobia/rime-emoji-plus emoji_plus && 
 cp emoji_plus/opencc/* ${SCHEMAS}/opencc/ && \
 echo "fetch emoji-plus done."
 
-# 📖️通规
+# OpenCC 简繁转换之通用规范汉字标准
 # https://github.com/amorphobia/opencc-tonggui
 rm -rf tonggui && \
 git clone --depth 1 https://github.com/amorphobia/opencc-tonggui tonggui && (
@@ -152,7 +137,7 @@ git clone --depth 1 https://github.com/amorphobia/opencc-tonggui tonggui && (
 cp tonggui/opencc/* ${SCHEMAS}/opencc/ && \
 echo "fetch tonggui done."
 
-# 👽️焱暒妏
+# OpenCC 转换之焱暒妏
 # https://github.com/amorphobia/opencc-martian
 rm -rf martian && \
 git clone --depth 1 https://github.com/amorphobia/opencc-martian martian && (

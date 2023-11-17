@@ -11,7 +11,7 @@ patch:
     - { when: always, accept: Control+Alt+period, toggle: ascii_punct }
   schema_list:
     - { schema: jiandao }
-    - { schema: clover }
+    - { schema: pinyin_simp }
     - { schema: japanese }
     - { schema: shupin_congqin }
   switcher/hotkeys:

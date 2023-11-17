@@ -89,10 +89,9 @@ jobs:
         if: ${{ matrix.target == 'hamster' }}
         run: |
           mkdir -p ${{ matrix.target }}/lua ${{ matrix.target }}/opencc && \
-          cp schemas/jiandao.* ${{ matrix.target }}/ && \
+          cp schemas/jiandao.* schemas/pinyin_simp.* ${{ matrix.target }}/ && \
           cp -r schemas/lua/* lua/* ${{ matrix.target }}/lua/ && \
           cp schemas/opencc/* opencc/* ${{ matrix.target }}/opencc/ && \
-          rm ${{ matrix.target }}/opencc/symbol* && \
           echo "prepare for ${{ matrix.target }} done."
 
       - name: Prepare User Settings for iRime ℹ️
@@ -102,7 +101,6 @@ jobs:
           cp schemas/jiandao.* ${{ matrix.target }}/ && \
           cp -r schemas/lua/* lua/* ${{ matrix.target }}/lua/ && \
           cp schemas/opencc/* opencc/* ${{ matrix.target }}/opencc/ && \
-          rm ${{ matrix.target }}/opencc/symbol* && \
           echo "prepare for ${{ matrix.target }} done."
 
       - name: Prepare User Settings for Squirrel 🐿️

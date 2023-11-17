@@ -2,7 +2,7 @@ patch:
   menu/page_size: 10
   schema_list:
     - { schema: jiandao }
-    - { schema: clover }
+    - { schema: pinyin_simp }
   switcher/save_options/+:
     - traditionalization
     - martianization

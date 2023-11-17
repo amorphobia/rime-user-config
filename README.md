@@ -6,15 +6,15 @@
 
 主要方案
 - [🌟️星空键道](https://github.com/amorphobia/rime-jiandao)
-- [🍀️四叶草简体拼音](https://github.com/fkxxyz/rime-cloverpinyin)
-- [🇯🇵日本語](https://github.com/gkovacs/rime-japanese)
-- [🍲蜀拼-重庆](https://github.com/Papnas/shupin)
+- [袖珍简化字拼音](https://github.com/rime/rime-pinyin-simp)
+- [日本語](https://github.com/gkovacs/rime-japanese)
+- [蜀拼-重慶](https://github.com/Papnas/shupin)
 
 Opencc 方案
-- [😂绘文字](https://github.com/rime/rime-emoji)
+- [繪文字](https://github.com/rime/rime-emoji)
 - [➕️绘文字加](https://github.com/amorphobia/rime-emoji-plus)
-- [📖️通规](https://github.com/amorphobia/opencc-tonggui)
-- [👽️焱暒妏](https://github.com/amorphobia/opencc-martian)
+- [OpenCC 简繁转换之通用规范汉字标准](https://github.com/amorphobia/opencc-tonggui)
+- [OpenCC 转换之焱暒妏](https://github.com/amorphobia/opencc-martian)
 
 ## 使用
 
