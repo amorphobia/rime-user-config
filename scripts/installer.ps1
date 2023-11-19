@@ -84,6 +84,13 @@ function Start-Deployment {
     }
 }
 
+function Find-Font {
+    if (![System.Reflection.Assembly]::LoadWithPartialName("System.Drawing")) {
+        return $false
+    }
+    return (New-Object System.Drawing.Text.InstalledFontCollection).Families.Name.Contains('Plangothic P2')
+}
+
 $p = if ($Proxy) { @{ Proxy = $Proxy } } else { @{} }
 
 $download_url = Get-DownloadUrl @p
@@ -104,6 +111,13 @@ if (Test-Path "$rime_user_dir\jiandao.user.dict.yaml") {
 }
 if ([System.Version](Get-WeaselVersion) -lt [System.Version]"0.15.0") {
     Remove-Item "$dest_path\jiandao.ico"
+} elseif (Find-Font) {
+    Get-Content "$dest_path\weasel.custom.yaml" | ForEach-Object {
+        $_
+        if ($_ -match "patch:") {
+            '  style/font_face: "Plangothic P2:30000:3134A, Plangothic P2:31350:323AF"'
+        }
+    } | Set-Content "$dest_path\weasel.custom.yaml"
 }
 
 Write-Host "Copying files to rime user data directory ..."
