@@ -117,7 +117,9 @@ if ([System.Version](Get-WeaselVersion) -lt [System.Version]"0.15.0") {
         if ($_ -match "patch:") {
             '  style/font_face: "Plangothic P2:30000:3134A, Plangothic P2:31350:323AF"'
         }
-    } | Set-Content "$dest_path\weasel.custom.yaml"
+    } | Set-Content "$dest_path\temp.yaml"
+    Remove-Item "$dest_path\weasel.custom.yaml"
+    Rename-Item -Path "$dest_path\temp.yaml" -NewName "weasel.custom.yaml"
 }
 
 Write-Host "Copying files to rime user data directory ..."
