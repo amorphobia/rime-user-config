@@ -47,7 +47,9 @@ patch:
         - keys:
             - &num1
               action: character(1)
-              width: &normalWidth percentage(0.1)
+              width: &normalWidth
+                portrait: &portraitNormalWidth percentage(0.1)
+                landscape: &landscapeNormalWidth percentage(0.06)
               swipe:
                 - { action: character(!), processByRIME: true, direction: up }
                 - { action: character(!), processByRIME: true, display: false, direction: down }
@@ -82,11 +84,24 @@ patch:
               label: *engraving
             - &num6
               action: character(6)
-              width: *normalWidth
+              width:
+                portrait: available
+                landscape: *landscapeNormalWidth
               swipe:
                 - { action: character(^), processByRIME: true, direction: up }
                 - { action: character(^), processByRIME: true, display: false, direction: down }
               label: *engraving
+            - &horizontalSpace
+              action: none
+              width: &horizontalSpaceWidth
+                portrait: available
+                landscape: percentage(0.28)
+            - <<: *num5
+              width:
+                portrait: available
+                landscape: *landscapeNormalWidth
+            - <<: *num6
+              width: *normalWidth
             - &num7
               action: character(7)
               width: *normalWidth
@@ -133,11 +148,20 @@ patch:
             - &t { action: character(t), width: *normalWidth, label: *engraving }
             - &y
               action: character(y)
-              width: *normalWidth
+              width:
+                portrait: available
+                landscape: *landscapeNormalWidth
               swipe:
                 - { action: character(-), processByRIME: true, direction: up }
                 - { action: character(_), processByRIME: true, direction: down }
               label: *engraving
+            - <<: *horizontalSpace
+            - <<: *t
+              width:
+                portrait: available
+                landscape: *landscapeNormalWidth
+            - <<: *y
+              width: *normalWidth
             - &u
               action: character(u)
               width: *normalWidth
@@ -167,51 +191,65 @@ patch:
                 - { action: character(|), processByRIME: true, direction: down }
               label: *engraving
         - keys:
-            - &marginA { action: characterMargin(a), width: &halfWidth percentage(0.050) }
-            - &a { action: character(a), width: *normalWidth, label: *engraving }
+            - &marginA
+              action: characterMargin(a)
+              width: &halfWidth
+                portrait: percentage(0.05)
+                landscape: percentage(0.0327272727272727)
+            - &a
+              action: character(a)
+              width: &normalWidth2
+                portrait: percentage(0.1)
+                landscape: percentage(0.0654545454545455)
+              label: *engraving
             - &s
               action: character(s)
-              width: *normalWidth
+              width: *normalWidth2
               swipe:
                - { action: shortCommand(#RimeSwitcher), label: 选单, direction: up }
                - { action: shortCommand(#简繁切换), label: 简繁, direction: down }
               label: *engraving
-            - &d { action: character(d), width: *normalWidth, label: *engraving }
+            - &d { action: character(d), width: *normalWidth2, label: *engraving }
             - &f
               action: character(f)
-              width: *normalWidth
+              width: *normalWidth2
               swipe:
                 - { action: shortCommand(#行首), label: ⇤, direction: up }
                 - { action: shortCommand(#左移), direction: left }
-                - { action: 'keyboardType(custom(36键-横屏))', label: 分体, direction: down }
+                # - { action: 'keyboardType(custom(36键-横屏))', label: 分体, direction: down }
               label: *engraving
             - &g
               action: character(g)
-              width: *normalWidth
+              width: *normalWidth2
               swipe:
                 - { action: none, direction: up }
                 - { action: 'keyboardType(custom(36键))', label: 单手, direction: down }
                 - { action: 'keyboardType(custom(36键-左))', direction: left }
                 - { action: 'keyboardType(custom(36键-右))', direction: right }
               label: *engraving
+            - <<: *horizontalSpace
+            - <<: *g
+              width:
+                portrait: available
+                landscape: percentage(0.0654545454545455)
             - &h
               action: character(h)
-              width: *normalWidth
+              width: *normalWidth2
               swipe:
                 - { action: shortCommand(#行尾), label: ⇥, direction: up }
                 - { action: shortCommand(#右移), direction: right }
               label: *engraving
-            - &j { action: character(j), width: *normalWidth, label: *engraving }
+            - &j { action: character(j), width: *normalWidth2, label: *engraving }
             - &k
               action: character(k)
-              width: *normalWidth
+              width: *normalWidth2
               swipe:
                 - { action: character(;), processByRIME: true, direction: up }
                 - { action: character(:), processByRIME: true, direction: down }
               label: *engraving
             - &l
               action: character(l)
-              width: *normalWidth
+              width: *normalWidth2
               swipe:
                 - { action: character('), processByRIME: true, direction: up }
                 - { action: character("), processByRIME: true, direction: down }
@@ -220,74 +258,100 @@ patch:
         - keys:
             - &shift
               action: shift
-              width: percentage(0.13)
+              width:
+                portrait: percentage(0.13)
+                landscape: percentage(0.0850909090909091)
               swipe: [{ action: shortCommand(#中英切换), direction: up }]
               label: *engraving
-            - &marginZ { action: characterMargin(z), width: percentage(0.02) }
-            - &z { action: character(z), width: *normalWidth, label: *engraving }
+            - &marginZ
+              action: characterMargin(z)
+              width: &fifthWidth
+                portrait: percentage(0.02)
+                landscape: percentage(0.0130909090909091)
+            - &z { action: character(z), width: *normalWidth2, label: *engraving }
             - &x
               action: character(x)
-              width: *normalWidth
+              width: *normalWidth2
               swipe: [{ action: shortCommand(#剪切), label: 剪切, direction: up }]
               label: *engraving
             - &c
               action: character(c)
-              width: *normalWidth
+              width: *normalWidth2
               swipe: [{ action: shortCommand(#复制), label: 复制, direction: up }]
               label: *engraving
             - &v
               action: character(v)
-              width: *normalWidth
+              width: *normalWidth2
               swipe: [{ action: shortCommand(#粘贴), label: 粘贴, direction: up }]
               label: *engraving
+            - <<: *horizontalSpace
+            - <<: *v
+              width:
+                portrait: available
+                landscape: percentage(0.0654545454545455)
             - &b
               action: character(b)
-              width: *normalWidth
+              width: *normalWidth2
               swipe:
                 - { action: 'character(,)', processByRIME: true, direction: up }
                 - { action: character(<), processByRIME: true, direction: down }
               label: *engraving
             - &n
               action: character(n)
-              width: *normalWidth
+              width: *normalWidth2
               swipe:
                 - { action: character(.), processByRIME: true, direction: up }
                 - { action: character(>), processByRIME: true, direction: down }
               label: *engraving
             - &m
               action: character(m)
-              width: *normalWidth
+              width: *normalWidth2
               swipe:
                 - { action: character(/), processByRIME: true, direction: up }
                 - { action: character(?), processByRIME: true, direction: down }
               label: *engraving
-            - &marginM { action: characterMargin(m), width: percentage(0.02) }
+            - &marginM { action: characterMargin(m), width: *fifthWidth }
             - &backspace
               action: backspace
-              width: percentage(0.13)
+              width:
+                portrait: percentage(0.13)
+                landscape: percentage(0.0850909090909091)
               swipe: [{ action: shortCommand(#重输), direction: left }]
               label: *engraving
         - keys:
             - &numPad
               action: keyboardType(numericNineGrid)
-              width: percentage(0.14)
+              width:
+                portrait: percentage(0.14)
+                landscape: percentage(0.084)
               swipe: [{ action: shortCommand(#上个输入方案), direction: up }]
               label: *engraving
             - action: character(.)
-              width: percentage(0.08)
+              width:
+                portrait: percentage(0.08)
+                landscape: percentage(0.048)
               swipe: [{ action: 'symbol(.com)', direction: up }]  
             - &spaceLeft
               action: character(,)
-              width: percentage(0.08)
+              width:
+                portrait: percentage(0.08)
+                landscape: percentage(0.048)
               swipe: [{ action: character(.), processByRIME: true, direction: up }]
               label: *engraving
             - &space
               action: space
-              width: percentage(0.4)
+              width:
+                portrait: percentage(0.4)
+                landscape: percentage(0.18)
               swipe:
                 - { action: shortCommand(#次选上屏), direction: up }
                 - { action: shortCommand(#左移), direction: left }
                 - { action: shortCommand(#右移), direction: right }
+            - <<: *horizontalSpace
+            - <<: *space
+              width:
+                portrait: available
+                landscape: percentage(0.18)
             - &spaceRight
               action: shortCommand(#中英切换)
               width: *normalWidth
@@ -295,7 +359,9 @@ patch:
               label: *asciiMode
             - &enter
               action: enter
-              width: percentage(0.2)
+              width:
+                portrait: percentage(0.2)
+                landscape: percentage(0.12)
               swipe: [{ action: shortCommand(#换行), direction: up }]
               label: *engraving
       rowHeight: &charHeight
@@ -523,130 +589,5 @@ patch:
               width: *compressedWidth
             - <<: *enter
               width: *compressedEnterWidth
-      rowHeight: *charHeight
-      buttonInsets: left(3),bottom(2),top(4),right(3)
-    - name: 36键-横屏
-      rows:
-        - keys:
-            - <<: *num1
-              width: &splitNormalWidth percentage(0.06)
-            - <<: *num2
-              width: *splitNormalWidth
-            - <<: *num3
-              width: *splitNormalWidth
-            - <<: *num4
-              width: *splitNormalWidth
-            - <<: *num5
-              width: *splitNormalWidth
-            - <<: *num6
-              width: *splitNormalWidth
-            - &landscapePadding
-              action: none
-              width: percentage(0.28)
-            - <<: *num5
-              width: *splitNormalWidth
-            - <<: *num6
-              width: *splitNormalWidth
-            - <<: *num7
-              width: *splitNormalWidth
-            - <<: *num8
-              width: *splitNormalWidth
-            - <<: *num9
-              width: *splitNormalWidth
-            - <<: *num0
-              width: *splitNormalWidth
-          rowHeight: *numHeight
-        - keys:
-            - <<: *q
-              width: *splitNormalWidth
-            - <<: *w
-              width: *splitNormalWidth
-            - <<: *e
-              width: *splitNormalWidth
-            - <<: *r
-              width: *splitNormalWidth
-            - <<: *t
-              width: *splitNormalWidth
-            - <<: *y
-              width: *splitNormalWidth
-            - <<: *landscapePadding
-            - <<: *t
-              width: *splitNormalWidth
-            - <<: *y
-              width: *splitNormalWidth
-            - <<: *u
-              width: *splitNormalWidth
-            - <<: *i
-              width: *splitNormalWidth
-            - <<: *o
-              width: *splitNormalWidth
-            - <<: *p
-              width: *splitNormalWidth
-        - keys:
-            - <<: *marginA
-              width: percentage(0.0327272727272727)
-            - <<: *a
-              width: &splitAdjustedNormalWidth percentage(0.0654545454545455)
-            - <<: *s
-              width: *splitAdjustedNormalWidth
-            - <<: *d
-              width: *splitAdjustedNormalWidth
-            - <<: *f
-              width: *splitAdjustedNormalWidth
-            - <<: *g
-              width: *splitAdjustedNormalWidth
-            - <<: *landscapePadding
-            - <<: *g
-              width: *splitAdjustedNormalWidth
-            - <<: *h
-              width: *splitAdjustedNormalWidth
-            - <<: *j
-              width: *splitAdjustedNormalWidth
-            - <<: *k
-              width: *splitAdjustedNormalWidth
-            - <<: *l
-              width: *splitAdjustedNormalWidth
-            - <<: *marginL
-              width: percentage(0.0327272727272727)
-        - keys:
-            - <<: *shift
-              width: percentage(0.0850909090909091)
-            - <<: *marginZ
-              width: percentage(0.0130909090909091)
-            - <<: *z
-              width: *splitAdjustedNormalWidth
-            - <<: *x
-              width: *splitAdjustedNormalWidth
-            - <<: *c
-              width: *splitAdjustedNormalWidth
-            - <<: *v
-              width: *splitAdjustedNormalWidth
-            - <<: *landscapePadding
-            - <<: *v
-              width: *splitAdjustedNormalWidth
-            - <<: *b
-              width: *splitAdjustedNormalWidth
-            - <<: *n
-              width: *splitAdjustedNormalWidth
-            - <<: *m
-              width: *splitAdjustedNormalWidth
-            - <<: *marginM
-              width: percentage(0.0130909090909091)
-            - <<: *backspace
-              width: percentage(0.0850909090909091)
-        - keys:
-            - <<: *numPad
-              width: percentage(0.12)
-            - <<: *spaceLeft
-              width: *splitNormalWidth
-            - <<: *space
-              width: percentage(0.18)
-            - <<: *landscapePadding
-            - <<: *space
-              width: percentage(0.18)
-            - <<: *spaceRight
-              width: *splitNormalWidth
-            - <<: *enter
-              width: percentage(0.12)
       rowHeight: *charHeight
       buttonInsets: left(3),bottom(2),top(4),right(3)
