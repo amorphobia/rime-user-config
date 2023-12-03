@@ -13,8 +13,11 @@
 夯	bnvuau
 熛	bqo
 熛	bqouvi
+䨻	brvovo
 峇	bsiai
 峇	bsiaiv
+𫁂	bsuvi
+𫁂	bsuvia
 𰻝	bxo
 𰻝	bxoooa
 獕	cbua
@@ -36,6 +39,8 @@
 𪠽	dpoi
 𪠽	dpoiou
 鿎	dsvuv
+𮹝	dsvuvu
+𱍂	dsvuvu
 鿎	dsvuvu
 𰛒	dyav
 𰛒	dyavai
@@ -78,6 +83,8 @@
 玏	levvau
 㘄	lrov
 㘄	lrovia
+䶛	lsvui
+䶛	lsvuiv
 茻	mjai
 茻	mjaiai
 蓂	mkiio
