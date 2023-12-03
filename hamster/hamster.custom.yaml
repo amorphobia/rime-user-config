@@ -43,6 +43,7 @@ patch:
     - &landscapeCharHeight 33.3
   keyboards:
     - name: 36键
+      isPrimary: true
       rows:
         - keys:
             - &num1
