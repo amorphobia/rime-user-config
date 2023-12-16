@@ -5,6 +5,11 @@ patch:
     candidateCommentFontSize: 14
     displayCommentOfCandidate: true
   keyboard:
+    style:
+      fontFace:
+        - name: "PingFangSC-Regular"
+        - url: "PlangothicP1-Regular.fallback.ttf"
+        - url: "PlangothicP2-Regular.ttf"
     useKeyboardType: "36键"
     # disableSwipeLabel: true
     # swipeLabelUpAndDownIrregularLayout: true
