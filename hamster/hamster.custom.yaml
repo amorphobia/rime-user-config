@@ -1,6 +1,6 @@
 patch:
   toolbar:
-    heightOfToolbar: 40
+    heightOfToolbar: 48 # 40 with embedding
     candidateTextFontSize: 16
     candidateCommentFontSize: 14
     displayCommentOfCandidate: true
@@ -21,7 +21,7 @@ patch:
     rightSymbolProcessByRimeOnNineGridOfNumericKeyboard: true
     symbolsOfGridOfNumericKeyboard: [ '=', '+', '-', '*', '/']
     lockShiftState: false
-    enableEmbeddedInputMode: true
+    # enableEmbeddedInputMode: true
     symbolsOfCursorBack: [ '()', '[]', '{}' ]
     symbolsOfReturnToMainKeyboard: []
     pairsOfSymbols: [ '()', '[]', '{}' ]
