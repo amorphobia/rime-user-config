@@ -207,7 +207,7 @@ patch:
               width: { portrait: { percentage: 0.02 }, landscape: { percentage: 0.0130909090909091 } }
             - action: { character: { char: "z" } }
               width: { portrait: { percentage: 0.1 }, landscape: { percentage: 0.0654545454545455 } }
-              swipe: [{ direction: up, action: { character: { char: "`" } } }]
+              swipe: [{ direction: up, action: { character: { char: "`" }, processByRIME: true } }]
               callout: [{ action: { character: { char: "`" } } }]
             - action: { character: { char: "x" } }
               width: { portrait: { percentage: 0.1 }, landscape: { percentage: 0.0654545454545455 } }
