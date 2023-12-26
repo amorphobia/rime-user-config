@@ -7790,6 +7790,7 @@
 人格障碍	rgqx	iv	1050
 冉家坝	rjb	iov	950
 日进斗金	rjdj	iv	950
+冉教授	rje	iui	950
 儒山	rjef	ii	950
 乳山	rjef	ui	850
 乳扇	rjef	uo	850
