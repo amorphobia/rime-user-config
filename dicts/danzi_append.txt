@@ -5,6 +5,7 @@
 氷	bgio
 氷	bgioau
 毴	bkuviv
+辡	bmovov
 熛	bqo
 熛	bqouvi
 䨻	brvovo
@@ -51,6 +52,8 @@
 屮	jeaiii
 𲂍	jgoa
 𲂍	jgoaov
+豖	jjvua
+豖	jjvuau
 乆	jqai
 乆	jqaii
 𬂁	jwuav
@@ -59,6 +62,8 @@
 𤆺	kyouai
 霝	lgvoo
 霝	lgvooo
+盝	ljavi
+盝	ljavia
 䶛	lsvui
 䶛	lsvuiv
 茻	mjai
