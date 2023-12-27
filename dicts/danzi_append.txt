@@ -60,6 +60,8 @@
 䶛	lsvuiv
 䖋	nhivi
 䖋	nhivii
+𠕄	nsiav
+𠕄	nsiavi
 䖰	phia
 䖰	phiauu
 𠂢	phuuu
@@ -85,5 +87,6 @@
 牠	tsuvai
 舺	xsuu
 舺	xsuuia
+㐌	ykuvai
 𱊭	yluiu
 𱊭	yluiua
