@@ -68,5 +68,9 @@
 𥫗	uvouvo
 龵	uvvu
 匸	va
+𰀂	vav
+𰀄	vav
+𰀉	viavi
+𰀁	vvu
 # 多音节字
 𱁬	dbdsvo
