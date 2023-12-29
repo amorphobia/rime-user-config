@@ -32,6 +32,7 @@
 𰛒	dyavai
 坏	fhv
 坏	fhvovu
+㖹	fnouoa
 暃	fwoii
 暃	fwoiiv
 眗	gdiau
@@ -42,6 +43,8 @@
 粳	grouvi
 乕	hjuu
 乕	hjuuvv
+䎜	hwuo
+䎜	hwuouo
 𬺔	jbiv
 𬺔	jbivvv
 𲂍	jgoa
@@ -68,6 +71,8 @@
 䖰	phiauu
 𠂢	phuuu
 𠂢	phuuua
+㖹	pnou
+㖹	pnouoa
 膖	ppuua
 膖	ppuuao
 𠀾	pwvu
@@ -82,6 +87,8 @@
 鶸	rlavui
 玊	sjvvo
 玊	sjvvoo
+恖	skui
+恖	skuioa
 蜙	syiavu
 咅	tdov
 咅	tdovoo
@@ -89,6 +96,8 @@
 牠	tsuvai
 舺	xsuu
 舺	xsuuia
+夓	xsvuu
+夓	xsvuua
 㐌	ykuvai
 𱊭	yluiu
 𱊭	yluiua
