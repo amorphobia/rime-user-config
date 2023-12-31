@@ -13,8 +13,6 @@
 𫁂	bsuvia
 𰻝	bxo
 𰻝	bxoooa
-歺	cfivu
-歺	cfivua
 䨺	dbvov
 䨺	dbvovo
 𢭃	ddiuvo
@@ -26,10 +24,11 @@
 奀	dkvuvu
 𪠽	dpoi
 𪠽	dpoiou
-𮹝	dsvuvu
 𱍂	dsvuvu
 𰛒	dyav
 𰛒	dyavai
+㚒	efvuo
+㚒	efvuou
 坏	fhv
 坏	fhvovu
 㖹	fnouoa
@@ -51,6 +50,8 @@
 𲂍	jgoaov
 豖	jjvua
 豖	jjvuau
+旡	jkvau
+旡	jkvaua
 乆	jqai
 乆	jqaii
 𬂁	jwuav
@@ -79,10 +80,14 @@
 𠀾	pwvuiv
 珮	pwvv
 珮	pwvvua
+喿	qcoov
+喿	qcoovv
 𡎺	qjoavo
 㝉	qjoo
 㝉	qjoovv
 壴	qjvooo
+夋	qwaou
+夋	qwaoua
 鶸	rlav
 鶸	rlavui
 玊	sjvvo
@@ -98,7 +103,11 @@
 舺	xsuuia
 夓	xsvuu
 夓	xsvuua
+枼	yeviv
+枼	yevivv
 㐌	ykuvai
 𱊭	yluiu
 𱊭	yluiua
 肙	ytouu
+喿	zzoov
+喿	zzoovv

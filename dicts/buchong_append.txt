@@ -70,6 +70,7 @@
 匸	va
 𰀂	vav
 𰀄	vav
+丅	vi
 𰀉	viavi
 𰀁	vvu
 # 多音节字
