@@ -28,6 +28,7 @@
 ⺄	a
 𠃊	a
 ㇉	a
+𠄌	a
 㔾	aa
 㡭	aaoaao
 芔	aiiaiu
@@ -50,6 +51,7 @@
 攴	ivao
 卝	iviv
 ⺿	ivvi
+乀	o
 ⺳	oauo
 𧾷	oiviv
 𭕄	oou
