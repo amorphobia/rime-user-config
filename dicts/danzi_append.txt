@@ -1,9 +1,15 @@
+豩	bbvuv
+豩	bbvuvu
+麃	bcovo
+麃	bcovoo
 𧿨	bfoiu
 𧿨	bfoiuu
 仌	bgii
 仌	bgiii
 氷	bgio
 氷	bgioau
+並	bgouv
+並	bgouvi
 毴	bkuviv
 辡	bmovov
 熛	bqo
@@ -48,6 +54,8 @@
 厷	gyvuao
 乕	hjuu
 乕	hjuuvv
+豩	htvu
+豩	htvuvu
 䎜	hwuo
 䎜	hwuouo
 厷	hyvua
@@ -56,6 +64,7 @@
 𬺔	jbivvv
 𲂍	jgoa
 𲂍	jgoaov
+玨	jhvvvv
 豖	jjvua
 豖	jjvuau
 旡	jkvau
@@ -76,6 +85,8 @@
 䖋	nhivii
 𠕄	nsiav
 𠕄	nsiavi
+麃	pcov
+麃	pcovoo
 䖰	phia
 䖰	phiauu
 𠂢	phuuu
@@ -89,6 +100,8 @@
 𠀾	pwvuiv
 珮	pwvv
 珮	pwvvua
+麃	pzovo
+麃	pzovoo
 喿	qcoov
 喿	qcoovv
 𡎺	qjoavo
@@ -106,6 +119,8 @@
 蜙	syiavu
 咅	tdov
 咅	tdovoo
+眔	tsia
+眔	tsiaiu
 牠	tsuv
 牠	tsuvai
 舺	xsuu

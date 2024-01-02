@@ -3588,6 +3588,7 @@
 躬行	gyxg	uu	950
 共型	gyxg	vv	950
 弓星	gyxg	ao	850
+古猗园	gyy	uui	950
 公租	gyzj	uu	1050
 公族	gyzj	uo	950
 拱卒	gyzj	io	850
