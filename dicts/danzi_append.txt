@@ -43,11 +43,14 @@
 週	fduaoa
 坏	fhv
 坏	fhvovu
+髴	fjviav
 尃	fjviv
 尃	fjvivi
 㞢	fkaii
 㞢	fkaiiv
 㖹	fnouoa
+髣	fpvi
+髣	fpviov
 峯	friau
 峯	friaua
 暃	fwoii
@@ -109,6 +112,8 @@
 䶛	lsvuiv
 𪨧	lwiai
 𪨧	lwiaiu
+吂	mpovo
+吂	mpovoo
 䖋	nhivi
 䖋	nhivii
 𠕄	nsiav
