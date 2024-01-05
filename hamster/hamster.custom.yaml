@@ -15,7 +15,7 @@ patch:
     # swipeLabelUpAndDownIrregularLayout: true
     swipeLabelUpAndDownLayout: true
     enableHapticFeedback: true
-    hapticFeedbackIntensity: 0
+    hapticIntensity: 0.5
     numberKeyProcessByRimeOnNineGridOfNumericKeyboard: true
     leftSymbolProcessByRimeOnNineGridOfNumericKeyboard: true
     rightSymbolProcessByRimeOnNineGridOfNumericKeyboard: true
