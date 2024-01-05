@@ -17,6 +17,7 @@
 䨻	brvovo
 𫁂	bsuvi
 𫁂	bsuvia
+盃	bwvuia
 𰻝	bxo
 𰻝	bxoooa
 朁	cfva
@@ -44,7 +45,6 @@
 坏	fhv
 坏	fhvovu
 髴	fjviav
-尃	fjviv
 尃	fjvivi
 㞢	fkaii
 㞢	fkaiiv
@@ -121,7 +121,7 @@
 𪨧	lwiai
 畾	lwiaia
 𪨧	lwiaiu
-㒳	lxia
+㒳	lxiau
 㒳	lxiauo
 吂	mpovo
 吂	mpovoo
@@ -173,6 +173,8 @@
 恖	skui
 恖	skuioa
 蜙	syiavu
+惣	syuv
+惣	syuvoa
 咅	tdov
 咅	tdovoo
 眔	tsia
@@ -186,7 +188,7 @@
 𠩺	xkvvvu
 韱	xmiiv
 韱	xmiivi
-臽	xmuaua
+臽	xmuaui
 舺	xsuu
 舺	xsuuia
 夓	xsvuu
@@ -197,5 +199,7 @@
 𱊭	yluiu
 𱊭	yluiua
 肙	ytouu
+惣	zyuv
+惣	zyuvoa
 喿	zzoov
 喿	zzoovv
