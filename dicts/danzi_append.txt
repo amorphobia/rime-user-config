@@ -141,8 +141,12 @@
 犛	mzvvuv
 䖋	nhivi
 䖋	nhivii
+秊	nmuv
+秊	nmuvuv
 𠕄	nsiav
 𠕄	nsiavi
+㧱	nsiv
+㧱	nsiviu
 麃	pcov
 麃	pcovoo
 䖰	phia
@@ -162,7 +166,7 @@
 珮	pwvvua
 麃	pzovo
 麃	pzovoo
-砲	pzvu
+砲	pzvuu
 砲	pzvuua
 喿	qcoov
 喿	qcoovv
