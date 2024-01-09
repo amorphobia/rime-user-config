@@ -27,6 +27,8 @@
 䩗	bsviuu
 犮	bsvuao
 盃	bwvuia
+冊	ceia
+冊	ceiavi
 朁	cfva
 朁	cfvaoi
 朿	ckvi
@@ -234,8 +236,11 @@
 咅	tdovoo
 啚	tjou
 啚	tjouoi
-眔	tsia
+躰	tkui
+躰	tkuivi
+眔	tsiai
 眔	tsiaiu
+𦐇	tsoiao
 牠	tsuv
 牠	tsuvai
 敄	wjaouv
