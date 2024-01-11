@@ -75,6 +75,7 @@
 𰀄	vav
 丅	vi
 𰀉	viavi
+𠮛	vo
 𰀁	vvu
 # 多音节字
 𤿱	bdpkoa
