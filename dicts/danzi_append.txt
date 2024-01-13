@@ -89,6 +89,8 @@
 屍	ekavvu
 啇	ekovi
 啇	ekovia
+欶	elvi
+欶	elviua
 㕠	emo
 㕠	emovao
 㕥	enoii
@@ -110,6 +112,7 @@
 㞢	fkaii
 㞢	fkaiiv
 秖	fkuvua
+𠮛	fkvoo
 斲	flaauu
 斵	flu
 斵	fluauu
@@ -140,6 +143,8 @@
 匃	ghuaia
 淈	gjaa
 淈	gjaavu
+𠯑	gqua
+𠯑	gquaoo
 粳	grouv
 粳	grouvi
 厷	gyvua
@@ -162,6 +167,8 @@
 𬺔	jbivvv
 觔	jbuaa
 觔	jbuaau
+晉	jbva
+晉	jbvaoi
 呌	jcooou
 敎	jcuou
 敎	jcuouv
@@ -200,10 +207,14 @@
 𤆺	kyouai
 攷	kzva
 攷	kzvauv
+厸	lbaoa
+厸	lbaoao
 㐭	lbovi
 㐭	lbovia
 尞	lcvui
 尞	lcvuiu
+楽	leui
+楽	leuivv
 霝	lgvoo
 霝	lgvooo
 夌	lgvou
@@ -225,6 +236,7 @@
 䶛	lsvuiv
 𪨧	lwiai
 畾	lwiaia
+𱛍	lwiaiu
 𪨧	lwiaiu
 㗊	lwoo
 㗊	lwoooo
@@ -236,6 +248,8 @@
 㵘	mfaaaa
 𠇮	mgiv
 𠇮	mgivia
+厸	mmaoa
+厸	mmaoao
 吂	mpovo
 吂	mpovoo
 戼	mzav
@@ -253,11 +267,16 @@
 嬭	nhauvu
 䖋	nhivi
 䖋	nhivii
+𰀂	nhva
+𰀂	nhvav
 廼	nhvia
 廼	nhviao
+𰀄	nhvva
 妳	nkauua
 秊	nmuv
 秊	nmuvuv
+𰀉	npvi
+𰀉	npviav
 𠕄	nsiav
 𠕄	nsiavi
 㧱	nsiv
@@ -325,6 +344,8 @@
 刄	rnauoo
 宂	ryoo
 宂	ryooua
+欶	sdv
+欶	sdviua
 㪚	sfvi
 㪚	sfviuv
 玊	sjvvo
@@ -350,6 +371,8 @@
 讬	tloauv
 眔	tsiai
 眔	tsiaiu
+𣥂	tsiuu
+𣥂	tsiuuu
 𦐇	tsoiao
 牠	tsuv
 牠	tsuvai
@@ -372,6 +395,8 @@
 牀	wma
 牀	wmaivv
 亾	wpiaa
+𰀁	wtvv
+𰀁	wtvvi
 為	wwoua
 為	wwouaa
 牀	wxa
@@ -417,6 +442,8 @@
 舺	xsuuia
 夓	xsvuu
 夓	xsvuua
+㿝	xxui
+㿝	xxuiao
 忷	xyoou
 忷	xyoouo
 胷	xyuauu
