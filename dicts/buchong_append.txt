@@ -28,6 +28,7 @@
 𠃊	a
 ㇉	a
 𠄌	a
+乁	a
 㔾	aa
 㡭	aaoaao
 芔	aiiaiu
@@ -35,6 +36,7 @@
 茻	aiuaii
 ⺪	aiviv
 龴	ao
+乄	ao
 𢀖	aoviv
 𠬤	aovvi
 丱	auiiv
@@ -49,6 +51,7 @@
 ⺗	iuoo
 𣥂	iuu
 攴	ivao
+丄	iv
 龰	ivi
 卝	iviv
 ⺿	ivvi
@@ -66,12 +69,14 @@
 夊	uao
 𧘇	uauo
 龺	uooiuo
+乊	uou
 尣	uoua
-⺁	uu
+𠂆	uu
 ⺧	uviv
 𥫗	uvouvo
 龵	uvvu
 匸	va
+丂	va
 𰀂	vav
 𰀄	vav
 丅	vi
