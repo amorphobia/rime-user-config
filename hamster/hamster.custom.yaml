@@ -46,6 +46,7 @@ patch:
               swipe:
                 - { direction: up, action: { character: { char: "!" } }, processByRIME: true }
                 - { direction: down, action: { character: { char: "!" } }, display: false, processByRIME: true }
+                - { direction: right, action: tab, processByRIME: true }
             - action: { character: { char: "2" } }
               width: { portrait: { percentage: 0.1 }, landscape: { percentage: 0.06 } }
               swipe:
@@ -101,19 +102,25 @@ patch:
               swipe:
                 - { direction: up, action: { character: { char: "(" } }, processByRIME: true }
                 - { direction: down, action: { character: { char: "(" } }, display: false, processByRIME: true }
+              callout:
+                - { action: { symbol: { char: "（" } } }
+                - { action: { symbol: { char: "(" } }, label: "(半" }
             - action: { character: { char: "0" } }
               width: { portrait: { percentage: 0.1 }, landscape: { percentage: 0.06 } }
               swipe:
                 - { direction: up, action: { character: { char: ")" } }, processByRIME: true }
                 - { direction: down, action: { shortcutCommand: "#关闭键盘" }, display: false, processByRIME: true }
-              callout: [{ action: { shortcutCommand: "#关闭键盘" }, label: "✖" }]
+              callout:
+                - { action: { symbol: { char: "）" } } }
+                - { action: { shortcutCommand: "#关闭键盘" }, label: "✖" }
+                - { action: { symbol: { char: ")" } }, label: ")半" }
         - keys:
             - action: { character: { char: "q" } }
               width: { portrait: { percentage: 0.1 }, landscape: { percentage: 0.06 } }
               swipe:
                 - { direction: up, action: { character: { char: "`" } }, processByRIME: true }
                 - { direction: down, action: { character: { char: "~" } }, processByRIME: true }
-                - { action: tab, processByRIME: true, direction: right }
+                - { direction: right, action: tab, processByRIME: true }
             - { action: { character: { char: "w" } }, width: { portrait: { percentage: 0.1 }, landscape: { percentage: 0.06 } } }
             - { action: { character: { char: "e" } }, width: { portrait: { percentage: 0.1 }, landscape: { percentage: 0.06 } } }
             - { action: { character: { char: "r" } }, width: { portrait: { percentage: 0.1 }, landscape: { percentage: 0.06 } } }
@@ -154,6 +161,9 @@ patch:
         - keys:
             - action: { characterMargin: { char: "a" } }
               width: { portrait: { percentage: 0.05 }, landscape: { percentage: 0.0327272727272727 } }
+              swipe:
+                - { direction: up, action: { character: { char: "~" } }, processByRIME: true }
+                - { direction: right, action: tab, processByRIME: true }
             - action: { character: { char: "a" } }
               width: { portrait: { percentage: 0.1 }, landscape: { percentage: 0.0654545454545455 } }
             - action: { character: { char: "s" } }
@@ -184,6 +194,10 @@ patch:
               swipe:
                 - { direction: up, action: { shortcutCommand: "#行尾" }, label: "⇥" }
                 - { direction: right, action: { shortcutCommand: "#右移" } }
+              callout:
+                - { action: { symbol: { char: "https://" } } }
+                - { action: { symbol: { char: "http://" } } }
+                - { action: { symbol: { char: "ftp://" } } }
             - { action: { character: { char: "j" } }, width: { portrait: { percentage: 0.1 }, landscape: { percentage: 0.0654545454545455 } } }
             - action: { character: { char: "k" } }
               width: { portrait: { percentage: 0.1 }, landscape: { percentage: 0.0654545454545455 } }
@@ -196,7 +210,13 @@ patch:
               swipe:
                 - { direction: up, action: { character: { char: "'" } }, processByRIME: true }
                 - { direction: down, action: { character: { char: '"' } }, processByRIME: true }
-              callout: [{ action: { character: { char: '"' } } }]
+              callout:
+                - { action: { symbol: { char: "“" } } }
+                - { action: { symbol: { char: "”" } } }
+                - { action: { symbol: { char: '"' } } }
+                - { action: { symbol: { char: "'" } } }
+                - { action: { symbol: { char: "‘" } } }
+                - { action: { symbol: { char: "’" } } }
             - { action: { characterMargin: { char: "l" } }, width: { portrait: { percentage: 0.05 }, landscape: { percentage: 0.0327272727272727 } } }
         - keys:
             - action: shift
@@ -243,7 +263,9 @@ patch:
               swipe:
                 - { direction: up, action: { character: { char: "/" } }, processByRIME: true }
                 - { direction: down, action: { character: { char: "?" } }, processByRIME: true }
-              callout: [{ action: { character: { char: "?" } } }]
+              callout:
+                - { action: { character: { char: "/" } } }
+                - { action: { character: { char: "?" } } }
             - { action: { characterMargin: { char: "m" } }, width: { portrait: { percentage: 0.02 }, landscape: { percentage: 0.0130909090909091 } } }
             - action: backspace
               width: { portrait: { percentage: 0.13 }, landscape: { percentage: 0.0850909090909091 } }
@@ -253,17 +275,10 @@ patch:
               width: { portrait: { percentage: 0.2 }, landscape: { percentage: 0.12 } }
               swipe: [{ direction: up, action: { shortcutCommand: "#上个输入方案" } }]
               callout: [{ action: { shortcutCommand: "#方案切换" }, label: "方案" }]
-            - action: { character: { char: "." } }
+            - action: { character: { char: "," } }
               width: { portrait: { percentage: 0.1 }, landscape: { percentage: 0.06 } }
-              swipe: [{ direction: up, action: { symbol: { char: ".com" } }, display: false }]
-              callout:
-                - { action: { symbol: { char: ".com" } } }
-                - { action: { symbol: { char: ".cn" } } }
-                - { action: { symbol: { char: ".hk" } } }
-                - { action: { symbol: { char: ".io" } } }
-                - { action: { symbol: { char: ".edu" } } }
-                - { action: { symbol: { char: ".org" } } }
-                - { action: { symbol: { char: ".net" } } }
+              swipe: [{ direction: up, action: { shortcutCommand: "#中英切换" }, label: "中英" }]
+              callout: [{ action: { shortcutCommand: "#三选上屏" }, label: "三选" }]
             - action: space
               width: { portrait: { percentage: 0.4 }, landscape: { percentage: 0.18 } }
               swipe:
@@ -277,10 +292,17 @@ patch:
                 - { direction: up, action: { shortcutCommand: "#次选上屏" } }
                 - { direction: left, action: { shortcutCommand: "#左移" } }
                 - { direction: right, action: { shortcutCommand: "#右移" } }
-            - action: { character: { char: "," } }
+            - action: { character: { char: "." } }
               width: { portrait: { percentage: 0.1 }, landscape: { percentage: 0.06 } }
-              swipe: [{ direction: up, action: { shortcutCommand: "#三选上屏" }, label: "三选" }]
-              callout: [{ action: { shortcutCommand: "#中英切换" }, label: "中英" }]
+              swipe: [{ direction: up, action: { symbol: { char: ".com" } }, display: false }]
+              callout:
+                - { action: { symbol: { char: ".com" } } }
+                - { action: { symbol: { char: ".cn" } } }
+                - { action: { symbol: { char: ".hk" } } }
+                - { action: { symbol: { char: ".io" } } }
+                - { action: { symbol: { char: ".edu" } } }
+                - { action: { symbol: { char: ".org" } } }
+                - { action: { symbol: { char: ".net" } } }
             - action: enter
               width: { portrait: { percentage: 0.2 }, landscape: { percentage: 0.12 } }
               swipe: [{ direction: up, action: { shortcutCommand: "#换行" } }]
