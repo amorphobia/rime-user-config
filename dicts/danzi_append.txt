@@ -48,6 +48,8 @@
 乲	ckovaa
 朿	ckvi
 朿	ckviai
+虘	clivi
+虘	clivia
 𠕁	cyia
 𠕁	cyiavi
 怱	cyua
@@ -82,6 +84,8 @@
 𢛳	deuooa
 啗	dfoua
 啗	dfouau
+躭	dfui
+躭	dfuioa
 丼	dfvv
 丼	dfvvui
 妬	djauv
@@ -174,6 +178,7 @@
 㞢	fkaiiv
 値	fkiuoi
 帋	fkuaia
+夂	fkuaoo
 乿	fkuoaa
 秖	fkuvua
 𠮛	fkvoo
@@ -205,6 +210,8 @@
 粧	fxou
 粧	fxouov
 眾	fyiaui
+夂	fyuao
+夂	fyuaoo
 乑	fyuiu
 乑	fyuiuu
 亀	gbuaia
@@ -578,6 +585,8 @@
 陏	sbaivu
 嵗	sbiavu
 亗	sbiavv
+夊	sbua
+夊	sbuaoo
 欶	sdv
 欶	sdviua
 𰬷	sfaa
