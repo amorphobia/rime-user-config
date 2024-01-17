@@ -52,8 +52,8 @@
 𣥂	iuu
 攴	ivao
 丄	iv
-龰	ivi
 卝	iviv
+龰	ivuo
 ⺿	ivvi
 乀	o
 ⺳	oauo
@@ -83,6 +83,7 @@
 𰀉	viavi
 𠮛	vo
 𰀁	vvi
+𠀎	vviiv
 # 多音节字
 𤿱	bdpkoa
 𱁬	dbdsvo
