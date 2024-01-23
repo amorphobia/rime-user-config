@@ -11,6 +11,7 @@
 地铁	dktd	+150
 挡风	dpfr	+150
 大招	dsfz	+150
+戴森球	dsq	+250
 大招	dsqz	+150
 睡吧	ebbs	+150
 疏于	ejyl	+150
@@ -70,6 +71,7 @@
 务必	wjbk	+150
 无线	wjxm	+150
 吃的	wkde	+150
+闻名不如见面	wmbm	-250
 违停	wwtg	+250
 未听	wwtg	-150
 威信	wwxb	+150
