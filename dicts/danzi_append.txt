@@ -29,8 +29,6 @@
 䶛	lsvui
 䶛	lsvuiv
 乮	mzuaaa
-嬭	nhauv
-嬭	nhauvu
 𰀂	nhva
 𰀂	nhvav
 𰀄	nhvva
