@@ -43,6 +43,7 @@
 𠃓	auu
 肀	avvi
 ⺻	avviv
+龱	iauov
 𰀡	iiao
 𫇦	iioa
 𰀢	iiuvo
@@ -52,6 +53,7 @@
 𣥂	iuu
 攴	ivao
 丄	iv
+⺊	iv
 卝	iviv
 龰	ivuo
 ⺿	ivvi
@@ -88,6 +90,11 @@
 𠀎	vviiv
 # 多音节字
 𤿱	bdpkoa
+瓸	bhwsva
 𱁬	dbdsvo
+瓧	ekwsva
+瓰	fnwsva
+瓱	hzwsva
 𠄯	kbbnvv
+甅	lkwsva
 𦒹	lzlquo
