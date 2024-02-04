@@ -20,24 +20,43 @@ export LC_ALL=C
 
 WORK=$(pwd)
 
-sort -k2,2 -k4,4nr -k5,5nr -k3,3 dicts/cizu_append.txt | awk '!seen[$1,$2]++' > dicts/cizu_append_processed.txt
-res=$(diff --strip-trailing-cr dicts/cizu_append.txt dicts/cizu_append_processed.txt)
+res=$(diff <(tr -d '\r' < ${WORK}/dicts/cizu_append.txt) <(tr -d '\r' < ${WORK}/dicts/cizu_append.txt | sort -k2,2 -k4,4nr -k5,5nr -k3,3 | awk '!seen[$1,$2]++'))
 
 if [[ $res ]]; then
+    echo "cizu_append error"
+    echo "$res"
     exit 1
 fi
 
-sort -k2,2 -s dicts/cizu_delete.txt | awk '!seen[$1,$2]++' > dicts/cizu_delete_processed.txt
-res=$(diff --strip-trailing-cr dicts/cizu_delete.txt dicts/cizu_delete_processed.txt)
+res=$(diff <(tr -d '\r' < ${WORK}/dicts/cizu_delete.txt) <(tr -d '\r' < ${WORK}/dicts/cizu_delete.txt | sort -k2,2 -s | awk '!seen[$1,$2]++'))
 
 if [[ $res ]]; then
+    echo "cizu_delete error"
+    echo "$res"
     exit 1
 fi
 
-sort -k2,2 -s dicts/cizu_modify.txt | awk '!seen[$1,$2]++' > dicts/cizu_modify_processed.txt
-res=$(diff --strip-trailing-cr dicts/cizu_modify.txt dicts/cizu_modify_processed.txt)
+res=$(diff <(tr -d '\r' < ${WORK}/dicts/cizu_modify.txt) <(tr -d '\r' < ${WORK}/dicts/cizu_modify.txt | sort -k2,2 -s | awk '!seen[$1,$2]++'))
 
 if [[ $res ]]; then
+    echo "cizu_modify error"
+    echo "$res"
+    exit 1
+fi
+
+res=$(diff <(tr -d '\r' < ${WORK}/opencc/tofu.txt) <(tr -d '\r' < ${WORK}/opencc/tofu.txt | sort -s | awk '!seen[$1]++'))
+
+if [[ $res ]]; then
+    echo "tofu error"
+    echo "$res"
+    exit 1
+fi
+
+res=$(diff <(tr -d '\r' < ${WORK}/dicts/danzi_append.txt) <(tr -d '\r' < ${WORK}/dicts/danzi_append.txt | sort -t$'\t' -k2,2 -s))
+
+if [[ $res ]]; then
+    echo "danzi_append error"
+    echo "$res"
     exit 1
 fi
 
