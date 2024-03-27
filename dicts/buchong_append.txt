@@ -5,9 +5,11 @@
 抱	bz
 猜	ch
 带	dh
+打	ds
 竞	jg
 咯	ll
 佬	lz
+挺	tg
 # 词组二简二重
 是的	ed
 前滩	qt
