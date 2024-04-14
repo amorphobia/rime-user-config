@@ -19,7 +19,7 @@ patch:
     numberKeyProcessByRimeOnNineGridOfNumericKeyboard: true
     leftSymbolProcessByRimeOnNineGridOfNumericKeyboard: true
     rightSymbolProcessByRimeOnNineGridOfNumericKeyboard: true
-    symbolsOfGridOfNumericKeyboard: [ '=', '+', '-', '*', '/']
+    symbolsOfGridOfNumericKeyboard: [ '=', ':', '+', '-', '*', '/']
     lockShiftState: false
     # enableEmbeddedInputMode: true
     symbolsOfCursorBack: [ '()', '[]', '{}' ]
