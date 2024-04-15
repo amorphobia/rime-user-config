@@ -14,6 +14,7 @@ patch:
   app_options/code.exe/ascii_mode: true
   app_options/vscodium.exe/ascii_mode: true
   app_options/tvnviewer.exe/ascii_mode: true
+  app_options/isaac-ng.exe/ascii_mode: true
   preset_color_schemes/pornhub:
     name: 涩情枢纽／PornHub
     author: amorphobia
