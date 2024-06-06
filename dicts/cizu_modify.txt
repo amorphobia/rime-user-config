@@ -54,6 +54,7 @@
 来点	lhdm	+150
 老九	lzjq	-250
 馒头	mftd	+150
+棉签	mmqm	+150
 难喝	nfhe	+150
 你和	nkhe	+150
 内卷	nwjt	+150
