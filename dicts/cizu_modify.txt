@@ -52,6 +52,7 @@
 开平	khpg	-150
 列第	lddk	-250
 来点	lhdm	+150
+连上	lmep	+150
 老九	lzjq	-250
 馒头	mftd	+150
 棉签	mmqm	+150
