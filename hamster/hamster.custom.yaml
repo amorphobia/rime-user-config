@@ -109,7 +109,7 @@ patch:
               width: { portrait: { percentage: 0.1 }, landscape: { percentage: 0.06 } }
               swipe:
                 - { direction: up, action: { character: { char: ")" } }, processByRIME: true }
-                - { direction: down, action: { shortcutCommand: "#关闭键盘" }, display: false, processByRIME: true }
+                - { direction: down, action: { character: { char: ")" }, display: false, processByRIME: true }
               callout:
                 - { action: { symbol: { char: "）" } } }
                 - { action: { shortcutCommand: "#关闭键盘" }, label: "✖" }
