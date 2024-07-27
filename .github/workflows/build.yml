@@ -13,7 +13,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout 🛎️
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: Sanity Check 📄️
         run: |
@@ -25,7 +25,7 @@ jobs:
     needs: sanity-check
     steps:
       - name: Checkout 🛎️
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: Clear Cache ❌
         env:
@@ -43,7 +43,7 @@ jobs:
           bash scripts/fetch.sh --setver ${{ github.ref_name }}
 
       - name: Cache Schemas 💾
-        uses: actions/cache/save@v3
+        uses: actions/cache/save@v4
         if: always()
         with:
           path: schemas
@@ -63,18 +63,18 @@ jobs:
     needs: prepare-schemas
     steps:
       - name: Checkout 🛎️
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: Cache Schemas 💾
         id: cache-schemas
-        uses: actions/cache/restore@v3
+        uses: actions/cache/restore@v4
         with:
           path: schemas
           key: ${{ runner.os }}-schemas
 
       - name: Check Schema Cache ✔️
         if: steps.cache-schemas.outputs.cache-hit != 'true'
-        uses: actions/github-script@v6
+        uses: actions/github-script@v7
         with:
           script: core.setFailed('Cached schemas not found!')
 
@@ -117,7 +117,7 @@ jobs:
           zip -r -q ../${{ matrix.target }}.zip *
 
       - name: Upload Artifact 📤
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: ${{ matrix.target }}.zip
           path: ${{ matrix.target }}.zip
@@ -129,10 +129,10 @@ jobs:
     needs: prepare-schemas
     steps:
       - name: Checkout 🛎️
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: Create Release 🚀
-        uses: softprops/action-gh-release@v1
+        uses: softprops/action-gh-release@v2
 
   upload-assets:
     strategy:
@@ -149,10 +149,10 @@ jobs:
     needs: [ build-package, create-release ]
     steps:
       - name: Checkout 🛎️
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: Download Artifacts of ${{ matrix.name }} ${{ matrix.emoji }}
-        uses: actions/download-artifact@v3
+        uses: actions/download-artifact@v4
         with:
           name: ${{ matrix.target }}.zip
 
@@ -160,6 +160,6 @@ jobs:
         run: mv ${{ matrix.target }}.zip ${{ matrix.target }}-${{ github.ref_name }}.zip
 
       - name: Upload Assets 🚀
-        uses: softprops/action-gh-release@v1
+        uses: softprops/action-gh-release@v2
         with:
           files: ${{ matrix.target }}-${{ github.ref_name }}.zip
