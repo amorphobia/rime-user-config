@@ -31,6 +31,7 @@
 分母	fnmj	+150
 专精	ftjg	+150
 飞键	fwjm	+150
+中立	fylk	+150
 古装	gjfm	+150
 过审	glen	+150
 光伏	gmfj	+150
@@ -64,6 +65,7 @@
 注释	qjek	+150
 奇技淫巧	qjyq	+150
 起效	qkxc	+150
+起于	qkyl	+150
 签收	qmed	+250
 乳糖	rjtp	+150
 三连	sflm	+150
