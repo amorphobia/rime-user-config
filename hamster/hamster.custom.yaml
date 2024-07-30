@@ -1,53 +1,59 @@
 patch:
-  toolbar:
-    heightOfToolbar: 48 # 40 with embedding
-    candidateTextFontSize: 16
-    candidateCommentFontSize: 14
-    displayCommentOfCandidate: true
-  keyboard:
-    style:
-      fontFace:
-        - name: "PingFangSC-Regular"
-        - name: "Plangothic P1"
-        - name: "Plangothic P2"
-    useKeyboardType: "36键"
-    # disableSwipeLabel: true
-    # swipeLabelUpAndDownIrregularLayout: true
-    swipeLabelUpAndDownLayout: true
-    enableHapticFeedback: true
-    hapticIntensity: 0.5
-    numberKeyProcessByRimeOnNineGridOfNumericKeyboard: true
-    leftSymbolProcessByRimeOnNineGridOfNumericKeyboard: true
-    rightSymbolProcessByRimeOnNineGridOfNumericKeyboard: true
-    symbolsOfGridOfNumericKeyboard: [ '=', ':', '+', '-', '*', '/']
-    lockShiftState: false
-    # enableEmbeddedInputMode: true
-    symbolsOfCursorBack: [ '()', '[]', '{}' ]
-    symbolsOfReturnToMainKeyboard: []
-    pairsOfSymbols: [ '()', '[]', '{}' ]
-    enableLoadingTextForSpaceButton: true
-    showCurrentInputSchemaNameOnLoadingTextForSpaceButton: true
-    # enableColorSchema: true
-  rime:
-    switchSimplifiedOrTraditionalOption: traditionalization
-    overrideDictFiles: false
-    regexOnOverrideDictFiles: [ installation.yaml, user.yaml, "^.*[.]userdb.*$" ]
-    regexOnCopyAppGroupDictFile: [ installation.yaml, user.yaml, "^.*[.]userdb.*$" ]
-  keyboards:
+  general/textEditorLineWrappingEnabled: false
+  toolbar/heightOfToolbar: 48 # 40 with embedding
+  toolbar/candidateTextFontSize: 16
+  toolbar/candidateCommentFontSize: 14
+  toolbar/displayCommentOfCandidate: true
+  keyboard/style:
+    fontFace:
+      - name: "PingFangSC-Regular"
+      - name: "Plangothic P1"
+      - name: "Plangothic P2"
+  keyboard/useKeyboardType: "36键"
+  # keyboard/disableSwipeLabel: true
+  # keyboard/swipeLabelUpAndDownIrregularLayout: true
+  keyboard/swipeLabelUpAndDownLayout: true
+  keyboard/enableHapticFeedback: true
+  keyboard/hapticIntensity: 0.5
+  keyboard/numberKeyProcessByRimeOnNineGridOfNumericKeyboard: true
+  keyboard/leftSymbolProcessByRimeOnNineGridOfNumericKeyboard: true
+  keyboard/rightSymbolProcessByRimeOnNineGridOfNumericKeyboard: true
+  keyboard/symbolsOfGridOfNumericKeyboard: [ '=', ':', '+', '-', '*', '/']
+  keyboard/lockShiftState: false
+  # keyboard/enableEmbeddedInputMode: true
+  keyboard/symbolsOfCursorBack: [ '()', '[]', '{}' ]
+  keyboard/symbolsOfReturnToMainKeyboard: []
+  keyboard/pairsOfSymbols: [ '()', '[]', '{}' ]
+  keyboard/enableLoadingTextForSpaceButton: true
+  keyboard/showCurrentInputSchemaNameOnLoadingTextForSpaceButton: true
+  # keyboard/enableColorSchema: true
+  rime/switchSimplifiedOrTraditionalOption: traditionalization
+  rime/overrideDictFiles: false
+  rime/regexOnOverrideDictFiles: [ installation.yaml, user.yaml, "^.*[.]userdb.*$" ]
+  rime/regexOnCopyAppGroupDictFile: [ installation.yaml, user.yaml, "^.*[.]userdb.*$" ]
+  keyboards/+:
     - name: "36键"
       isPrimary: true
       rowHeight: { portrait: 45, landscape: 33.3 }
       buttonInsets: { left: 3, right: 3, top: 4, bottom: 2 }
+      keyStyle:
+        num:
+          fontSize: 18
+          swipeFontSize: 6
       rows:
         - rowHeight: { portrait: 36, landscape: 27 }
           keys:
             - action: { character: { char: "1" } }
+              lightModeStyleName: num
+              darkModeStyleName: num
               width: { portrait: { percentage: 0.1 }, landscape: { percentage: 0.06 } }
               swipe:
                 - { direction: up, action: { character: { char: "!" } }, processByRIME: true }
                 - { direction: down, action: { character: { char: "!" } }, display: false, processByRIME: true }
                 - { direction: right, action: tab, processByRIME: true }
             - action: { character: { char: "2" } }
+              lightModeStyleName: num
+              darkModeStyleName: num
               width: { portrait: { percentage: 0.1 }, landscape: { percentage: 0.06 } }
               swipe:
                 - { direction: up, action: { character: { char: "@" } }, processByRIME: true }
@@ -57,47 +63,65 @@ patch:
                 - { action: { symbol: { char: "@126.com" } } }
                 - { action: { symbol: { char: "@outlook.com" } } }
             - action: { character: { char: "3" } }
+              lightModeStyleName: num
+              darkModeStyleName: num
               width: { portrait: { percentage: 0.1 }, landscape: { percentage: 0.06 } }
               swipe:
                 - { direction: up, action: { character: { char: "#" } }, processByRIME: true }
                 - { direction: down, action: { character: { char: "#" } }, display: false, processByRIME: true }
             - action: { character: { char: "4" } }
+              lightModeStyleName: num
+              darkModeStyleName: num
               width: { portrait: { percentage: 0.1 }, landscape: { percentage: 0.06 } }
               swipe:
                 - { direction: up, action: { character: { char: "$" } }, processByRIME: true }
                 - { direction: down, action: { character: { char: "$" } }, display: false, processByRIME: true }
             - action: { character: { char: "5" } }
+              lightModeStyleName: num
+              darkModeStyleName: num
               width: { portrait: { percentage: 0.1 }, landscape: { percentage: 0.06 } }
               swipe:
                 - { direction: up, action: { character: { char: "%" } }, processByRIME: true }
                 - { direction: down, action: { character: { char: "%" } }, display: false, processByRIME: true }
             - action: { character: { char: "6" } }
+              lightModeStyleName: num
+              darkModeStyleName: num
               width: { portrait: available, landscape: { percentage: 0.06 } }
               swipe:
                 - { direction: up, action: { character: { char: "^" } }, processByRIME: true }
                 - { direction: down, action: { character: { char: "^" } }, display: false, processByRIME: true }
             - { action: none, width: { portrait: available, landscape: { percentage: 0.28 } } }
             - action: { character: { char: "5" } }
+              lightModeStyleName: num
+              darkModeStyleName: num
               width: { portrait: available, landscape: { percentage: 0.06 } }
               swipe:
                 - { direction: up, action: { character: { char: "%" } }, processByRIME: true }
                 - { direction: down, action: { character: { char: "%" } }, display: false, processByRIME: true }
             - action: { character: { char: "6" } }
+              lightModeStyleName: num
+              darkModeStyleName: num
               width: { portrait: { percentage: 0.1 }, landscape: { percentage: 0.06 } }
               swipe:
                 - { direction: up, action: { character: { char: "^" } }, processByRIME: true }
                 - { direction: down, action: { character: { char: "^" } }, display: false, processByRIME: true }
             - action: { character: { char: "7" } }
+              lightModeStyleName: num
+              darkModeStyleName: num
               width: { portrait: { percentage: 0.1 }, landscape: { percentage: 0.06 } }
               swipe:
                 - { direction: up, action: { character: { char: "&" } }, processByRIME: true }
                 - { direction: down, action: { character: { char: "&" } }, display: false, processByRIME: true }
             - action: { character: { char: "8" } }
+              lightModeStyleName: num
+              darkModeStyleName: num
               width: { portrait: { percentage: 0.1 }, landscape: { percentage: 0.06 } }
               swipe:
                 - { direction: up, action: { character: { char: "*" } }, processByRIME: true }
                 - { direction: down, action: { character: { char: "*" } }, display: false, processByRIME: true }
             - action: { character: { char: "9" } }
+              lightModeStyleName: num
+              darkModeStyleName: num
               width: { portrait: { percentage: 0.1 }, landscape: { percentage: 0.06 } }
               swipe:
                 - { direction: up, action: { character: { char: "(" } }, processByRIME: true }
@@ -106,6 +130,8 @@ patch:
                 - { action: { symbol: { char: "（" } } }
                 - { action: { symbol: { char: "(" } }, label: "(半" }
             - action: { character: { char: "0" } }
+              lightModeStyleName: num
+              darkModeStyleName: num
               width: { portrait: { percentage: 0.1 }, landscape: { percentage: 0.06 } }
               swipe:
                 - { direction: up, action: { character: { char: ")" } }, processByRIME: true }
