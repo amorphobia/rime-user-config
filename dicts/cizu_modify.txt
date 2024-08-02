@@ -7,6 +7,7 @@
 爆雷	bzlw	+150
 才对	chdb	+150
 搭便车	dbj	+150
+短视频	dep	+150
 氮气	dfqk	+150
 待会	dhhb	+150
 地铁	dktd	+150
