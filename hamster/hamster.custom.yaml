@@ -12,6 +12,7 @@ patch:
   keyboard/useKeyboardType: "36键"
   # keyboard/disableSwipeLabel: true
   # keyboard/swipeLabelUpAndDownIrregularLayout: true
+  keyboard/enableSystemClipboardListener: true
   keyboard/swipeLabelUpAndDownLayout: true
   keyboard/enableHapticFeedback: true
   keyboard/hapticIntensity: 0.5
