@@ -139,7 +139,6 @@ patch:
                 - { direction: down, action: { character: { char: ")" } }, display: false, processByRIME: true }
               callout:
                 - { action: { symbol: { char: "）" } } }
-                - { action: { shortcutCommand: "#关闭键盘" }, label: "✖" }
                 - { action: { symbol: { char: ")" } }, label: ")半" }
         - keys:
             - action: { character: { char: "q" } }
@@ -149,9 +148,13 @@ patch:
                 - { direction: down, action: { character: { char: "~" } }, processByRIME: true }
                 - { direction: right, action: tab, processByRIME: true }
             - { action: { character: { char: "w" } }, width: { portrait: { percentage: 0.1 }, landscape: { percentage: 0.06 } } }
-            - { action: { character: { char: "e" } }, width: { portrait: { percentage: 0.1 }, landscape: { percentage: 0.06 } } }
+            - action: { character: { char: "e" } }
+              width: { portrait: { percentage: 0.1 }, landscape: { percentage: 0.06 } }
+              swipe: [{ direction: down, action: { shortcutCommand: { sendKeys: { keys: "Control+backslash" } } }, label: "绘文" }]
             - { action: { character: { char: "r" } }, width: { portrait: { percentage: 0.1 }, landscape: { percentage: 0.06 } } }
-            - { action: { character: { char: "t" } }, width: { portrait: { percentage: 0.1 }, landscape: { percentage: 0.06 } } }
+            - action: { character: { char: "t" } }
+              width: { portrait: { percentage: 0.1 }, landscape: { percentage: 0.06 } }
+              swipe: [{ direction: down, action: { shortcutCommand: { sendKeys: { keys: "Control+comma" } } }, label: "豆腐" }]
             - action: { character: { char: "y" } }
               width: { portrait: available, landscape: { percentage: 0.06 } }
               swipe:
@@ -160,6 +163,7 @@ patch:
             - { action: none, width: { portrait: available, landscape: { percentage: 0.28 } } }
             - action: { character: { char: "t" } }
               width: { portrait: available, landscape: { percentage: 0.06 } }
+              swipe: [{ direction: down, action: { shortcutCommand: { sendKeys: { keys: "Control+comma" } } }, label: "豆腐" }]
             - action: { character: { char: "y" } }
               width: { portrait: { percentage: 0.1 }, landscape: { percentage: 0.06 } }
               swipe:
@@ -196,9 +200,9 @@ patch:
             - action: { character: { char: "s" } }
               width: { portrait: { percentage: 0.1 }, landscape: { percentage: 0.0654545454545455 } }
               swipe:
-               - { direction: up, action: { shortcutCommand: "#RimeSwitcher" }, label: "选单" }
-               - { direction: down, action: { shortcutCommand: "#简繁切换" }, label: "简繁" }
-              callout: [{ action: { shortcutCommand: "#RimeSwitcher" }, label: "选单" }]
+               - { direction: up, action: { shortcutCommand: { sendKeys: { keys: "Control+quoteright" } } }, label: "选单" }
+               - { direction: down, action: { shortcutCommand: { sendKeys: { keys: "Control+slash" } } }, label: "简繁" }
+              callout: [{ action: { shortcutCommand: { sendKeys: { keys: "Control+quoteright" } } }, label: "选单" }]
             - { action: { character: { char: "d" } }, width: { portrait: { percentage: 0.1 }, landscape: { percentage: 0.0654545454545455 } } }
             - action: { character: { char: "f" } }
               width: { portrait: { percentage: 0.1 }, landscape: { percentage: 0.0654545454545455 } }

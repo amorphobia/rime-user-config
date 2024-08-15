@@ -3,6 +3,8 @@ patch:
   schema_list:
     - { schema: jiandao }
     - { schema: pinyin_simp }
+  switcher/hotkeys:
+    - Control+quoteright
   switcher/save_options/+:
     - traditionalization
     - martianization

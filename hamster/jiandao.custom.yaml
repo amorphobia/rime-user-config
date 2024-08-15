@@ -4,8 +4,9 @@ patch:
   switches/@2: { options: [ simplification, traditionalization, martianization ], abbrev: [ 汉, 漢, 焱 ], states: [ 通用规范汉字, 繁體字, 焱暒妏 ] }
   switches/@next: { name: notolization, abbrev: [ �, 字 ], states: [ ��, 文字 ] }
   key_binder/bindings:
-    - { when: has_menu, accept: "^", toggle: traditionalization }
-    - { when: has_menu, accept: "&", toggle: emoji_suggestion }
+    - { when: always, accept: "Control+slash", toggle: traditionalization }
+    - { when: always, accept: "Control+backslash", toggle: emoji_suggestion }
+    - { when: always, accept: "Control+comma", toggle: notolization }
   engine/filters/+:
     - simplifier@martianization
     - lua_filter@*comment_spliter
