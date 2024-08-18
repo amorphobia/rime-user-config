@@ -1,0 +1,20 @@
+patch:
+  ascii_composer/switch_key:
+    Caps_Lock: noop
+    Control_L: noop
+    Control_R: noop
+    Shift_L: commit_code
+    Shift_R: noop
+  key_binder/bindings:
+    - { when: always, accept: Shift+space, select: .next }
+    - { when: always, accept: Control+Alt+comma, toggle: full_shape }
+    - { when: always, accept: Control+Alt+period, toggle: ascii_punct }
+  schema_list:
+    - { schema: jiandao }
+    - { schema: pinyin_simp }
+  switcher/hotkeys:
+    - Control+quoteright
+    - Control+Shift+space
+  switcher/save_options/+:
+    - traditionalization
+    - martianization

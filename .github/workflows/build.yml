@@ -52,12 +52,13 @@ jobs:
   build-package:
     strategy:
       matrix:
-        target: [ weasel, hamster, irime, squirrel ]
+        target: [ weasel, hamster, irime, squirrel, rabbit ]
         include:
           - { target: weasel, name: Weasel, emoji: 🦡 }
           - { target: hamster, name: Hamster, emoji: 🐹 }
           - { target: irime, name: iRime, emoji: ℹ️ }
           - { target: squirrel, name: Squirrel, emoji: 🐿️ }
+          - { target: rabbit, name: Rabbit, emoji: 🐇️ }
     name: Build Package for ${{ matrix.name }} ${{ matrix.emoji }}
     runs-on: ubuntu-latest
     needs: prepare-schemas
@@ -111,6 +112,15 @@ jobs:
           cp lua/* ${{ matrix.target }}/lua/ && \
           echo "prepare for ${{ matrix.target }} done."
 
+      - name: Prepare User Settings for Rabbit 🐇️
+        if: ${{ matrix.target == 'rabbit' }}
+        run: |
+          mkdir -p ${{ matrix.target }}/lua ${{ matrix.target }}/opencc && \
+          cp -r schemas/pinyin_simp.* schemas/jiandao.base.dict.yaml ${{ matrix.target }}/ && \
+          cp lua/* ${{ matrix.target }}/lua/ && \
+          cp schemas/opencc/emoji_plus.* schemas/opencc/s2m.json schemas/opencc/SM* ${{ matrix.target }}/opencc/ && \
+          echo "prepare for ${{ matrix.target }} done."
+
       - name: Make Zip Archive 🗄️
         run: |
           cd ${{ matrix.target }}
@@ -143,6 +153,7 @@ jobs:
           - { target: hamster, name: Hamster, emoji: 🐹 }
           - { target: irime, name: iRime, emoji: ℹ️ }
           - { target: squirrel, name: Squirrel, emoji: 🐿️ }
+          - { target: rabbit, name: Rabbit, emoji: 🐇️ }
     name: Upload Assets of ${{ matrix.name }} ${{ matrix.emoji }}
     if: startsWith(github.ref, 'refs/tags/v')
     runs-on: ubuntu-latest

@@ -1,0 +1,36 @@
+patch:
+  schema/dependencies:
+    - pinyin_simp
+  switches/@2: { options: [ simplification, traditionalization, martianization ], abbrev: [ 汉, 漢, 焱 ], states: [ 通用规范汉字, 繁體字, 焱暒妏 ] }
+  engine/filters/+:
+    - simplifier@martianization
+    - lua_filter@*comment_spliter
+    - simplifier@emoji_plus
+  engine/translators/+:
+    - reverse_lookup_translator
+  recognizer/patterns/+:
+    reverse_lookup: "^u[a-z]*'?$"
+  reverse_lookup:
+    dictionary: pinyin_simp
+    prefix: "u"
+    suffix: "'"
+    tips: "〔全拼〕"
+    preedit_format:
+      - xform/^u(.+)/$1/
+      - xform/([nl])v/$1ü/
+      - xform/([nl])ue/$1üe/
+      - xform/([jqxy])v/$1u/
+    comment_format:
+      - xform/^/〔/
+      - xform/$/〕/
+      - xform/ /, /
+  martianization:
+    opencc_config: s2m.json
+    option_name: martianization
+    tips: all
+    random: true
+  emoji_plus:
+    opencc_config: emoji_plus.json
+    option_name: emoji_suggestion
+    tips: all
+  hint_text: '✖️'
