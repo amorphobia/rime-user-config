@@ -32,7 +32,7 @@ patch:
   rime/overrideDictFiles: false
   rime/regexOnOverrideDictFiles: [ installation.yaml, user.yaml, "^.*[.]userdb.*$" ]
   rime/regexOnCopyAppGroupDictFile: [ installation.yaml, user.yaml, "^.*[.]userdb.*$" ]
-  keyboards/+:
+  keyboards/:
     - name: "36键"
       isPrimary: true
       rowHeight: { portrait: 45, landscape: 33.3 }
