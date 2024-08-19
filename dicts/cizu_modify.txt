@@ -65,6 +65,7 @@
 内推	nwtb	+150
 注释	qjek	+150
 奇技淫巧	qjyq	+150
+起重	qkfy	+150
 起效	qkxc	+150
 起于	qkyl	+150
 签收	qmed	+250
