@@ -42,7 +42,7 @@ patch:
           fontSize: 18
           swipeFontSize: 6
       rows:
-        - rowHeight: { portrait: 36, landscape: 27 }
+        - rowHeight: { portrait: 36, landscape: 0 }
           keys:
             - action: { character: { char: "1" } }
               lightModeStyleName: num
