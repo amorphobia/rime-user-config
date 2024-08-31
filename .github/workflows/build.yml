@@ -116,9 +116,9 @@ jobs:
         if: ${{ matrix.target == 'rabbit' }}
         run: |
           mkdir -p ${{ matrix.target }}/lua ${{ matrix.target }}/opencc && \
-          cp -r schemas/pinyin_simp.* schemas/jiandao.base.dict.yaml ${{ matrix.target }}/ && \
+          cp -r schemas/jiandao.base.dict.yaml ${{ matrix.target }}/ && \
           cp lua/* ${{ matrix.target }}/lua/ && \
-          cp schemas/opencc/emoji_plus.* schemas/opencc/s2m.json schemas/opencc/SM* ${{ matrix.target }}/opencc/ && \
+          cp schemas/opencc/emoji_plus.* schemas/opencc/s2m.json schemas/opencc/SM* opencc/* ${{ matrix.target }}/opencc/ && \
           echo "prepare for ${{ matrix.target }} done."
 
       - name: Make Zip Archive 🗄️
