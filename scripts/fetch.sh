@@ -53,6 +53,7 @@ done
 WORK=$(pwd)
 DICTS=${WORK}/dicts
 SCHEMAS=${WORK}/schemas
+XIAOXIAO=${WORK}/xiaoxiao
 
 rm -rf ${SCHEMAS}
 
@@ -70,6 +71,7 @@ git clone --depth 1 https://github.com/amorphobia/rime-jiandao jiandao && (
     rm schema/recipe.yaml schema/rime.lua
 ) && \
 cp -r jiandao/schema/* ${SCHEMAS}/ && \
+cp -r jiandao/xiaoxiao/* ${XIAOXIAO}/ && \
 echo "fetch Jiandao done."
 
 # 袖珍简化字拼音

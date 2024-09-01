@@ -46,7 +46,9 @@ jobs:
         uses: actions/cache/save@v4
         if: always()
         with:
-          path: schemas
+          path: |
+            schemas
+            xiaoxiao
           key: ${{ runner.os }}-schemas
 
   build-package:
@@ -59,6 +61,7 @@ jobs:
           - { target: irime, name: iRime, emoji: ℹ️ }
           - { target: squirrel, name: Squirrel, emoji: 🐿️ }
           - { target: rabbit, name: Rabbit, emoji: 🐇️ }
+          - { target: yong, name: xiaoxiao, emoji: ☯️ }
     name: Build Package for ${{ matrix.name }} ${{ matrix.emoji }}
     runs-on: ubuntu-latest
     needs: prepare-schemas
@@ -70,7 +73,9 @@ jobs:
         id: cache-schemas
         uses: actions/cache/restore@v4
         with:
-          path: schemas
+          path: |
+            schemas
+            xiaoxiao
           key: ${{ runner.os }}-schemas
 
       - name: Check Schema Cache ✔️
@@ -121,6 +126,13 @@ jobs:
           cp schemas/opencc/emoji_plus.* schemas/opencc/s2m.json schemas/opencc/SM* opencc/* ${{ matrix.target }}/opencc/ && \
           echo "prepare for ${{ matrix.target }} done."
 
+      - name: Prepare User Settings for Yong ☯️
+        if: ${{ matrix.target == 'yong' }}
+        run: |
+          mkdir ${{ matrix.target }} && \
+          cp -r xiaoxiao/* ${{ matrix.target }}/ && \
+          echo "prepare for ${{ matrix.target }} done."
+
       - name: Make Zip Archive 🗄️
         run: |
           cd ${{ matrix.target }}
@@ -154,6 +166,7 @@ jobs:
           - { target: irime, name: iRime, emoji: ℹ️ }
           - { target: squirrel, name: Squirrel, emoji: 🐿️ }
           - { target: rabbit, name: Rabbit, emoji: 🐇️ }
+          - { target: yong, name: xiaoxiao, emoji: ☯️ }
     name: Upload Assets of ${{ matrix.name }} ${{ matrix.emoji }}
     if: startsWith(github.ref, 'refs/tags/v')
     runs-on: ubuntu-latest
