@@ -59,6 +59,7 @@ rm -rf ${SCHEMAS}
 
 mkdir -p ${SCHEMAS}/lua
 mkdir -p ${SCHEMAS}/opencc
+mkdir ${XIAOXIAO}
 
 # 🌟️星空键道
 # https://github.com/amorphobia/rime-jiandao
