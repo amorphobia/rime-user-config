@@ -1,0 +1,14 @@
+patch:
+  suspend_hotkey: Control+Alt+space
+  app_options/terminus.exe/ascii_mode: true
+  app_options/mintty.exe/ascii_mode: true
+  app_options/conemu64.exe/ascii_mode: true
+  app_options/fluentterminal.app.exe/ascii_mode: true
+  app_options/remotedesktopmanagerfree.exe/ascii_mode: true
+  app_options/code.exe/ascii_mode: true
+  app_options/vscodium.exe/ascii_mode: true
+  app_options/tvnviewer.exe/ascii_mode: true
+  app_options/isaac-ng.exe/ascii_mode: true
+  app_options/sublime_text.exe/ascii_mode: true
+  app_options/explorer.exe/ascii_mode: true
+  app_options/hh.exe/ascii_mode: true
