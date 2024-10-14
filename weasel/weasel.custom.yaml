@@ -1,10 +1,19 @@
 patch:
-  style/color_scheme: pornhub
+  style/color_scheme: win11
+  style/color_cheme_dark: win11dark
   style/inline_preedit: true
-  # turn on following two options on Weasel 0.15.0+
+  style/text_orientation: "vertical"
+  style/vertical_text_left_to_right: true
+  style/vertical_auto_reverse: true
+  style/click_to_capture: true
+  # turn on following two options for full embedded mode
   # style/preedit_type: preview_all
   # style/layout/margin_x: -1
+  style/layout/min_width: 0
+  style/layout/min_height: 160
   style/font_face: "Plangothic P2:30000:3134F, Plangothic P2:31350:323AF"
+  style/label_font_point: 12
+  style/label_format: "%s・"
   app_options/terminus.exe/ascii_mode: true
   app_options/mintty.exe/ascii_mode: true
   app_options/conemu64.exe/ascii_mode: true
@@ -37,3 +46,23 @@ patch:
     hilited_mark_color: 0x034e8c
     prevpage_color: 0xf2f2f2
     nextpage_color: 0xf2f2f2
+  preset_color_schemes/win11:
+    name: "视窗十一／Windows 11"
+    text_color: 0x191919
+    label_color: 0xa4a4a4
+    hilited_label_color: 0x191919
+    back_color: 0xf9f9f9
+    border_color: 0x199e5a00
+    hilited_mark_color: 0xc06700
+    hilited_candidate_back_color: 0xf0f0f0
+    shadow_color: 0x20000000
+  preset_color_schemes/win11dark:
+    name: "视窗十一暗色／Windows 11 Dark"
+    text_color: 0xf9f9f9
+    label_color: 0x6e6e6e
+    hilited_label_color: 0xf9f9f9
+    back_color: 0x2c2c2c
+    border_color: 0x1987cbff
+    hilited_mark_color: 0xffc24c
+    hilited_candidate_back_color: 0x383838
+    shadow_color: 0x20000000

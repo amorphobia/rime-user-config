@@ -34,4 +34,6 @@ patch:
     opencc_config: emoji_plus.json
     option_name: emoji_suggestion
     tips: all
-  hint_text: '✖️'
+  hint_text: ""
+  translator/comment_format:
+    - xlit/abcdefghijklmnopqrstuvwxyz/ａｂｃｄｅｆｇｈｉｊｋｌｍｎｏｐｑｒｓｔｕｖｗｘｙｚ/
