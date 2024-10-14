@@ -1,6 +1,6 @@
 patch:
   general/textEditorLineWrappingEnabled: false
-  toolbar/heightOfToolbar: 48 # 40 with embedding
+  toolbar/heightOfToolbar: 38 # 38 with embedding, 48 without embedding
   toolbar/candidateTextFontSize: 16
   toolbar/candidateCommentFontSize: 14
   toolbar/displayCommentOfCandidate: true
@@ -21,7 +21,7 @@ patch:
   keyboard/rightSymbolProcessByRimeOnNineGridOfNumericKeyboard: true
   keyboard/symbolsOfGridOfNumericKeyboard: [ '=', ':', '+', '-', '*', '/']
   keyboard/lockShiftState: false
-  # keyboard/enableEmbeddedInputMode: true
+  keyboard/enableEmbeddedInputMode: true
   keyboard/symbolsOfCursorBack: [ '()', '[]', '{}' ]
   keyboard/symbolsOfReturnToMainKeyboard: []
   keyboard/pairsOfSymbols: [ '()', '[]', '{}' ]
@@ -212,14 +212,20 @@ patch:
             - action: { character: { char: "g" } }
               width: { portrait: { percentage: 0.1 }, landscape: { percentage: 0.0654545454545455 } }
               swipe:
+                - { direction: up, action: { shortcutCommand: { openURL: { url: "#pasteboardContent" } } }, label: "转到" }
+                - { direction: down, action: { shortcutCommand: { openURL: { url: "https://www.google.com/search?q=#pasteboardContent" } } }, label: "谷歌" }
                 - { direction: left, action: { shortcutCommand: "#左手模式" } }
                 - { direction: right, action: { shortcutCommand: "#右手模式" } }
+              callout: [{ action: { shortcutCommand: { openURL: { url: "#pasteboardContent" } } }, label: "转到" }]
             - { action: none, width: { portrait: available, landscape: { percentage: 0.28 } } }
             - action: { character: { char: "g" } }
               width: { portrait: available, landscape: { percentage: 0.0654545454545455 } }
               swipe:
+                - { direction: up, action: { shortcutCommand: { openURL: { url: "#pasteboardContent" } } }, label: "转到" }
+                - { direction: down, action: { shortcutCommand: { openURL: { url: "https://www.google.com/search?q=#pasteboardContent" } } }, label: "谷歌" }
                 - { direction: left, action: { shortcutCommand: "#左手模式" } }
                 - { direction: right, action: { shortcutCommand: "#右手模式" } }
+              callout: [{ action: { shortcutCommand: { openURL: { url: "#pasteboardContent" } } }, label: "转到" }]
             - action: { character: { char: "h" } }
               width: { portrait: { percentage: 0.1 }, landscape: { percentage: 0.0654545454545455 } }
               swipe:
