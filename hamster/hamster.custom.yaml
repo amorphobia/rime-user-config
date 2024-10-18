@@ -10,7 +10,7 @@ patch:
       - name: "Plangothic P1"
       - name: "Plangothic P2"
   keyboard/useKeyboardType: "36键"
-  # keyboard/disableSwipeLabel: true
+  keyboard/disableSwipeLabel: true
   # keyboard/swipeLabelUpAndDownIrregularLayout: true
   keyboard/enableSystemClipboardListener: true
   keyboard/swipeLabelUpAndDownLayout: true
