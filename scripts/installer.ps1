@@ -111,15 +111,6 @@ if (Test-Path "$rime_user_dir\jiandao.user.dict.yaml") {
 }
 if ([System.Version](Get-WeaselVersion) -lt [System.Version]"0.15.0") {
     Remove-Item "$dest_path\jiandao.ico"
-} elseif (Find-Font) {
-    Get-Content "$dest_path\weasel.custom.yaml" | ForEach-Object {
-        $_
-        if ($_ -match "patch:") {
-            '  style/font_face: "Plangothic P2:30000:3134A, Plangothic P2:31350:323AF"'
-        }
-    } | Set-Content "$dest_path\temp.yaml"
-    Remove-Item "$dest_path\weasel.custom.yaml"
-    Rename-Item -Path "$dest_path\temp.yaml" -NewName "weasel.custom.yaml"
 }
 
 Write-Host "Copying files to rime user data directory ..."
