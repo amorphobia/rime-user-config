@@ -17,6 +17,7 @@
 戴森球	dsq	+250
 大招	dsqz	+150
 睡吧	ebbs	+150
+手牌	edph	+150
 疏于	ejyl	+150
 熟语	ejyl	+150
 是个	ekge	+150
