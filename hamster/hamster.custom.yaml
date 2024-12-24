@@ -203,7 +203,9 @@ patch:
                - { direction: up, action: { shortcutCommand: { sendKeys: { keys: "Control+quoteright" } } }, label: "选单" }
                - { direction: down, action: { shortcutCommand: { sendKeys: { keys: "Control+slash" } } }, label: "简繁" }
               callout: [{ action: { shortcutCommand: { sendKeys: { keys: "Control+quoteright" } } }, label: "选单" }]
-            - { action: { character: { char: "d" } }, width: { portrait: { percentage: 0.1 }, landscape: { percentage: 0.0654545454545455 } } }
+            - action: { character: { char: "d" } }
+              width: { portrait: { percentage: 0.1 }, landscape: { percentage: 0.0654545454545455 } }
+              swipe: [{ direction: up, action: { shortcutCommand: "#clearSystemPasteboard" }, label: "清空" }]
             - action: { character: { char: "f" } }
               width: { portrait: { percentage: 0.1 }, landscape: { percentage: 0.0654545454545455 } }
               swipe:
