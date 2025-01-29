@@ -15,7 +15,6 @@ patch:
   engine/translators/+:
     - reverse_lookup_translator
   speller/auto_select: false
-  punctuator/digit_separators: ""
   recognizer/patterns/+:
     reverse_lookup: "^u[a-z]*'?$"
   reverse_lookup:

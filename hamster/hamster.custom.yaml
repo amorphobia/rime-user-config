@@ -18,7 +18,7 @@ patch:
   keyboard/hapticIntensity: 0.5
   keyboard/numberKeyProcessByRimeOnNineGridOfNumericKeyboard: true
   keyboard/leftSymbolProcessByRimeOnNineGridOfNumericKeyboard: true
-  keyboard/rightSymbolProcessByRimeOnNineGridOfNumericKeyboard: true
+  keyboard/rightSymbolProcessByRimeOnNineGridOfNumericKeyboard: false
   keyboard/symbolsOfGridOfNumericKeyboard: [ '=', ':', '+', '-', '*', '/']
   keyboard/lockShiftState: false
   keyboard/enableEmbeddedInputMode: true

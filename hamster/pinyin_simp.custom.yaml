@@ -3,4 +3,3 @@ patch:
   engine/translators:
     - punct_translator
     - script_translator
-  punctuator/digit_separators: ""
