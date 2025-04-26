@@ -39,6 +39,8 @@
 古装	gjfm	+150
 过审	glen	+150
 光伏	gmfj	+150
+罐装	gtfm	+150
+故态复萌	gtfm	-250
 光伏	gxfj	+150
 公网	gywp	+150
 高斯	gzsk	+150
