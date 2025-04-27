@@ -90,7 +90,7 @@ git clone --depth 1 https://github.com/gkovacs/rime-japanese japanese && (
     sed -i '/import_tables/,/^\.\.\.$/{/^\./!d}' japanese.dict.yaml && \
     for dict in mozc jmdict kana
     do
-        sed '0,/^\.\.\.$/d' japanese.${dict}.dict.yaml >> japanese.dict.yaml && \
+        sed '0,/^\.\.\.$/d' japanese.${dict}.dict.yaml | awk '!seen[$1,$2]++' >> japanese.dict.yaml && \
         rm japanese.${dict}.dict.yaml
     done
 ) && \
