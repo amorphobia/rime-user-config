@@ -122,6 +122,7 @@ jobs:
         run: |
           cp -r schemas/* ${{ matrix.target }}/ && \
           cp lua/* ${{ matrix.target }}/lua/ && \
+          cp opencc/* ${{ matrix.target }}/opencc/ && \
           echo "prepare for ${{ matrix.target }} done."
 
       - name: Prepare User Settings for Yong ☯️
