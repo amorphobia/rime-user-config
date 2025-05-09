@@ -4,6 +4,7 @@
 辨识	bmek	+150
 编译	bmyk	+250
 便以	bmyk	-150
+芭蕉	bsjc	+150
 比亚迪	byd	+150
 爆雷	bzlw	+150
 才对	chdb	+150
