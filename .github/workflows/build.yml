@@ -27,14 +27,6 @@ jobs:
       - name: Checkout 🛎️
         uses: actions/checkout@v4
 
-      - name: Clear Cache ❌
-        env:
-          GH_TOKEN: ${{ github.token }}
-        run: |
-          gh extension install actions/gh-actions-cache
-          gh actions-cache delete ${{ runner.os }}-schemas --confirm
-        continue-on-error: true
-
       - name: Install Dependencies ⚙️
         run: sudo apt-get install -y opencc
 
@@ -42,14 +34,13 @@ jobs:
         run: |
           bash scripts/fetch.sh --setver ${{ github.ref_name }}
 
-      - name: Cache Schemas 💾
-        uses: actions/cache/save@v4
-        if: always()
+      - name: Upload Schemas 💾
+        uses: actions/upload-artifact@v4
         with:
+          name: schemas
           path: |
             schemas
             xiaoxiao
-          key: ${{ runner.os }}-schemas
 
   build-package:
     strategy:
@@ -69,20 +60,10 @@ jobs:
       - name: Checkout 🛎️
         uses: actions/checkout@v4
 
-      - name: Cache Schemas 💾
-        id: cache-schemas
-        uses: actions/cache/restore@v4
+      - name: Download Schemas 💾
+        uses: actions/download-artifact@v4
         with:
-          path: |
-            schemas
-            xiaoxiao
-          key: ${{ runner.os }}-schemas
-
-      - name: Check Schema Cache ✔️
-        if: steps.cache-schemas.outputs.cache-hit != 'true'
-        uses: actions/github-script@v7
-        with:
-          script: core.setFailed('Cached schemas not found!')
+          name: schemas
 
       - name: Prepare User Settings for Weasel 🦡
         if: ${{ matrix.target == 'weasel' }}
