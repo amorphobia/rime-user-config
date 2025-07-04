@@ -12,3 +12,5 @@ patch:
   app_options/sublime_text.exe/ascii_mode: true
   app_options/explorer.exe/ascii_mode: true
   app_options/hh.exe/ascii_mode: true
+  app_options/bash.exe/ascii_mode: true
+  app_options/enpass.exe/ascii_mode: true
