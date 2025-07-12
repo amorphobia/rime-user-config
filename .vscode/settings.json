@@ -9,5 +9,5 @@
         "comments": false,
         "strings": false,
     },
-    "editor.fontFamily": "'Noto Sans SC', 'Plangothic P1', 'Plangothic P2'",
+    "editor.fontFamily": "Consolas, 'Courier New', monospace, 'Noto Sans SC', 'Plangothic P1', 'Plangothic P2'",
 }
