@@ -27,11 +27,11 @@ Opencc 方案
 Set-ExecutionPolicy RemoteSigned -Scope CurrentUser
 
 # 直接安装
-irm 0xa.nl/rime-conf | iex
+irm https://raw.githubusercontent.com/amorphobia/rime-user-config/master/scripts/installer.ps1 | iex
 
 # 或者使用代理
 $Proxy = "http://addr:port"
-& ([scriptblock]::Create((irm -Proxy $Proxy 0xa.nl/rime-conf))) -Proxy $Proxy
+& ([scriptblock]::Create((irm -Proxy $Proxy https://raw.githubusercontent.com/amorphobia/rime-user-config/master/scripts/installer.ps1))) -Proxy $Proxy
 ```
 
 ### 下载安装
