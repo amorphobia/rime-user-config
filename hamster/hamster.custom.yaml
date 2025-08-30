@@ -6,6 +6,7 @@ patch:
   toolbar/displayCommentOfCandidate: true
   keyboard/style:
     fontFace:
+      - name: "LXGWWenKaiMonoGB-Regular"
       - name: "PingFangSC-Regular"
       - name: "Plangothic P1"
       - name: "Plangothic P2"
