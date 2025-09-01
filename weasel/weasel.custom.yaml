@@ -12,7 +12,7 @@
   # style/layout/margin_x: -1
   style/layout/min_width: 0
   style/layout/min_height: 160
-  style/font_face: "Plangothic P2:30000:3134F, Plangothic P2:31350:323AF"
+  style/font_face: "LXGW WenKai Mono GB, Plangothic P2:30000:3134F, Plangothic P2:31350:323AF"
   style/label_font_point: 12
   style/label_format: "%s・"
   app_options/terminus.exe/ascii_mode: true
