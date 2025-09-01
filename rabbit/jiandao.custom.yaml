@@ -1,5 +1,6 @@
 patch:
   schema/icon: jiandao.ico
+  schema/name: 星空键道
   schema/dependencies:
     - pinyin_simp
   switches/@2: { options: [ simplification, traditionalization, martianization ], abbrev: [ 汉, 漢, 焱 ], states: [ 通用规范汉字, 繁體字, 焱暒妏 ] }
