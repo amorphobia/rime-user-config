@@ -20,6 +20,7 @@ patch:
   app_options/vscodium.exe/ascii_mode: true
   preset_color_schemes/win11:
     name: "视窗十一／Windows 11"
+    color_format: abgr
     text_color: 0x191919
     label_color: 0xa4a4a4
     hilited_label_color: 0x191919
@@ -30,6 +31,7 @@ patch:
     shadow_color: 0x20000000
   preset_color_schemes/win11dark:
     name: "视窗十一暗色／Windows 11 Dark"
+    color_format: abgr
     text_color: 0xf9f9f9
     label_color: 0x6e6e6e
     hilited_label_color: 0xf9f9f9
