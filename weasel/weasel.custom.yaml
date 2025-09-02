@@ -1,6 +1,6 @@
 ﻿patch:
   style/color_scheme: win11
-  style/color_cheme_dark: win11dark
+  style/color_scheme_dark: win11dark
   style/inline_preedit: true
   style/text_orientation: "vertical"
   style/vertical_text: true
