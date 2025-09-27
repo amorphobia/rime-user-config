@@ -1,4 +1,5 @@
 病历	bglk	+250
+百事	bhek	+350
 布丁	bjdg	+250
 不吃	bjwk	+150
 辨识	bmek	+150
@@ -45,6 +46,7 @@
 光伏	gxfj	+150
 公网	gywp	+150
 高斯	gzsk	+150
+后端	hddt	+150
 盒马	hems	+250
 好爽	hzem	+150
 好爽	hzex	+150
