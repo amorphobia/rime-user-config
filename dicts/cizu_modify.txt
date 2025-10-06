@@ -91,6 +91,8 @@
 吃饱了撑	wblj	-250
 外翻	whff	+150
 务必	wjbk	+150
+物理	wjlk	-250
+武力	wjlk	+150
 无线	wjxm	+150
 吃的	wkde	+150
 闻名不如见面	wmbm	-250

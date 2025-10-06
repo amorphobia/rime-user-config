@@ -31,6 +31,7 @@
 借点	jddm
 江津区	jjq
 五指	wjfk
+物理	wjlk
 有次	ydck
 一丢丢	ydd
 有雨	ydyl
