@@ -6,6 +6,7 @@
 # 词组二重
 百世	bhek
 不识	bjek
+大不大	dbd
 大数	dsej
 大史	dsek
 夶䎜	dslz
@@ -18,6 +19,7 @@
 江津区	jjq
 五指	wjfk
 物理	wjlk
+问得	wnde
 有次	ydck
 一丢丢	ydd
 有雨	ydyl
