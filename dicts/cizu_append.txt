@@ -2547,6 +2547,7 @@
 氐土貉	dth	uvu	950
 电梯间	dtj	ivo	950
 地厅级	dtj	vva	950
+打太极	dtj	ivv	850
 地图集	dtj	vii	850
 短剧	dtjl	ua	950
 电梯口	dtk	ivo	950
