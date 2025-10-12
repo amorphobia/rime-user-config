@@ -3682,6 +3682,7 @@
 圣饼	erbg	au	950
 升变	erbm	uo	950
 生的	erde	uu	750
+剩得	erde	uu	650
 圣代	erdh	ai	950
 深入敌后	erdh	au	850
 生电	erdm	ui	950
