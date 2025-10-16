@@ -28,6 +28,7 @@
 双核	emhe	+150
 双流	emlq	+150
 双押	emys	+150
+神志	enfk	+150
 上海	ephh	+150
 生菜	erch	+150
 歃血	esxh	+150
