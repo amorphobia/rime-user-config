@@ -134,7 +134,7 @@ git clone --depth 1 https://github.com/amorphobia/opencc-tonggui tonggui && (
     cd tonggui && \
     if command -v opencc &> /dev/null
     then
-        make
+        make extend
     fi
 ) && \
 cp tonggui/opencc/* ${SCHEMAS}/opencc/ && \
