@@ -9852,6 +9852,7 @@
 龙河	lyhe	va	950
 鲁鱼亥豕	lyhe	uu	850
 龙湖	lyhj	va	950
+老友记	lyj	uvo	950
 晾衣夹	lyj	oov	850
 林依晨	lyj	vio	850
 林永健	lyj	voi	850
