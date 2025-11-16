@@ -108,6 +108,7 @@
 血条	xhtc	+250
 爱惜	xhxk	+150
 相互作用	xhzy	+150
+希码	xkms	-250
 虚惊	xljg	+150
 线上	xmep	+150
 线下	xmxs	+150
