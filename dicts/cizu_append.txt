@@ -7822,6 +7822,7 @@
 角木蛟	jmj	uvi	850
 简截	jmjd	uu	850
 肩颈	jmjg	oa	950
+减除	jmjj	oa	950
 荐饥	jmjk	iu	850
 歼击	jmjk	vv	850
 戋戋	jmjm	vv	850
