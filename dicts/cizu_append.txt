@@ -7860,6 +7860,7 @@
 箭竹	jmqj	uu	850
 洁面乳	jmr	avu	950
 场面人	jmr	vvi	950
+检入	jmrj	vu	950
 捡人	jmrn	ii	850
 兼祧	jmtc	oo	850
 建台	jmth	aa	950
