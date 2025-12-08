@@ -9595,6 +9595,7 @@
 练个	lmge	ai	850
 老闵行	lmh	uou	950
 廉航	lmhp	ou	950
+连好	lmhz	va	950
 连脚	lmjc	vu	950
 链家	lmjs	io	950
 练江	lmjx	aa	950
