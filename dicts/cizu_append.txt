@@ -2989,6 +2989,7 @@
 收不了	ebl	ava	850
 尚博路	ebl	iuo	850
 上不了	ebl	iva	850
+水木	ebmj	av	950
 睡懵	ebmr	io	950
 睡吗	ebms	io	950
 手不能提	ebnt	iv	950
