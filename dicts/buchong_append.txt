@@ -19,6 +19,7 @@
 公历	gylk
 借点	jddm
 江津区	jjq
+基建	jkjm
 五指	wjfk
 物理	wjlk
 问得	wnde

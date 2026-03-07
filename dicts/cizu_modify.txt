@@ -58,6 +58,7 @@
 精装	jgfm	+150
 基操	jkcz	+150
 积分	jkfn	+150
+基建	jkjm	-150
 键道	jmdz	+150
 见见	jmjm	+150
 键政	jmqr	+150
