@@ -98,6 +98,7 @@
 无线	wjxm	+150
 吃的	wkde	+150
 闻名不如见面	wmbm	-250
+挖哧	wswk	-250
 违停	wwtg	+250
 未听	wwtg	-150
 威信	wwxb	+150
