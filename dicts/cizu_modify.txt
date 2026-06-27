@@ -36,6 +36,7 @@
 值钱	fkqm	+150
 只想	fkxx	+150
 分母	fnmj	+150
+放平	fppg	+150
 专精	ftjg	+150
 飞键	fwjm	+150
 中立	fylk	+150
