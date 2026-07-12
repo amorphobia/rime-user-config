@@ -1402,6 +1402,7 @@
 保结	bzjd	ia	850
 报捷	bzjd	ii	850
 宝捷	bzjd	oi	850
+包成	bzjr	uv	950
 报架	bzjs	ia	850
 保价	bzjs	ii	850
 报夹	bzjs	iv	850
