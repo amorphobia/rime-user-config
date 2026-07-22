@@ -1,5 +1,6 @@
 patch:
   suspend_hotkey: Control+Alt+space
+  use_caret_hook: false
   style/color_scheme: win11
   style/color_scheme_dark: win11dark
   style/font_face: "LXGW WenKai Mono GB"
