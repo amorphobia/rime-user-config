@@ -9514,6 +9514,7 @@
 漏听	ldtg	ao	1050
 猎巫	ldwj	uv	950
 裂差	ldws	vo	1050
+漏写	ldxd	ao	950
 裂穴	ldxh	vo	950
 鬣蜥	ldxk	vi	850
 娄宿	ldxq	oo	1050
