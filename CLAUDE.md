@@ -12,6 +12,7 @@ RIME 输入法用户配置仓库，使用 GitHub Actions 自动集成生成各�
 make sort          # 排序 opencc/tofu.txt
 make check         # 运行字典校验（排序检查 + 去重校验）
 bash scripts/sanity_check.sh  # 字典文件校验（cizu_append/delete/modify、danzi_append、tofu 的排序和去重检查）
+bash scripts/calc_encoding.sh <词组> [权重]  # 计算词组编码，输出待插入行
 ```
 
 ## Architecture
@@ -86,11 +87,18 @@ irime/              # iRime (iOS)
 向 `cizu_append.txt` 添加新词的标准步骤：
 
 1. **查上游** — 在 `rime-jiandao/dicts/cizu_raw.txt` 中确认该词是否已存在，避免重复
-2. **查单字编码** — 在 `rime-jiandao/dicts/01.danzi.txt` 中查每个字的全码，取音码（前 2 码）和形码（后 4 码首码）
-3. **计算词组编码** — 按编码规则组合（见上节）
-4. **确定权重** — 在上游 `cizu_raw.txt` 中查相同音码的现有词权重作为参照，新词权重需在其之间或之外留出间隔（常见档位：850 / 950 / 980 / 1050），避免相邻整数
-5. **插入文件** — 按排序规则（音码 → 权重降序 → 形码）放到正确位置
-6. **校验** — 运行 `bash scripts/sanity_check.sh` 确认排序和去重通过
+2. **计算编码** — 使用辅助脚本自动计算：
+   ```bash
+   bash scripts/calc_encoding.sh <词组> [权重]
+   # 示例：
+   bash scripts/calc_encoding.sh 胜在           # 输出：胜在	erzh	uv	950
+   bash scripts/calc_encoding.sh 子模块 980      # 输出：子模块	zmk	avv	980
+   bash scripts/calc_encoding.sh --check 胜在    # 同时检查是否已存在
+   ```
+   脚本需上游 `rime-jiandao` 仓库在同级目录，或设置 `JIANDOO_DIR` 环境变量指向其路径。
+3. **确定权重** — 在上游 `cizu_raw.txt` 中查相同音码的现有词权重作为参照，新词权重需在其之间或之外留出间隔（常见档位：850 / 950 / 980 / 1050），避免相邻整数
+4. **插入文件** — 按排序规则（音码 → 权重降序 → 形码）放到正确位置
+5. **校验** — 运行 `bash scripts/sanity_check.sh` 确认排序和去重通过
 
 ### Dictionary Validation Rules
 
