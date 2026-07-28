@@ -107,13 +107,13 @@ irime/              # iRime (iOS)
    ```bash
    bash scripts/calc_encoding.sh <词组> [权重]
    # 示例：
-   bash scripts/calc_encoding.sh 胜在           # 输出：胜在	erzh	uv	950
+   bash scripts/calc_encoding.sh 胜在           # 输出：胜在	erzh	uv	850
    bash scripts/calc_encoding.sh 子模块 980      # 输出：子模块	zmk	avv	980
    bash scripts/calc_encoding.sh --check 找全    # 同时检查是否已存在
    ```
    脚本需上游 `rime-jiandao` 仓库在同级目录，或设置 `JIANDOO_DIR` 环境变量指向其路径。
    若输出多行，注意 stderr 的提示：标记为飞键的行全部添加，标记为多音字的行只取符合读音的。
-3. **确定权重** — 在上游 `cizu_raw.txt` 和追加文件 `cizu_append.txt` 中查相同音码的现有词权重作为参照，新词权重需在其之间或之外留出间隔（常见档位：850 / 950 / 980 / 1050），避免相邻整数。结合词频判断，不常用词不应给高权重
+3. **确定权重** — 新词之所以不在上游词库中，大概率因为词频低于已有词，因此**默认权重为 850**（低于上游 897 这一常见最低档）。若确需更高权重，参照同音码现有词定档（常见档位：850 / 950 / 980 / 1050），留出间隔避免相邻整数
 4. **插入文件** — 按排序规则（音码 → 权重降序 → 形码）放到正确位置
 5. **校验** — 运行 `bash scripts/sanity_check.sh` 确认排序和去重通过
 

@@ -74,7 +74,7 @@ while [[ $# -gt 0 ]]; do
             echo "  --context   Show same-yinma entries from upstream and append"
             echo "              to help determine the right weight"
             echo "  phrase      The phrase to calculate encoding for"
-            echo "  weight      Optional weight (default: 950)"
+            echo "  weight      Optional weight (default: 850)"
             echo ""
             echo "Examples:"
             echo "  $(basename "$0") 胜在"
@@ -103,7 +103,7 @@ if [[ -z "${WORD}" ]]; then
 fi
 
 if [[ -z "${WEIGHT}" ]]; then
-    WEIGHT="950"
+    WEIGHT="850"
 fi
 
 if ! [[ "${WEIGHT}" =~ ^[0-9]+$ ]]; then
