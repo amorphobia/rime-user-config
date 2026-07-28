@@ -48,6 +48,7 @@ fi
 
 # Parse arguments
 CHECK=0
+CONTEXT=0
 WORD=""
 WEIGHT=""
 
@@ -57,21 +58,29 @@ while [[ $# -gt 0 ]]; do
             CHECK=1
             shift
             ;;
+        --context|-c)
+            CONTEXT=1
+            shift
+            ;;
         -h|--help)
-            echo "Usage: $(basename "$0") [--check] <phrase> [weight]"
+            echo "Usage: $(basename "$0") [options] <phrase> [weight]"
             echo ""
             echo "Calculate encoding for a phrase and output a line ready to"
             echo "add to cizu_append.txt."
             echo ""
-            echo "  --check    Check whether the phrase already exists upstream"
-            echo "             or in cizu_append.txt"
-            echo "  phrase     The phrase to calculate encoding for"
-            echo "  weight     Optional weight (default: 950)"
+            echo "Options:"
+            echo "  --check     Check whether the phrase already exists upstream"
+            echo "              or in cizu_append.txt"
+            echo "  --context   Show same-yinma entries from upstream and append"
+            echo "              to help determine the right weight"
+            echo "  phrase      The phrase to calculate encoding for"
+            echo "  weight      Optional weight (default: 950)"
             echo ""
             echo "Examples:"
             echo "  $(basename "$0") 胜在"
             echo "  $(basename "$0") 子模块 980"
             echo "  $(basename "$0") --check 胜在"
+            echo "  $(basename "$0") --context 受话器"
             exit 0
             ;;
         *)
@@ -112,6 +121,7 @@ append_path = '${APPEND_WIN}'
 word = '${WORD}'
 weight = '${WEIGHT}'
 check = ${CHECK}
+context = ${CONTEXT}
 
 # Build lookup from danzi: char -> (音码, 形码首码)
 # Use the longest code for each character
@@ -173,6 +183,38 @@ else:
     phrase_yin = ''.join(y[:1] for y in yinmas)[:4]
     # 前两字形码首码
     phrase_xing = (xingmas[0][:1] if xingmas[0] else '') + (xingmas[1][:1] if len(xingmas) > 1 else '')
+
+# Show same-yinma context
+if context:
+    entries = []  # (word, xingma, weight, source)
+    with open(raw_path, 'r', encoding='utf-8') as f:
+        for line in f:
+            parts = line.strip().split('\t')
+            if len(parts) >= 4 and parts[1] == phrase_yin:
+                entries.append((parts[0], parts[2], int(parts[3]), 'upstream'))
+    with open(append_path, 'r', encoding='utf-8') as f:
+        for line in f:
+            parts = line.strip().split('\t')
+            if len(parts) >= 4 and parts[1] == phrase_yin:
+                entries.append((parts[0], parts[2], int(parts[3]), 'append'))
+    entries.sort(key=lambda e: (-e[2], e[1]))
+    if entries:
+        print(f'Same-yinma entries ({phrase_yin}):', file=sys.stderr)
+        for w, xm, wt, src in entries:
+            marker = ' <= NEW' if w == word else ''
+            print(f'  {wt:>4}  {w}\t{phrase_yin}\t{xm}  ({src}){marker}', file=sys.stderr)
+    else:
+        print(f'No existing entries with yinma \"{phrase_yin}\".', file=sys.stderr)
+
+# Add new entry to context list for illustration
+if context:
+    entries.append((word, phrase_xing, int(weight), 'new'))
+    entries.sort(key=lambda e: (-e[2], e[1]))
+    print(f'\nAfter insertion (sorted by weight desc, then xingma):', file=sys.stderr)
+    for w, xm, wt, src in entries:
+        marker = ' <= NEW' if src == 'new' else ''
+        src_label = 'NEW' if src == 'new' else src
+        print(f'  {wt:>4}  {w}\t{phrase_yin}\t{xm}  ({src_label}){marker}', file=sys.stderr)
 
 print(f'{word}\t{phrase_yin}\t{phrase_xing}\t{weight}')
 "
