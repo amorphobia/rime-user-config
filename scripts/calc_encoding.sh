@@ -112,8 +112,11 @@ if ! [[ "${WEIGHT}" =~ ^[0-9]+$ ]]; then
 fi
 
 # Delegate encoding calculation to Python for proper UTF-8 handling
-python3 -c "
+PYTHONIOENCODING=utf-8 python3 -c "
 import sys, itertools
+try:
+    sys.stderr.reconfigure(encoding='utf-8')
+except: pass
 
 danzi_path = '${DANZI_WIN}'
 raw_path = '${RAW_DICT_WIN}'
