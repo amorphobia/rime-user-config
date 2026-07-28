@@ -113,7 +113,7 @@ fi
 
 # Delegate encoding calculation to Python for proper UTF-8 handling
 python3 -c "
-import sys
+import sys, itertools
 
 danzi_path = '${DANZI_WIN}'
 raw_path = '${RAW_DICT_WIN}'
@@ -123,98 +123,117 @@ weight = '${WEIGHT}'
 check = ${CHECK}
 context = ${CONTEXT}
 
-# Build lookup from danzi: char -> (音码, 形码首码)
-# Use the longest code for each character
-lookup = {}
+# --- Lookup: char -> {yinma: xingma_first} ---
+# Collect ALL yinma variants (飞键 + 多音字). Keep longest code per yinma.
+lookup = {}  # char -> {yinma: (xingma_first, code_len)}
 with open(danzi_path, 'r', encoding='utf-8') as f:
     for line in f:
         line = line.strip()
-        if '\t' not in line:
-            continue
+        if '\t' not in line: continue
         char, code = line.split('\t', 1)
-        code = code.split()[0]  # remove any comment
-        if len(code) < 2:
-            continue  # short code, skip
-        yinma = code[:2]
-        xingma_first = code[2:3] if len(code) > 2 else ''
-        prev = lookup.get(char)
-        if prev is None or len(code) > len(prev[2]):
-            lookup[char] = (yinma, xingma_first, code)
+        code = code.split()[0]
+        if len(code) < 2: continue
+        yin, xing = code[:2], code[2:3] if len(code) > 2 else ''
+        if char not in lookup: lookup[char] = {}
+        prev = lookup[char].get(yin)
+        if prev is None or len(code) > prev[1]:
+            lookup[char][yin] = (xing, len(code))
 
-# Check for duplicates
-if check:
-    found = False
-    with open(raw_path, 'r', encoding='utf-8') as f:
-        for line in f:
-            if line.startswith(word + '\t'):
-                print(f'WARNING: \"{word}\" already exists in cizu_raw.txt (upstream)!', file=sys.stderr)
-                found = True
-                break
-    with open(append_path, 'r', encoding='utf-8') as f:
-        for line in f:
-            if line.startswith(word + '\t'):
-                print(f'WARNING: \"{word}\" already exists in cizu_append.txt!', file=sys.stderr)
-                found = True
-                break
-
-# Get encoding for each character
-yinmas = []
-xingmas = []
+# --- Per-char options: list of (yinma, xingma) tuples ---
+char_opts = []
 for char in word:
     if char not in lookup:
-        print(f'ERROR: Cannot find character \"{char}\" in danzi.', file=sys.stderr)
-        sys.exit(1)
-    y, x, _ = lookup[char]
-    yinmas.append(y)
-    xingmas.append(x)
+        print(f'ERROR: \"{char}\" not in danzi.', file=sys.stderr); sys.exit(1)
+    opts = [(y, lookup[char][y][0]) for y in sorted(lookup[char].keys())]
+    char_opts.append(opts)
 
-num = len(yinmas)
+# --- Warn if any char has multiple yinmas ---
+extra = False
+for i, char in enumerate(word):
+    opts = char_opts[i]
+    if len(opts) > 1:
+        extra = True
+        yins = [y for y, _ in opts]
+        # Heuristic label: same letter except F/Q, J/W, or M/X -> hint 飞键
+        hint = ''
+        for a in yins:
+            for b in yins:
+                if a >= b: continue
+                if len(a) == 2 and len(b) == 2:
+                    if a[0] != b[0] and a[1] == b[1] and {a[0], b[0]} <= set('fq'):
+                        hint = ' (可能 zh 飞键 F/Q)'; break
+                    if a[0] != b[0] and a[1] == b[1] and {a[0], b[0]} <= set('jw'):
+                        hint = ' (可能 ch 飞键 J/W)'; break
+                    if a[0] == b[0] and a[1] != b[1] and {a[1], b[1]} <= set('mx'):
+                        hint = ' (可能 uang 飞键 M/X)'; break
+        tag = hint if hint else ' (可能多音字)'
+        print(f'NOTE: \"{char}\" has multiple yinmas: {\" \".join(yins)}{tag}', file=sys.stderr)
 
-if num == 2:
-    # 二字词: 两字音码各取 2 码, 两字形码各取第 1 码
-    phrase_yin = yinmas[0] + yinmas[1]
-    phrase_xing = xingmas[0] + xingmas[1]
-elif num == 3:
-    # 三字词: 三字音码各取首码, 三字形码各取首码
-    phrase_yin = ''.join(y[:1] for y in yinmas)
-    phrase_xing = ''.join(x[:1] for x in xingmas)
-else:
-    # 四字及以上: 四字各取音码首码
-    phrase_yin = ''.join(y[:1] for y in yinmas)[:4]
-    # 前两字形码首码
-    phrase_xing = (xingmas[0][:1] if xingmas[0] else '') + (xingmas[1][:1] if len(xingmas) > 1 else '')
+if extra:
+    print(file=sys.stderr)
 
-# Show same-yinma context
+# --- Cartesian product ---
+combos = list(itertools.product(*char_opts))
+nc = len(char_opts)
+
+# Check duplicates
+if check:
+    for combo in combos:
+        yins = [c[0] for c in combo]
+        if nc == 2: py = yins[0] + yins[1]
+        elif nc == 3: py = ''.join(y[:1] for y in yins)
+        else: py = ''.join(y[:1] for y in yins)[:4]
+        for path, label in [(raw_path, 'upstream'), (append_path, 'cizu_append')]:
+            try:
+                with open(path, 'r', encoding='utf-8') as f:
+                    for line in f:
+                        p = line.strip().split('\t')
+                        if len(p) >= 2 and p[0] == word and p[1] == py:
+                            print(f'WARNING: \"{word}\" ({py}) already in {label}!', file=sys.stderr)
+            except: pass
+
+# Context
 if context:
-    entries = []  # (word, xingma, weight, source)
-    with open(raw_path, 'r', encoding='utf-8') as f:
-        for line in f:
-            parts = line.strip().split('\t')
-            if len(parts) >= 4 and parts[1] == phrase_yin:
-                entries.append((parts[0], parts[2], int(parts[3]), 'upstream'))
-    with open(append_path, 'r', encoding='utf-8') as f:
-        for line in f:
-            parts = line.strip().split('\t')
-            if len(parts) >= 4 and parts[1] == phrase_yin:
-                entries.append((parts[0], parts[2], int(parts[3]), 'append'))
-    entries.sort(key=lambda e: (-e[2], e[1]))
-    if entries:
-        print(f'Same-yinma entries ({phrase_yin}):', file=sys.stderr)
-        for w, xm, wt, src in entries:
-            marker = ' <= NEW' if w == word else ''
-            print(f'  {wt:>4}  {w}\t{phrase_yin}\t{xm}  ({src}){marker}', file=sys.stderr)
-    else:
-        print(f'No existing entries with yinma \"{phrase_yin}\".', file=sys.stderr)
+    ctx_seen = set()
+    for combo in combos:
+        yins = [c[0] for c in combo]; xings = [c[1] for c in combo]
+        if nc == 2: py, px = yins[0]+yins[1], xings[0]+xings[1]
+        elif nc == 3: py, px = ''.join(y[:1] for y in yins), ''.join(x[:1] for x in xings)
+        else: py, px = ''.join(y[:1] for y in yins)[:4], (xings[0][:1] if xings[0] else '')+(xings[1][:1] if len(xings)>1 else '')
+        entries = []
+        for path, src in [(raw_path, 'upstream'), (append_path, 'append')]:
+            try:
+                with open(path, 'r', encoding='utf-8') as f:
+                    for line in f:
+                        p = line.strip().split('\t')
+                        if len(p) >= 4 and p[1] == py:
+                            entries.append((p[0], p[2], int(p[3]), src))
+            except: pass
+        key = (py, px)
+        if key in ctx_seen: continue
+        ctx_seen.add(key)
+        entries.sort(key=lambda e: (-e[2], e[1]))
+        print(f'Context for {py}:', file=sys.stderr)
+        if entries:
+            entries.append((word, px, int(weight), 'new'))
+            entries.sort(key=lambda e: (-e[2], e[1]))
+            for w, xm, wt, src in entries:
+                m = ' <= NEW' if src == 'new' else ''
+                s = 'NEW' if src == 'new' else src
+                print(f'  {wt:>4}  {w}\t{py}\t{xm}  ({s}){m}', file=sys.stderr)
+        else:
+            print(f'  (first entry for {py})', file=sys.stderr)
+        print(file=sys.stderr)
 
-# Add new entry to context list for illustration
-if context:
-    entries.append((word, phrase_xing, int(weight), 'new'))
-    entries.sort(key=lambda e: (-e[2], e[1]))
-    print(f'\nAfter insertion (sorted by weight desc, then xingma):', file=sys.stderr)
-    for w, xm, wt, src in entries:
-        marker = ' <= NEW' if src == 'new' else ''
-        src_label = 'NEW' if src == 'new' else src
-        print(f'  {wt:>4}  {w}\t{phrase_yin}\t{xm}  ({src_label}){marker}', file=sys.stderr)
-
-print(f'{word}\t{phrase_yin}\t{phrase_xing}\t{weight}')
+# Output (deduplicated)
+seen = set()
+for combo in combos:
+    yins = [c[0] for c in combo]; xings = [c[1] for c in combo]
+    if nc == 2: py, px = yins[0]+yins[1], xings[0]+xings[1]
+    elif nc == 3: py, px = ''.join(y[:1] for y in yins), ''.join(x[:1] for x in xings)
+    else: py, px = ''.join(y[:1] for y in yins)[:4], (xings[0][:1] if xings[0] else '')+(xings[1][:1] if len(xings)>1 else '')
+    key = (py, px)
+    if key not in seen:
+        seen.add(key)
+        print(f'{word}\t{py}\t{px}\t{weight}')
 "
