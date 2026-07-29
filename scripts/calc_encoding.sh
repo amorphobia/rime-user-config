@@ -202,7 +202,7 @@ if context:
         yins = [c[0] for c in combo]; xings = [c[1] for c in combo]
         if nc == 2: py, px = yins[0]+yins[1], xings[0]+xings[1]
         elif nc == 3: py, px = ''.join(y[:1] for y in yins), ''.join(x[:1] for x in xings)
-        else: py, px = ''.join(y[:1] for y in yins)[:4], (xings[0][:1] if xings[0] else '')+(xings[1][:1] if len(xings)>1 else '')
+        else: py, px = yins[0][:1]+yins[1][:1]+yins[2][:1]+yins[-1][:1], (xings[0][:1] if xings[0] else '')+(xings[1][:1] if len(xings)>1 else '')
         entries = []
         for path, src in [(raw_path, 'upstream'), (append_path, 'append')]:
             try:
@@ -234,7 +234,7 @@ for combo in combos:
     yins = [c[0] for c in combo]; xings = [c[1] for c in combo]
     if nc == 2: py, px = yins[0]+yins[1], xings[0]+xings[1]
     elif nc == 3: py, px = ''.join(y[:1] for y in yins), ''.join(x[:1] for x in xings)
-    else: py, px = ''.join(y[:1] for y in yins)[:4], (xings[0][:1] if xings[0] else '')+(xings[1][:1] if len(xings)>1 else '')
+    else: py, px = yins[0][:1]+yins[1][:1]+yins[2][:1]+yins[-1][:1], (xings[0][:1] if xings[0] else '')+(xings[1][:1] if len(xings)>1 else '')
     key = (py, px)
     if key not in seen:
         seen.add(key)
