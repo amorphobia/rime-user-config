@@ -66,11 +66,23 @@ fi
 # so line numbers above the insertion point remain valid
 sort -t$'\t' -k1,1nr "$entries_file" -o "$entries_file"
 
-# Apply each insertion
+# Apply each insertion.
+# For consecutive entries with the same after_line, the actual target
+# line is offset by the number of same-line entries already inserted,
+# so they stack in input order (first in input = first in output).
+prev_lineno=""
+same_offset=0
 while IFS=$'\t' read -r lineno word yinma xingma weight; do
     entry="${word}	${yinma}	${xingma}	${weight}"
-    sed -i "${lineno}a\\
+    if [[ "$lineno" == "$prev_lineno" ]]; then
+        same_offset=$((same_offset + 1))
+    else
+        same_offset=0
+    fi
+    actual_lineno=$((lineno + same_offset))
+    sed -i "${actual_lineno}a\\
 ${entry}" "$target"
+    prev_lineno="$lineno"
 done < "$entries_file"
 
 echo "Inserted $count entries into $(basename "$target")." >&2
