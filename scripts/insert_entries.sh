@@ -64,7 +64,7 @@ fi
 
 # Sort by line number descending — insert from bottom to top
 # so line numbers above the insertion point remain valid
-sort -t$'\t' -k1,1nr "$entries_file" -o "$entries_file"
+sort -s -t$'\t' -k1,1nr "$entries_file" -o "$entries_file"
 
 # Apply each insertion.
 # For consecutive entries with the same after_line, the actual target
