@@ -4,6 +4,9 @@ patch:
   style/color_scheme: win11
   style/color_scheme_dark: win11dark
   style/font_face: "LXGW WenKai Mono GB"
+  style/layout:
+    type: flow
+    align_type: center
   app_options/bash.exe/ascii_mode: true
   app_options/code.exe/ascii_mode: true
   app_options/conemu64.exe/ascii_mode: true
