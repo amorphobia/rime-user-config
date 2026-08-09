@@ -12188,6 +12188,7 @@
 平面内	pmn	vvi	1050
 骗骗	pmpm	aa	950
 跑码头	pmt	ovo	950
+偏台	pmth	ia	950
 骗他	pmts	ai	950
 骗它	pmts	ao	850
 平面外	pmw	vvu	950
