@@ -20,3 +20,4 @@ patch:
   switcher/save_options/+:
     - traditionalization
     - martianization
+  menu/alternative_select_labels: [ 壹, 贰, 叁, 肆, 伍, 陸, 柒, 捌, 玖, 拾 ]

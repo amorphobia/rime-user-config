@@ -1,12 +1,17 @@
 patch:
   suspend_hotkey: Control+Alt+space
   use_caret_hook: false
+  style/floating_preedit: true
+  style/vertical_text_left_to_right: true
   style/color_scheme: win11
   style/color_scheme_dark: win11dark
   style/font_face: "LXGW WenKai Mono GB"
-  style/layout:
-    type: flow
-    align_type: center
+  style/preedit_font_face: "LXGW WenKai Mono GB"
+  style/label_font_face: "LXGW WenKai Mono GB"
+  style/comment_font_face: "LXGW WenKai Mono GB"
+  style/label_font_point: 12
+  style/label_format: "{:s}・"
+  style/layout/type: vertical_text
   app_options/bash.exe/ascii_mode: true
   app_options/code.exe/ascii_mode: true
   app_options/conemu64.exe/ascii_mode: true

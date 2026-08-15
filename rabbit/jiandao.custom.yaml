@@ -42,4 +42,6 @@ patch:
   notolization:
     opencc_config: tofu.json
     option_name: notolization
-  hint_text: '✖'
+  hint_text: ''
+  translator/comment_format:
+    - xlit/abcdefghijklmnopqrstuvwxyz/ａｂｃｄｅｆｇｈｉｊｋｌｍｎｏｐｑｒｓｔｕｖｗｘｙｚ/
