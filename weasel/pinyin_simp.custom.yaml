@@ -1,8 +1,4 @@
 patch:
-  schema/dependencies: null
-  engine/translators:
-    - punct_translator
-    - script_translator
   key_binder/bindings/+:
     - { when: has_menu, accept: minus, send: Page_Up }
     - { when: has_menu, accept: equal, send: Page_Down }
