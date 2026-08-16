@@ -13,6 +13,8 @@ make sort          # 排序 opencc/tofu.txt
 make check         # 运行字典校验（排序检查 + 去重校验）
 bash scripts/sanity_check.sh  # 字典文件校验（cizu_append/delete/modify、danzi_append、tofu 的排序和去重检查）
 bash scripts/calc_encoding.sh <词组> [权重]  # 计算词组编码，输出待插入行
+bash scripts/find_position.sh <file> [音码 [形码 [权重 [次要权重]]]]  # 定位插入行号（支持 stdin 批量）
+bash scripts/insert_entries.sh <file>  # 批量插入（stdin: after_line<TAB>词<TAB>音码<TAB>形码<TAB>权重）
 ```
 
 ## Architecture
@@ -32,6 +34,9 @@ opencc/             # OpenCC 转换数据（emoji、简繁、绘文字加、焱�
 scripts/
   fetch.sh          # 构建脚本：clone 上游方案仓库，应用 dicts/ 补丁，生成 schemas/ 目录
   sanity_check.sh   # 字典校验：检查排序和去重
+  calc_encoding.sh  # 计算词组编码（需上游 rime-jiandao 仓库）
+  find_position.sh  # 定位插入行号（单条参数模式 / stdin 批量模式）
+  insert_entries.sh # 批量插入（按 after_line 降序处理，同基线按输入顺序）
   installer.ps1     # 小狼毫一键安装脚本
 weasel/             # 小狼毫 (Windows) — weasel.custom.yaml, default.custom.yaml 等
 rabbit/             # 玉兔毫 (Windows, AutoHotkey) — rabbit.custom.yaml 等
@@ -128,14 +133,26 @@ irime/              # iRime (iOS)
 
    例如 `风暴潮` 形码 `uoa` 在 `fbj` 的 `u` 支下，首字符 `u` 与 制表键(`uvi`) 共享，需两码形码；但第二字符 `o` vs `v` 已分叉，与 直播间(`uio`) 在 `i` 处分叉——三者在同一首字符节点但不共享第二字符，权重高低互不影响编码长度。反例：`第一方`(`uvo`) 和 第一种(`uvu`) 共享前两字符 `uv`，在第三字符才分叉，权重排序会直接影响编码。`大吗`(`vo`) 和 大麻(`vo`) 形码完全相同，权重必须拉开。
 
-6. **插入文件** — 按排序规则（音码 → 权重降序 → 形码）放到正确位置。**单条词**直接编辑插入。**多条词**（≥3）使用批量插入脚本，避免多次写入：先确定每个词的插入行号，然后一次性执行：
+5. **插入文件** — 按排序规则（音码 → 权重降序 → 形码）放到正确位置。**定位与插入分两步**：
+
+   先定位（`find_position.sh` 一次运行给出精确行号，无需手工试探边界）：
+   ```bash
+   # 单条定位（输出 after_line + 前后行/组内成员供核对）
+   bash scripts/find_position.sh dicts/cizu_append.txt <音码> <形码> <权重>
+   # 批量定位（stdin: 词<TAB>音码<TAB>形码<TAB>权重，输出可直接喂 insert_entries.sh 的行）
+   printf '词\t音码\t形码\t权重\n...' | bash scripts/find_position.sh dicts/cizu_append.txt
+   ```
+   再插入（**≥2 条必须用脚本**，单条也可用管道）：
    ```bash
    # 格式：after_line<TAB>词<TAB>音码<TAB>形码<TAB>权重
    echo '3169	手敲	edqc	io	850
    6721	河南人	hnr	aui	850
    6721	湖南人	hnr	aui	850' | bash scripts/insert_entries.sh dicts/cizu_append.txt
+   # 完整流水线（定位 → 插入一步到位）：
+   printf '手敲\tedqc\tio\t850\n' | bash scripts/find_position.sh dicts/cizu_append.txt \
+     | bash scripts/insert_entries.sh dicts/cizu_append.txt
    ```
-   脚本按行号降序处理（从下到上插入），确保未插入词的行号不受先前插入影响。同一条插入基线（after_line 相同）的多条词按脚本输入顺序排列。
+   脚本按行号降序处理（从下到上插入），确保未插入词的行号不受先前插入影响。同一条插入基线（after_line 相同）的多条词按脚本输入顺序排列；after_line 为 0 表示插到文件开头。组内定位按 权重降序 → 次要权重降序 → 形码升序，与文件排序规则一致。**注意核对 find_position.sh 输出的 after_line 与上下文，避免定位偏差（曾出现形码误输入未被 sanity 拦截的先例）。**
 6. **校验** — 运行 `bash scripts/sanity_check.sh` 确认排序和去重通过
 
 ### Dictionary Validation Rules

@@ -79,9 +79,20 @@ while IFS=$'\t' read -r lineno word yinma xingma weight; do
     else
         same_offset=0
     fi
-    actual_lineno=$((lineno + same_offset))
-    sed -i "${actual_lineno}a\\
+    if [[ "$lineno" == "0" ]]; then
+        # after_line 0 = 插到文件开头；同基线多条按输入顺序堆叠
+        if [[ "$same_offset" == "0" ]]; then
+            sed -i "1i\\
 ${entry}" "$target"
+        else
+            sed -i "${same_offset}a\\
+${entry}" "$target"
+        fi
+    else
+        actual_lineno=$((lineno + same_offset))
+        sed -i "${actual_lineno}a\\
+${entry}" "$target"
+    fi
     prev_lineno="$lineno"
 done < "$entries_file"
 
