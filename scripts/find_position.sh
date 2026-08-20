@@ -77,8 +77,27 @@ NR == FNR {
         }
     }
 }
+function t_after(a, b) {
+    # 返回 1 表示目标 a 应排在目标 b 之后
+    # 输出排序：音码 → 权重降序 → 次要权重降序 → 形码升序
+    # （与文件排序规则一致，保证同 after_line 的多条按正确组内顺序堆叠）
+    if (tcode[a] != tcode[b]) return (tcode[a] > tcode[b])
+    wa = tweight[a] + 0; wb = tweight[b] + 0
+    if (wa != wb) return (wa < wb)
+    sa = tsub[a] + 0; sb = tsub[b] + 0
+    if (sa != sb) return (sa < sb)
+    return (txing[a] > txing[b])
+}
 END {
-    for (i = 1; i <= t; i++) {
+    # 按组内排序规则对目标排序（插入排序，t 通常很小）
+    for (i = 1; i <= t; i++) idx[i] = i
+    for (i = 2; i <= t; i++) {
+        key = idx[i]; j = i - 1
+        while (j >= 1 && t_after(idx[j], key)) { idx[j + 1] = idx[j]; j-- }
+        idx[j + 1] = key
+    }
+    for (ii = 1; ii <= t; ii++) {
+        i = idx[ii]
         after = prev_nr[i]
         if (tweight[i] != "" && gc[i] > 0) {
             # 组内定位：按 权重降序 → 次要权重降序 → 形码升序
