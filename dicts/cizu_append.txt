@@ -17820,6 +17820,7 @@
 献技	xmjk	ui	850
 先寄	xmjk	uo	850
 先就	xmjq	uo	950
+先加	xmjs	ua	950
 闲看	xmkf	oi	950
 先砍	xmkf	uv	950
 现刊	xmkf	vv	950
