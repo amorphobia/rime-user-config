@@ -5297,6 +5297,7 @@
 周瑜打黄盖	fydg	uv	850
 中导	fydz	ia	950
 种岛	fydz	uu	950
+防御式	fye	auv	950
 直饮水	fye	uua	950
 阜阳市	fye	uao	850
 重水	fyeb	ua	1050
