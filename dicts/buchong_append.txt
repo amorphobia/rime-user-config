@@ -19,6 +19,7 @@
 值域	fkyl
 共济	gyjk
 公历	gylk
+欢实	htek		
 借点	jddm
 江津区	jjq
 基建	jkjm
