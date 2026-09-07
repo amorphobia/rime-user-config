@@ -156,6 +156,7 @@
 白市驿	bey	uoa	950
 壁水㺄	bey	aau	850
 不使用	bey	viu	850
+不适用	bey	vuu	850
 不少于	bey	viv	750
 鼻拭子	bez	uia	950
 爆装备	bfb	oou	950
