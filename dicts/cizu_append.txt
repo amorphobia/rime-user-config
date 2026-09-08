@@ -17439,6 +17439,7 @@
 姓居	xgjl	aa	850
 姓琚	xgjl	av	850
 性具	xgjl	oi	850
+星君	xgjw	oa	950
 姓姜	xgjx	ao	950
 姓江	xgjx	aa	850
 姓蒋	xgjx	ai	850
