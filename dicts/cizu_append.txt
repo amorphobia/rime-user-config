@@ -15163,6 +15163,7 @@
 弹簧秤	thj	auu	950
 退环境	thj	avv	850
 台斤	thjb	au	950
+太挤	thjk	vi	850
 台鉴	thjm	ai	950
 太卷	thjt	vo	1050
 台客	thke	ao	950
