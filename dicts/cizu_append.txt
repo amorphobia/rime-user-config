@@ -18913,6 +18913,7 @@
 邮走	ydzd	iv	950
 有则	ydze	va	950
 有泽	ydze	va	850
+有在	ydzh	vv	950
 油子	ydzk	aa	750
 幼子	ydzk	aa	650
 压舌板	yeb	vuv	1050
