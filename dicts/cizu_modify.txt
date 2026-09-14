@@ -37,6 +37,7 @@
 歃血	esxh	+150
 芝士	fkek	+150
 值钱	fkqm	+150
+直行	fkxg	+150	
 只想	fkxx	+150
 分母	fnmj	+150
 放平	fppg	+150
