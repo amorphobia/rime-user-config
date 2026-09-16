@@ -11515,6 +11515,7 @@
 孟夏	mrxs	av	950
 艋舺	mrxs	uu	950
 没人用	mry	aiu	850
+蒙眼	mryf	ii	950
 盟员	mryt	oo	950
 锰族	mrzj	io	950
 蒙自	mrzk	iu	950
