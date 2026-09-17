@@ -1,5 +1,5 @@
-病史	bgek	+150	
-并发	bgfs	+150	
+病史	bgek	+150
+并发	bgfs	+150
 病历	bglk	+250
 百事	bhek	+350
 布丁	bjdg	+250
@@ -10,7 +10,7 @@
 芭蕉	bsjc	+150
 比亚迪	byd	+150
 爆雷	bzlw	+150
-残余	cfyl	+150	
+残余	cfyl	+150
 才对	chdb	+150
 搭便车	dbj	+150
 短视频	dep	+150
@@ -37,7 +37,7 @@
 歃血	esxh	+150
 芝士	fkek	+150
 值钱	fkqm	+150
-直行	fkxg	+150	
+直行	fkxg	+150
 只想	fkxx	+150
 分母	fnmj	+150
 放平	fppg	+150
@@ -60,6 +60,7 @@
 叫啥	jces	+150
 接种	jdfy	+150
 解耦	jdxd	+150
+扯蛋	jedf	-150
 精装	jgfm	+150
 基操	jkcz	+150
 积分	jkfn	+150
@@ -73,7 +74,7 @@
 列第	lddk	-250
 来点	lhdm	+150
 连上	lmep	+150
-两项	lxxx	+150	
+两项	lxxx	+150
 老九	lzjq	-250
 馒头	mftd	+150
 棉签	mmqm	+150
@@ -89,7 +90,7 @@
 起于	qkyl	+150
 签收	qmed	+250
 正交	qrjc	+150
-热秀	rexq	-50	
+热秀	rexq	-50
 乳糖	rjtp	+150
 散场	sfjp	+150
 三连	sflm	+150
@@ -98,6 +99,7 @@
 天府	tmfj	+150
 同事	tyek	+150
 吃饱了撑	wblj	-250
+扯蛋	wedf	-150
 外翻	whff	+150
 务必	wjbk	+150
 物理	wjlk	-250
