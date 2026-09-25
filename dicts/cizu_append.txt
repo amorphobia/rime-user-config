@@ -2763,6 +2763,7 @@
 大马	dsms	va	850
 大吗	dsms	vo	750
 大美	dsmw	vo	950
+达美	dsmw	vo	850
 第三年	dsn	uvu	950
 第四年	dsn	uiu	850
 大鲵	dsnk	vu	850
