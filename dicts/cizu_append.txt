@@ -12224,6 +12224,7 @@
 能守	nred	ao	850
 能受	nred	au	850
 能装	nrfm	ao	1050
+能飞	nrfw	aa	1050
 能装	nrfx	ao	1050
 能苟	nrgd	ai	950
 能过	nrgl	av	1050
