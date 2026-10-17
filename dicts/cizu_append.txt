@@ -456,6 +456,7 @@
 败叶	bhye	ao	950
 白夜	bhye	uo	950
 白页	bhye	uv	850
+白崖	bhys	ui	850
 白灾	bhzh	uo	950
 百足	bhzj	vo	950
 败子	bhzk	aa	950
