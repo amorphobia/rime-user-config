@@ -7636,6 +7636,7 @@
 金銮	jblt	io	950
 金雷	jblw	iv	850
 津梁	jblx	aa	950
+禁鸣	jbmg	vo	950
 筋膜	jbml	uu	950
 近吗	jbms	uo	950
 近八年	jbn	uuu	950
