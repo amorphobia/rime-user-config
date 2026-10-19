@@ -7758,6 +7758,7 @@
 缴了	jcle	aa	950
 浇漓	jclk	aa	950
 交联	jclm	ov	950
+郊狼	jclp	ou	1050
 几次幂	jcm	uoo	1050
 九次幂	jcm	uoo	950
 缴满	jcmf	aa	950
