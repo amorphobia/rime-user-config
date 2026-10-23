@@ -8267,9 +8267,11 @@
 近九年	jjn	uuu	850
 储奶	jjnh	ia	1050
 陈家坪	jjp	aov	1050
+急就篇	jjp	uou	950
 煎炒烹炸	jjpf	oo	1050
 竞价排名	jjpm	oi	850
 加进去	jjq	avv	850
+急就章	jjq	uoo	850
 建成区	jjq	avv	750
 江津区	jjq	aav	650	1	#六码次选
 出旗	jjqk	ao	850
