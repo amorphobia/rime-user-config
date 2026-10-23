@@ -8274,6 +8274,7 @@
 急就章	jjq	uoo	850
 建成区	jjq	avv	750
 江津区	jjq	aav	650	1	#六码次选
+出栈	jjqf	av	850
 出旗	jjqk	ao	850
 出妻	jjqk	av	850
 出千	jjqm	au	950
@@ -14307,6 +14308,8 @@
 如你	rjnk	ai	950
 荣昌区	rjq	iov	950
 日记账	rjq	ooa	950
+入站	rjqf	uo	1050
+入栈	rjqf	uv	950
 入珠	rjqj	uv	850
 人间正道是沧桑	rjqs	io	1050
 如她	rjts	aa	950
