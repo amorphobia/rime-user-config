@@ -7668,6 +7668,7 @@
 江北区	jbq	aiv	950
 出不去	jbq	avv	750
 禁不起	jbq	vvv	750
+进栈	jbqf	vv	850
 金注	jbqj	ia	850
 金竹	jbqj	iu	850
 承保人	jbr	aii	850
