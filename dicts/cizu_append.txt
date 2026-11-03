@@ -15896,6 +15896,7 @@
 铜版	tybf	iu	850
 同包	tybz	iu	850
 同音词	tyc	ioo	850
+同层	tycr	ia	1050
 通的	tyde	au	950
 同德	tyde	iu	950
 痛的	tyde	ou	950
