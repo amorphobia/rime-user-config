@@ -16951,6 +16951,7 @@
 卫瓘	wwgt	av	850
 伟观	wwgt	ia	850
 微管	wwgt	uu	850
+喂给	wwgw	oa	950
 围合	wwhe	ii	950
 维汉	wwhf	aa	950
 未含	wwhf	vi	950
