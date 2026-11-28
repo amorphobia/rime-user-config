@@ -18831,6 +18831,7 @@
 絮絮叨叨	xxdd	aa	950
 羞羞答答	xxdd	oo	650
 想点	xxdm	vi	950
+小小说	xxe	iio	850
 小橡树	xxe	ivv	850
 写小说	xxe	oio	850
 二项式	xxe	vvv	750
